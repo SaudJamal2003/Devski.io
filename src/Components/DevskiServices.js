@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useEffect} from "react";
+import Devski_Logo from '../Images/Devski_Logo.png'
 import webdevIcon from '../Images/webdevIcon.png';
 import MobileDevIcon from '../Images/MobileDevIcon.png';
 import DigitalIcon from '../Images/DigitalIcon.png';
@@ -12,8 +13,45 @@ import DevskiServicesCss from '../Css/DevskiServices.module.css';
 
 
 function DevskiServices(){
-    return(
+    useEffect(() => {
+        const hamburgerElement = document.querySelector(`.${DevskiServicesCss.hamburger}`);
+        const navMenu = document.querySelector(`.${DevskiServicesCss.navMenu}`);
+    
+        if (hamburgerElement && navMenu) {
+          function mobileMenu() {
+            hamburgerElement.classList.toggle(DevskiServicesCss.active);
+            navMenu.classList.toggle(DevskiServicesCss.active); 
+          }
+    
+          hamburgerElement.addEventListener("click", mobileMenu);
+    
+          return () => {
+            hamburgerElement.removeEventListener("click", mobileMenu);
+          };
+        }
+    }, []);
+    
+    
+  return(
         <>
+        <header className={DevskiServicesCss.header}>
+        <nav className={DevskiServicesCss.navbar}>
+            <img src={Devski_Logo} className={DevskiServicesCss.DevskiLogo} alt='logo'/>
+            <ul className={DevskiServicesCss.navMenu}>
+                <li className={DevskiServicesCss.home}>Home</li>
+                <li className={DevskiServicesCss.services}>Services</li>
+                <li className={DevskiServicesCss.projects}>Projects</li>
+                <li className={DevskiServicesCss.about}>About Us</li>
+                <li className={DevskiServicesCss.contact}>Contact Us</li>
+            </ul>
+            <div className={DevskiServicesCss.hamburger}>
+                <span className={DevskiServicesCss.bar}></span>
+                <span className={DevskiServicesCss.bar}></span>
+                <span className={DevskiServicesCss.bar}></span>
+            </div>
+        </nav>
+       </header>
+
         <div className={DevskiServicesCss.main}>
         <div className={DevskiServicesCss.Topimage}>
            <h1>Our <span> Services</span></h1>
