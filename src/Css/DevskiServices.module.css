@@ -1,0 +1,585 @@
+@import url('https://www.dafont.com/highrise.font') ;
+
+.main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+.TopDiv{
+    width: 100%;
+height: 476px;
+flex-shrink: 0;
+}
+
+.Topimage{
+    width: 100%;
+    height: 476px;
+    background-image: url('../Images/TopDiv.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: contain;
+}
+
+.Topimage h1{
+    color: white;
+    font-family: Outfit;
+    font-size: 92px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 126.034px; /* 137.5% */
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin-top: -0px;
+}
+
+.Topimage span{
+    color: white;
+    font-family: Outfit;
+    font-size: 92px;
+    font-style: normal;
+    font-weight:600;
+    line-height: 126.034px; /* 137.5% */
+    /* background-color: antiquewhite; */
+    display: flex;
+    padding-left: 10px ;
+    justify-content: center;
+    margin-top: -0px;
+}
+.ArrayofServices h2{
+    color: #0F0F0F;
+    font-family: Outfit;
+    font-size: 44.896px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 62.854px; /* 140% */
+    text-transform: capitalize;
+    display: flex;
+    justify-content: center;
+
+}
+.ArrayofServices {
+    display: flex;
+    flex-direction: column;    
+}
+.MainContainer{
+    display: flex;
+    flex-direction: column;
+    column-gap: 50px;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    /* display: inline-grid; */
+}
+.ContainerBlock1 , .ContainerBlock2{
+    display: flex;
+    gap: 20px;
+    
+}
+.ContainerBlock2{
+    margin-bottom: 60px;
+}
+
+.Container{
+    display: flex;
+    width: 320px;
+    height: 180px;
+    padding: 62px 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 15px;
+    background: #0F0F0F;
+    
+}
+.Container:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    
+}
+.Container h1{
+    color: white;
+    font-family: outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 0px;
+    line-height: normal;
+}
+.webdevIcon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.MobileDevIcon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.softDevIcon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.brandingIcon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.DigitalIcon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.CloudIcon{
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+.Container P{
+    height: 66px;
+    align-self: stretch;
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 18px;
+}
+.LearnMore{
+color: #A2FF86;
+background-color: transparent;
+font-family: Outfit;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-style: solid ;
+border-width: 0px 0px 2px 0px ;
+border-color: #A2FF86;
+}
+.LearnMore:hover{
+    color: white;
+    border-color: white;
+    
+}
+.BlackBg{
+    width: 100%;
+    height: 1588px;
+    flex-shrink: 0;
+    background-image: url('../Images/WavyDesign.png');
+    background-color:#0F0F0F;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.BlackBg h1{
+    color:  white;
+text-align: center;
+font-family: Outfit;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 130%; /* 62.4px */
+margin-top: 80px;
+}
+.ProjectButtons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.AllButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    border-style: solid ;
+    border-color: white;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.AllButton:hover{
+    color: #A2FF86;
+    border-color: #A2FF86;
+}
+.WebButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    border-style: solid ;
+    border-color: white;
+    font-family: Outfit;
+    font-size:24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.WebButton:hover{
+    color: #A2FF86;
+    border-color: #A2FF86;
+}
+.AppButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    border-style: solid ;
+    border-color: white;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.AppButton:hover{
+    color: #A2FF86;
+    border-color: #A2FF86;
+}
+.UIUXButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: white;
+    border-style: solid ;
+    border-color: white;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.UIUXButton:hover{
+    color: #A2FF86;
+    border-color: #A2FF86;
+}
+.AllProjects{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+.proj1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.proj1 h1{
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj1 p{
+    align-self: stretch;
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+}
+.proj2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.proj2 h1{
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj2 p{
+    align-self: stretch;
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+
+}
+.Project1{
+display: flex;
+width: 550px;
+height: 450px;
+padding: 38px 20px 0px 0px;
+justify-content: center;
+align-items: center;
+}
+.Project1:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+.Project2{
+    display: flex;
+width: 550px;
+height: 450px;
+padding: 38px 20px 0px 0px;
+justify-content: center;
+align-items: center;
+}
+.Project2:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+
+.AllProjects2{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+.proj3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.proj3 h1{
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj3 p{
+    align-self: stretch;
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+}
+.proj4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.proj4 h1{
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj4 p{
+    align-self: stretch;
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+
+}
+.Project1{
+display: flex;
+width: 550px;
+height: 450px;
+padding: 38px 20px 0px 0px;
+justify-content: center;
+align-items: center;
+}
+.Project2{
+    display: flex;
+width: 550px;
+height: 450px;
+padding: 38px 20px 0px 0px;
+justify-content: center;
+align-items: center;
+}
+
+.MainCard{
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* background-color: antiquewhite; */
+}
+.Card{
+    width: 1100px;
+    height: 540px;
+    background-color: #0F0F0F;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CardText{
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+.Card h1{
+color: white;
+font-family: Outfit;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 64px;
+width: 70%;
+
+}
+.Card p{
+width: 465.581px;
+height: 65.379px;
+flex-shrink: 0;
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Outfit;
+font-size: 15px;
+font-weight: 100;
+line-height: 31.699px; /* 200% */
+margin-top: 0px;
+}
+.CardImage{
+    width: 430px;
+height: 420px;
+flex-shrink: 0;
+margin-right: 50px;
+}
+.CardButton{
+    display: flex;
+width: 250px;
+padding: 19px 31px 17px 31px;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+background: #A2FF86;
+font-family: outfit;
+display: flex;
+gap: 5px;
+}
+.CardButton:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    background-color: transparent;
+    border-color: #A2FF86;
+    color: #A2FF86;
+}
+.FooterMain{
+width: 100%;
+height: 549px;
+flex-shrink: 0;
+background-image: url('../Images/WavyDesign.png');
+background-color: #0F0F0F;
+background-size: cover;
+background-repeat: no-repeat;
+}
+.FooterMain h1{
+    color: #A2FF86;
+    font-family: Highrise;
+    font-size: 120px;
+    align-items:baseline;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+}
+
+@media (max-width: 900px){
+    .Topimage h1{
+        font-size: 4vmax;
+    }
+    .Topimage span{
+        font-size: 4vmax;
+    }
+    .ContainerBlock1{
+        flex-direction: column;
+    }
+    .ContainerBlock2{
+        flex-direction: column;
+    }
+    .ArrayofServices h2{
+        text-align: center;
+        text-wrap: balance;
+        font-size: 4vmax;
+    }
+    .BlackBg{
+        flex-direction: column;
+    }
+    .BlackBg h1{
+        font-size: 4vmax;
+    }
+    .ProjectButtons{
+        flex-direction: column
+;
+    }
+    .AllProjects{
+        flex-direction: column;
+    }
+    .AllProjects2{
+        flex-direction: column;
+    }
+    .Project1 h1{
+        text-align: center;
+        text-wrap: balance;
+        font-size: 4vmax;
+    }
+    
+
+}
+
