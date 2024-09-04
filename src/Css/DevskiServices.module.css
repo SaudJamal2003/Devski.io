@@ -65,6 +65,7 @@ li {
 
 .navbar {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
@@ -392,12 +393,15 @@ margin-top: 80px;
     margin-top: 50px;
     align-items: center;
     width: 100%;
-    gap: 30px;
+    /* gap: 0px; */
+    
+    /* background-color: #A2FF86; */
 }
 .proj1{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center; 
+    /* background-color: aqua; */
 }
 .proj1 h1{
 color: white;
@@ -411,7 +415,7 @@ letter-spacing: -0.191px;
 margin-top: 20px;
 }
 .proj1 p{
-    align-self: stretch;
+    /* align-self: stretch; */
     color: white;
     font-family: outfit;
     font-size: 20px;
@@ -419,10 +423,12 @@ margin-top: 20px;
     line-height: 140%; /* 26.689px */
     margin-top: 0px;
 }
+
 .proj2{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+    /* background-color: blue; */
 }
 .proj2 h1{
 color: white;
@@ -436,7 +442,7 @@ letter-spacing: -0.191px;
 margin-top: 20px;
 }
 .proj2 p{
-    align-self: stretch;
+    /* align-self: stretch; */
     color: white;
     font-family: outfit;
     font-size: 20px;
@@ -449,7 +455,7 @@ margin-top: 20px;
 display: flex;
 width: 55%;
 height: 50%;
-padding: 38px 20px 0px 0px;
+padding: 38px 0px 0px 0px;
 justify-content: center;
 align-items: center;
 }
@@ -481,7 +487,7 @@ align-items: center;
 .proj3{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 .proj3 h1{
 color: white;
@@ -495,7 +501,7 @@ letter-spacing: -0.191px;
 margin-top: 20px;
 }
 .proj3 p{
-    align-self: stretch;
+    /* align-self: stretch; */
     color: white;
     font-family: outfit;
     font-size: 20px;
@@ -506,7 +512,7 @@ margin-top: 20px;
 .proj4{
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
 }
 .proj4 h1{
 color: white;
@@ -520,7 +526,7 @@ letter-spacing: -0.191px;
 margin-top: 20px;
 }
 .proj4 p{
-    align-self: stretch;
+    /* align-self: stretch; */
     color: white;
     font-family: outfit;
     font-size: 20px;
@@ -617,6 +623,10 @@ gap: 5px;
     color: #A2FF86;
 }
 .FooterMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:125px;
 width: 100%;
 height: 549px;
 flex-shrink: 0;
@@ -624,18 +634,149 @@ background-image: url('../Images/WavyDesign.png');
 background-color: #0F0F0F;
 background-size: cover;
 background-repeat: no-repeat;
+
+
 }
-.FooterMain h1{
-    color: #A2FF86;
-    font-family: Highrise;
-    font-size: 120px;
-    align-items:baseline;
+.EveryFooterDiv{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 190px;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+.AllColumn{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 200px;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.RightColumn{
+    display: flex;
+    flex-direction: column;
+
+    /* gap: 10px; */
+    
+}
+.RightColumn h1{
+    color: white;
+    font-family: outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.RightColumn h2{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-
 }
-
+.RightColumn h3{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.MiddleColumn{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap:20px;
+}
+.MiddleColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.LeftColumn{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+    /* align-items: Right; */
+}
+.LeftColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h4{
+    color: white;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h2,h3,h5,h6{
+        color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.FooterHeading{
+    justify-content:center;
+    display: flex;
+    /* background-color: antiquewhite; */
+}
+.WorkTogether{
+    width: 100%;
+    /* margin-top: 405px; */
+}
+.ThinLine{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 400px;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    margin-bottom: -100px;
+    width: 100%;
+}
+.ThinLine h1{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 30px;
+    line-height: normal;
+}
+.ThinLine h2{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 50px;
+}
+.SocialMedia{
+    width: 81.201px;
+height: 14px;
+flex-shrink: 0;
+display: flex;
+gap: 10px;
+}
 @media (max-width: 900px){
     .Topimage h1{
         font-size: 4vmax;
@@ -690,7 +831,7 @@ background-repeat: no-repeat;
     .navMenu {
         position: fixed;
         left: -100%;
-        top: 7%;
+        top: 4.88rem;
         flex-direction: column;
         background-color: #1F1F1F;
         width: 100%;
