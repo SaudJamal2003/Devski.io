@@ -129,7 +129,7 @@ function DevskiServices(){
 
         <div className={DevskiServicesCss.BlackBg}>
             <h1>Our Projects</h1>
-            <p>Scroll left > </p>
+            
             <div className={DevskiServicesCss.ProjectButtons}>
             <button className={DevskiServicesCss.AllButton}> All </button>
             <button className={DevskiServicesCss.WebButton}> Web </button>

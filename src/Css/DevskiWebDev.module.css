@@ -1,8 +1,3 @@
-@import url('https://www.dafont.com/highrise.font') ;
-
-
-
-
 
 * {
     margin: 0;
@@ -103,228 +98,270 @@ li {
 .main{
 
     width: 100%;
+    
+}
+.MainHeading{
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    gap: 80px;
+    margin-top: 135px;
 }
-.TopDiv{
-    width: 100%;
-height: 476px;
-flex-shrink: 0;
-}
-
-.Topimage{
-    width: 100%;
-    height: 476px;
-    background-image: url('../Images/TopDiv.png');
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-size: contain;
-}
-
-.Topimage h1{
-    color: white;
+.ServicesHeading{
+    color: #A2FF86;
     font-family: Outfit;
-    font-size: 92px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 126.034px; /* 137.5% */
-    /* background-color: antiquewhite; */
-    display: flex;
-    justify-content: center;
-    margin-top: -0px;
-}
-
-.Topimage span{
-    color: white;
-    font-family: Outfit;
-    font-size: 92px;
-    font-style: normal;
-    font-weight:600;
-    line-height: 126.034px; /* 137.5% */
-    /* background-color: antiquewhite; */
-    display: flex;
-    padding-left: 10px ;
-    justify-content: center;
-    margin-top: -0px;
-}
-.ArrayofServices {
-    display: flex;
-    flex-direction: column;   
-    gap: 60px;
-    align-items: center; /* Center content horizontally */
-}
-.ArrayofServices h2{
-    color: #0F0F0F;
-    font-family: Outfit;
-    font-size: 44.896px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 600;
-    line-height: 62.854px; /* 140% */
+    line-height: 24.942px; /* 140% */
     text-transform: capitalize;
 }
-
-.MainContainer {
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking up equal space */
-    gap: 30px; /* Gap between grid items */
-    width: 100%; /* Full width of the container */
-    max-width: 1200px; /* Optional: limit the maximum width of the grid */
-}
-
-.Container {
-    display: flex;
-    width: 373.533px;
-    height: 287.333px;
-    padding: 62.854px 35.917px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 28.733px;
-    border-radius: 15px;
-    background: #0F0F0F;
-    box-shadow: 0px 3.592px 8.979px 0px rgba(113, 9, 146, 0.06);
-}
-
-.Container:hover {
-    transform: scale(1.03);
-    transition: 0.2s ease-in;
-}
-
-.Container h1 {
-    color: white;
-    font-family: outfit;
+.WebDevHeading{
+    color: #0F0F0F;
+    font-family: Outfit;
     font-size: 24px;
     font-style: normal;
-    font-weight: 500;
-    margin-bottom: 0px;
+    font-weight: 600;
+    line-height: 83.806px; /* 140% */
+    text-transform: capitalize;
+}
+.ServiceDescription{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.ServiceDescriptionHeading{
+    color: #000;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: medium;
     line-height: normal;
 }
-
-.Container p {
-    height: auto; /* Adjust height as needed */
-    color: rgba(255, 255, 255, 0.80);
+.ServiceDescriptionPara{
+    width: 50%;
+    height: 128px;
+    flex-shrink: 0; 
+    color: #000;
+    text-align: center;
     font-family: Outfit;
-    font-size: 16px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: lighter;
-    line-height: 18px;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 120%; /* 31.2px */
 }
-
-.LearnMore {
+.HowWorks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+}
+.HowWorksHeading{
+    color: #000;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 40%;
+}
+.HowWorksHeading span{
     color: #A2FF86;
-    background-color: transparent;
+    text-align: center;
     font-family: Outfit;
-    font-size: 15px;
+    font-size: 38px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: normal;
-    border-style: solid;
-    border-width: 0px 0px 2px 0px;
-    border-color: #A2FF86;
+    width: 40%;
+}
+.HowWorksPara{
+    color: #AAA;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 34px */
+    letter-spacing: -0.2px;
+    width: 40%;
+}
+.ProcessGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed */
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    width: 80%;
+}
+.ProcessMain{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    /* background-color:blue; */
+}
+.ProcessBox1 {
+    display: flex;
+    width: calc(50% - 20px); /* 50% of the container minus the gap */
+    height: auto;
+    padding: 46.013px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 38.344px;
+    border-radius: 53.682px;
+    background: #090909;
+    box-sizing: border-box;
 }
 
-.LearnMore:hover {
-    color: white;
-    border-color: white;
+.ProcessBox1 h1 {
+    color: var(--N6, #666);
+    font-family: Outfit;
+    font-size: 30px;
+    font-style:normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
-.webdevIcon,
-.MobileDevIcon,
-.softDevIcon,
-.brandingIcon,
-.DigitalIcon,
-.CloudIcon {
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
+.ProcessBox1Img {
+    height: 287.583px;
+    align-self: stretch;
+    border-radius: 30.675px;
 }
 
-/* Base styles (for larger screens) */
+.ProcessBoxHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15.338px;
+    align-self: stretch;
+}
+
+.ProcessBoxHeading h1 {
+    color: var(--white, #FFF);
+    font-family: Outfit;
+    font-size: 26.01px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ProcessBoxHeading p {
+    width: 330.72px;
+    color: #DDD;
+    font-family: Outfit;
+    font-size: 17.255px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 29.333px */
+    letter-spacing: -0.173px;
+    
+}
 .BlackBg {
     width: 100%;
     background-image: url('../Images/WavyDesign.png');
     background-color: #0F0F0F;
-    background-size: contain;
+    background-size:contain;
     background-repeat: no-repeat;
     padding: 100px 0; /* Add more padding to the top and bottom */
+    margin-top: 220px;
 }
-
-.BlackBg h1 {
-    color: white;
-    text-align: center;
+.WebDevProjects{
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 284px;
+    /* background-color: #A2FF86; */
+    width: 100%;
+    justify-content: center;
+}
+.WebDevProjectsHeading{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    /* background-color: #18400c; */
+    width: 78%;
+}
+.WebDevProjects h1{
+    color: var(--white, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
     font-family: Outfit;
-    font-size: 48px;
+    font-size: 40px;
     font-style: normal;
     font-weight: 700;
-    line-height: 130%;
-    margin-top: 40px;
-    margin-bottom: 60px;
+    width: 70%;
+    line-height: 120%; /* 54.902px */
+    letter-spacing: -0.458px;
 }
-
-.ProjectButtons {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    overflow-x: auto; /* Enables horizontal scrolling */
-    padding: 10px 0;
-    width: 100%;
-    box-sizing: border-box;
-    white-space: nowrap; /* Prevents wrapping of buttons */
-    scroll-behavior: smooth; /* Smooth scrolling */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-    justify-content: center;
+.WebDevProjects span{
+    color: var(--white, #A2FF86);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Outfit;
+    font-size: 45.752px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.458px;
 }
-
-.AllButton, .WebButton, .AppButton, .UIUXButton {
+.WebDevProjects p{
+    color: var(--white, #FFF);
+    font-family: Outfit;
+    font-size: 19.063px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%; /* 26.689px */
+    letter-spacing: -0.191px;
+    width: 591px;
+}
+.MoreMain{
     display: flex;
-    width: 176.463px;
-    height: 74.06px;
-    padding: 14.629px 45.716px;
-    justify-content: center;
     align-items: center;
-    gap: 9.143px;
-    flex-shrink: 0;
+    gap: 7.625px;
+    margin-top: 50px;
+    justify-content: center;
+    
+}
+.MoreButton{
+    color: var(--white, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Outfit;
+    font-size: 19.063px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 26.689px */
+    letter-spacing: -0.191px;
     background-color: transparent;
+    /* border: transparent; */
+    border-color: #A2FF86;
+    width: 114px;
+    height: 55px;
     border-radius: 10px;
-    border-color: white;
-    font-size: 24px;
-    color: white;
 }
-.AllButton:hover{
-    color:#A2FF86;
-    border-color:#A2FF86;
-}
-.WebButton:hover{
-    color:#A2FF86;
-    border-color:#A2FF86;
-}
-.AppButton:hover{
-    color:#A2FF86;
-    border-color:#A2FF86;
-}
-.UIUXButton:hover{
-    color:#A2FF86;
-    border-color:#A2FF86;
+.MoreIcon{
+    width: 12.391px;
+    height: 14.297px;
+    transform: rotate(360deg);
 }
 
-
-.AllProjects, .AllProjects2 {
+.AllProjects {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap to the next line */
     justify-content: center;
     align-items: flex-start; /* Align items to the top */
     width: 100%;
     gap: 60px; /* Adjusted gap between project containers */
-    margin-top: 70px; /* Reduced top margin */
+    margin-top: 60px; /* Reduced top margin */
 }
-
-.AllProjects2 {
-    margin-top: 20px; /* Ensure a consistent gap */
-}
-
-.proj1, .proj2, .proj3, .proj4 {
+.proj1, .proj2{
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Align items to the start */
@@ -334,19 +371,19 @@ flex-shrink: 0;
     background-color: transparent; /* Ensure transparency if needed */
 }
 
-.proj1 img, .proj2 img, .proj3 img, .proj4 img {
+.proj1 img, .proj2 img{
     width: 100%; /* Responsive image width */
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Prevent images from exceeding container width */
     border-radius: 10px; /* Optional: Add rounded corners to images */
 }
 
-.proj1 img:hover, .proj2 img:hover, .proj3 img:hover, .proj4 img:hover {
+.proj1 img:hover, .proj2 img:hover {
     transform: scale(1.03);
     transition: 0.2s ease-in;
 }
 
-.proj1 h1, .proj2 h1, .proj3 h1, .proj4 h1 {
+.proj1 h1, .proj2 h1{
     color: white;
     font-family: Outfit;
     font-size: 19.063px;
@@ -357,7 +394,7 @@ flex-shrink: 0;
     margin: 0; /* Remove margin if needed */
 }
 
-.proj1 p, .proj2 p, .proj3 p, .proj4 p {
+.proj1 p, .proj2 p {
     color: white;
     font-family: Outfit;
     font-size: 20px;
@@ -365,6 +402,9 @@ flex-shrink: 0;
     line-height: 140%;
     margin: 0; /* Remove margin if needed */
 }
+
+
+
 
 .MainCard{
     justify-content: center;
@@ -436,6 +476,7 @@ gap: 5px;
     border-color: #A2FF86;
     color: #A2FF86;
 }
+
 
 .FooterMain{
     display: flex;
@@ -592,113 +633,54 @@ flex-shrink: 0;
 display: flex;
 gap: 10px;
 }
-/* .ArrayofServices p{
-    display: none;
-} */
-    /* .BlackBg p{
-        display: none;
-    } */
-@media (max-width: 1080px){
-    .Topimage{
-        height: 50%;
-    }
-    .Topimage h1{
-        font-size: 4vmax;
-    }
-    .Topimage span{
-        font-size: 4vmax;
-    }
-    .ArrayofServices {
-       
+
+
+
+@media only screen and (max-width: 1080px) {
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 4.88rem;
         flex-direction: column;
-        align-items: flex-start;
-        /* padding: 0%; */
-        gap: 10px;
-        scroll-behavior: smooth; /* Smooth scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
-    }
-    .ArrayofServices h2{
+        background-color: #1F1F1F;
         width: 100%;
-        font-size: 32px;
-        display: flex;
-        font-family: Outfit;
-        justify-content: center;
-        align-items: center;
-        line-height: 40px;
+        border-radius: 0px;
         text-align: center;
-    }
-    .MainContainer{
-        overflow-x: auto; /* Enable horizontal scrolling */
-        overflow-y: hidden; 
-        display: flex; /* Display items in a row */
-        flex-direction: row; /* Align items horizontally */
-        white-space: nowrap; /* Prevent wrapping */
-        padding: 20px 0; /* Adjust padding as needed */
-        gap: 20px; /* Space between boxes */
-        padding-left: 20px;
-        /* overflow-x: hidden; */
-    }
-    .ArrayofServices .Container {
-        
-        flex-direction: column; /* Align content vertically within each box */
-        flex: 0 0 auto; /* Prevent items from shrinking or growing */
-        align-items: flex-start; /* Align items at the start */
-        width: 100%; /* Adjust width as needed */
-        margin-right: 20px; /* Space between boxes */
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    .ArrayofServices .Container img {
-        width:; /* Full width of the container */
-        height: auto; /* Maintain aspect ratio */
-        object-fit: cover; /* Cover the container */
+    .DevskiLogo{
+        margin-left: 0px;
+        width: 20%;
     }
 
-    .ArrayofServices .Container h1{
-        width: 100%;
-        flex-direction: column;
-        margin: 0; /* Remove default margins */
-        padding: 0; /* Remove default padding */
-    } 
-    .ArrayofServices .Container p {
-        /* Ensure text wraps within the container */
+    ul{
+        gap: 10px
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+    
+    .hamburger {
         display: block;
-        overflow-wrap: break-word; /* Breaks long words to avoid overflow */
-        word-wrap: break-word; /* For older browsers */
-    
-        /* Text styling */
-        color: white; /* Text color */
-        font-family: Outfit;
-        font-size: 16px;
-        font-style: normal;
-        font-weight: lighter;
-        line-height: 1.5; /* Provides adequate space between lines */
-        
-        /* Layout and alignment */
-        /* Ensure block display for proper wrapping */
-        width: 90%; /* Width of the paragraph relative to its container */
-        margin: 0; /* Remove default margin to prevent extra space */
-        padding: 10px; /* Space between the text and the container edges */
-        text-align: left; /* Align text to the left */
-        
-        /* Ensure text does not overflow outside the container */
-        box-sizing: border-box; /* Includes padding and border in width and height calculations */
+        cursor: pointer;
     }
-    
-    .ArrayofServices p{
-        
-            width: 100%;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            color:#0F0F0F;
-            /* background-color: aqua; */
-            display: flex;
-            justify-content: end;
-            font-weight: 700;
-            /* background-color: aqua; */
-            /* align-items: end; */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
     }
 
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
 }
+
+
 @media (max-width: 1080px) {
     .MainCard {
         display: flex;
@@ -759,50 +741,6 @@ gap: 10px;
 }
 
 
-
-@media only screen and (max-width: 1080px) {
-    .navMenu {
-        position: fixed;
-        left: -100%;
-        top: 4.88rem;
-        flex-direction: column;
-        background-color: #1F1F1F;
-        width: 100%;
-        border-radius: 0px;
-        text-align: center;
-        transition: 0.3s;
-        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
-    }
-
-    .DevskiLogo{
-        margin-left: 0px;
-        width: 20%;
-    }
-
-    ul{
-        gap: 10px
-    }
-
-    .navMenu.active {
-        left: 0;
-    }
-    
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-    }
-}
 
 @media (max-width: 1080px) {
     .FooterMain {
@@ -941,66 +879,160 @@ gap: 10px;
     }
 }
 
-/* Media Query for mobile screens (768px and below) */
-@media screen and (max-width: 768px) {
-    .BlackBg {
-        padding: 50px 0; /* Reduce top and bottom padding for smaller screens */
-    }
-
-    .BlackBg h1 {
-        font-size: 36px; /* Smaller font size for mobile */
-        margin-bottom: 40px; /* Reduce bottom margin */
-    }
-    .BlackBg p{
-        color: white;
-        /* background-color: aqua; */
-        display: flex;
-        justify-content: end;
-        /* align-items: end; */
-    }
-    .ProjectButtons {
-        display: flex;
-        gap: 10px;
-        /* align-items: center; */
-        overflow-x: auto; /* Enables horizontal scrolling */
-        padding: 10px 0;
-        width: 100%;
-        /* align-items: flex-start; */
-        justify-content: flex-start;
-        box-sizing: border-box;
-        white-space: nowrap; /* Prevents wrapping of buttons */
-        scroll-behavior: smooth; /* Smooth scrolling */
-    }
-    .ProjectButtons::-webkit-scrollbar {
-        display: none; /* Hide scrollbar for WebKit browsers */
-    }
-}
 
 @media (max-width: 1080px) {
-    .AllProjects, .AllProjects2 {
+    .AllProjects {
         gap: 20px; /* Adjust gap for smaller screens */
     }
 
-    .proj1, .proj2, .proj3, .proj4 {
+    .proj1, .proj2{
         width: 80%; /* Ensure full width on smaller screens */
         max-width: 100%; /* Remove maximum width restriction */
         text-align: center; /* Center text for smaller screens */
     }
 
-    .proj1 img, .proj2 img, .proj3 img, .proj4 img {
+    .proj1 img, .proj2 img{
         width: 100%; /* Full width images on smaller screens */
     }
 
-    .proj1 h1, .proj2 h1, .proj3 h1, .proj4 h1{
+    .proj1 h1, .proj2 h1{
         text-align: center;
         font-size: 3vmax;
+        margin-top: 2px;
     }
-    .proj1 p, .proj2 p, .proj3 p, .proj4 p {
+    .proj1 p, .proj2 p{
         text-align: center; /* Center align text on smaller screens */
-        margin-top: -60px;
+        margin-top: -20px;
         font-size: 2.5vmax;
     }
 }
 
+/* Media query for devices with a max-width of 767px (phones) */
+@media only screen and (max-width: 767px) {
+    .MainHeading {
+        margin-top: 60px;
+        padding: 0 10px;
+    }
+
+    .ServicesHeading {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .WebDevHeading {
+        font-size: 2vmax;
+        line-height: 40px;
+    }
+
+    .ServiceDescription {
+        margin-top: 50px;
+    }
+    .ServiceDescriptionHeading{
+        font-size: 1.75vmax;
+    }
+
+    .ServiceDescriptionPara {
+        width: 90%;
+        font-size: 1.5vmax;
+        line-height: 140%;
+    }
+
+    .HowWorks {
+        margin-top: 70px;
+        padding: 0 10px;
+    }
+
+    .HowWorksHeading, .HowWorksPara {
+        width: 90%;
+        font-size: 1.5vmax;
+    }
+    .HowWorksHeading span{
+        font-size: 3vmax;
+    }
+
+    .ProcessGrid {
+        width: 90%;
+        gap: 15px;
+    }
+
+    .ProcessBox1 {
+        width: 100%; /* Make the boxes take full width on small screens */
+        padding: 20px;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    .ProcessBox1 h1 {
+        font-size: 24px;
+    }
+
+    .ProcessBox1Img {
+        height: 200px;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .ProcessBoxHeading h1 {
+        font-size: 22px;
+    }
+
+    .ProcessBoxHeading p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
 
 
+/* Media query for devices with a max-width of 767px (phones) */
+@media only screen and (max-width: 767px) {
+    .WebDevProjects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Reduce the gap for smaller screens */
+        width: 100%;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .WebDevProjectsHeading {
+        align-items: center;
+        gap: 10px;
+        text-align: center; /* Center text for better readability */
+    }
+
+    .WebDevProjects h1 {
+        font-size: 3.5vmax; /* Reduce font size for smaller screens */
+        width: 100%;
+        line-height: 140%; /* Adjust line height */
+        letter-spacing: -0.3px;
+    }
+
+    .WebDevProjects span {
+        font-size: 28px; /* Adjust size */
+        line-height: 130%;
+        letter-spacing: -0.3px;
+    }
+
+    .WebDevProjects p {
+        font-size: 1.5vmax; /* Make the font smaller */
+        width: 100%; /* Make the paragraph take full width */
+        line-height: 150%; /* Increase line height for better readability */
+        text-align: center;
+    }
+
+    .MoreMain {
+        justify-content: center;
+        gap: 5px; /* Reduce gap */
+    }
+
+    .MoreButton {
+        font-size: 16px; /* Reduce button text size */
+    }
+
+    .MoreIcon {
+        width: 10px; /* Reduce icon size */
+        height: 12px;
+    }
+}
