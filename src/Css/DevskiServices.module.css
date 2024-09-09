@@ -592,9 +592,9 @@ flex-shrink: 0;
 display: flex;
 gap: 10px;
 }
-.ArrayofServices p{
+/* .ArrayofServices p{
     display: none;
-}
+} */
 .BlackBg p{
     display: none;
 }

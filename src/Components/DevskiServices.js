@@ -83,10 +83,10 @@ function DevskiServices(){
             </div>
             <div className={DevskiServicesCss.ArrayofServices}>
                 <h2>We offer a wide array of services</h2>
-                <p>Scroll left > </p>
+                
                 
                 <div className={DevskiServicesCss.MainContainer}>
-                    
+                
                     <div className={DevskiServicesCss.Container}>
                         <img src={webdevIcon} className={DevskiServicesCss.webdevIcon} alt="webdevIcon" />
                         <h1>Web Development</h1>
