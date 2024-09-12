@@ -1,0 +1,582 @@
+@import url('https://www.dafont.com/highrise.font') ;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.hamburger {
+    display: none;
+}
+
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #1F1F1F;
+}
+
+ul{
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    background-color: #1F1F1F;
+}
+li {
+    list-style: none;
+    font-family: 'Outfit';
+}
+
+.services:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.projects:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.about:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.contact:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+
+.home{
+    background-color: #A2FF86;
+    padding: 8px;
+    border-radius: 1.8rem;
+    cursor: pointer;    
+}
+.services, .projects, .about, .contact{
+    color: white;
+    background-color:#1F1F1F;
+    padding: 8px;
+    border-radius: 1.8rem;
+}
+
+.DevskiLogo{
+    object-fit: contain;
+    width: 80px;
+    margin-left: 100px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.main{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 1px; */
+}
+
+.Topimage{
+    width: 100%;
+    height: 476px;
+    background-image: url('../Images/TopDiv.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: contain;
+}
+
+.Topimage h1{
+    color: white;
+    font-family: Outfit;
+    font-size: 92px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 126.034px; /* 137.5% */
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin-top: -0px;
+}
+.Topimage span{
+    color: white;
+    font-family: Outfit;
+    font-size: 92px;
+    font-style: normal;
+    font-weight:600;
+    line-height: 126.034px; /* 137.5% */
+    /* background-color: antiquewhite; */
+    display: flex;
+    padding-left: 10px ;
+    justify-content: center;
+    margin-top: -0px;
+}
+
+.WhiteBg{
+    width: 100%;
+    height: 1200px;
+    /* flex-shrink: 0; */
+    /* background-color:#0F0F0F; */
+    background: var(--white, #FFF);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.WhiteBg h1{
+    color:  white;
+text-align: center;
+font-family: Outfit;
+font-size: 48px;
+font-style: normal;
+font-weight: 700;
+line-height: 130%; /* 62.4px */
+margin-top: 80px;
+}
+
+.ProjectButtons{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
+}
+.AllButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #0F0F0F;
+    border-color: 0F0F0F;
+    border-style: solid ;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.AllButton:hover{
+    background-color: #A2FF86;
+    transition: 0.15s ease-in;
+    color: black;
+    cursor: pointer;
+    border-color: #A2FF86;
+}
+.WebButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #0F0F0F;
+    border-color: 0F0F0F;
+    border-style: solid ;
+    font-family: Outfit;
+    font-size:24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.WebButton:hover{
+    background-color: #A2FF86;
+    transition: 0.15s ease-in;
+    color: black;
+    cursor: pointer;
+    border-color: #A2FF86;
+}
+.AppButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #0F0F0F;
+    border-color: 0F0F0F;
+    border-style: solid ;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.AppButton:hover{
+    background-color: #A2FF86;
+    transition: 0.15s ease-in;
+    color: black;
+    cursor: pointer;
+    border-color: #A2FF86;
+}
+.UIUXButton{
+    display: flex;
+    width: 140px;
+    height: 65px;
+    padding: 14px 45px;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    flex-shrink: 0;
+    border-radius: 6px;
+    background-color: transparent;
+    color: #0F0F0F;
+    border-color: 0F0F0F;
+    border-style: solid ;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.UIUXButton:hover{
+    background-color: #A2FF86;
+    transition: 0.15s ease-in;
+    color: black;
+    cursor: pointer;
+    border-color: #A2FF86;
+}
+.AllProjects{
+    display: flex;
+    /* flex-direction: row; */
+    justify-content: center;
+    margin-top: 50px;
+    align-items: center;
+    width: 100%;
+    /* gap: 0px; */
+    /* margin-left: 10%; */
+}
+.proj1{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10%;
+    /* width: 564.273px;
+    height: 476.582px; */
+    /* padding: 38.127px 53.377px 0px 52.424px;     */
+    /* padding-right: 0; */
+}
+.proj1 h1{
+color: black;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj1 p{
+    align-self: stretch;
+    color: black;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+}
+.proj2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    /* padding-left: -1; */
+}
+.proj2 h1{
+color: black;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj2 p{
+    align-self: stretch;
+    color: black;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+
+}
+.Project1{
+display: flex;
+width: 70%;
+height: 70%;
+/* padding: 0px 20px 0px 0px; */
+justify-content: center;
+align-items: center;
+}
+.Project1:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+.Project2{
+    display: flex;
+    width: 70%;
+    height: 70%;
+/* padding: 38px 20px 0px 0px; */
+justify-content: center;
+align-items: center;
+}
+.Project2:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+
+.AllProjects2{
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+    align-items: center;
+    width: 100%;
+    /* gap: 30px; */
+    /* margin-left: 10%; */
+}
+.proj3{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 10%;
+}
+.proj3 h1{
+color: black;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%; /* 26.689px */
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj3 p{
+    align-self: stretch;
+    color: black;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+}
+.proj4{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.proj4 h1{
+color: black;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: outfit;
+font-size: 19.063px;
+font-style: normal;
+font-weight: 500;
+line-height: 140%;
+letter-spacing: -0.191px;
+margin-top: 20px;
+}
+.proj4 p{
+    align-self: stretch;
+    color: black;
+    font-family: outfit;
+    font-size: 20px;
+    font-weight:lighter;
+    line-height: 140%; /* 26.689px */
+    margin-top: 0px;
+
+}
+
+.BlackBg{
+    width: 100%;
+    height: 900px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    background-image: url('../Images/WavyDesign.png');
+    background-color:#0F0F0F;
+    background-size: contain;
+    background-repeat: no-repeat;    
+    /* justify-content: center; */
+    align-items: center;
+    /* justify-items: center; */
+    /* align-content: center; */
+}
+
+.BlackBg span{
+    color: #A2FF86;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;     
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+}
+.BlackBg h1{
+    color: #FFF;
+    font-family: Outfit;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 8%;
+}
+
+.BlackBg h2{
+    color: var(--White-Shades-50, #808080);
+    text-align: center;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 19.641px */
+    width: 65%;    
+}
+.KeyFeatureLines{
+    margin-top: 72px;
+    width: 1161px;
+    height: 460.436px;
+}   
+@media (max-width: 900px){
+    .Topimage h1{
+        font-size: 4vmax;
+    }
+    .Topimage span{
+        font-size: 4vmax;
+    }
+    .ContainerBlock1{
+        flex-direction: column;
+    }
+    .ContainerBlock2{
+        flex-direction: column;
+    }
+    .ArrayofServices h2{
+        text-align: center;
+        text-wrap: balance;
+        font-size: 4vmax;
+    }
+    .WhiteBg{
+        flex-direction: column;
+    }
+    .WhiteBg h1{
+        font-size: 4vmax;
+    }
+    .ProjectButtons{
+        flex-direction: column;
+;
+    }
+    .AllProjects{
+        flex-direction: column;
+
+    }
+    .AllProjects2{
+        flex-direction: column;
+    }
+    .proj1{
+        align-items: center;
+    }
+    .Project1{
+        width: 60%;
+    }
+    
+    .Project1 h1{
+        text-align: center;
+        text-wrap: balance;
+        font-size: 4vmax;
+    }
+
+}
+@media only screen and (max-width: 768px) {
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 7%;
+        flex-direction: column;
+        background-color: #1F1F1F;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .DevskiLogo{
+        margin-left: 0px;
+    }
+
+    ul{
+        gap: 10px
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
