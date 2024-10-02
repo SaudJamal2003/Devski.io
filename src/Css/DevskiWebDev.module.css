@@ -1,0 +1,1038 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    background-color: #1F1F1F;
+}
+li {
+    list-style: none;
+    font-family: 'Outfit';
+}
+.main1{
+    /* background-color: aqua; */
+}
+.home{
+    background-color: #A2FF86;
+    padding: 8px;
+    border-radius: 1.8rem;
+    cursor: pointer;    
+}
+.services, .projects, .about, .contact{
+    color: white;
+    background-color:#1F1F1F;
+    padding: 8px;
+    border-radius: 1.8rem;
+}
+
+.services:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.projects:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.about:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.contact:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #1F1F1F;
+}
+.DevskiLogo{
+    object-fit: contain;
+    width: 100px;
+    margin-left: 100px;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main{
+
+    width: 100%;
+    
+}
+.MainHeading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 135px;
+}
+.ServicesHeading{
+    color: #A2FF86;
+    font-family: Outfit;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24.942px; /* 140% */
+    text-transform: capitalize;
+}
+.WebDevHeading{
+    color: #0F0F0F;
+    font-family: Outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 83.806px; /* 140% */
+    text-transform: capitalize;
+}
+.ServiceDescription{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.ServiceDescriptionHeading{
+    color: #000;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: medium;
+    line-height: normal;
+}
+.ServiceDescriptionPara{
+    width: 50%;
+    height: 128px;
+    flex-shrink: 0; 
+    color: #000;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    margin-top: 10px;
+    font-weight: 300;
+    line-height: 120%; /* 31.2px */
+}
+.HowWorks{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+}
+.HowWorksHeading{
+    color: #000;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 40%;
+}
+.HowWorksHeading span{
+    color: #A2FF86;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 40%;
+}
+.HowWorksPara{
+    color: #AAA;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 34px */
+    letter-spacing: -0.2px;
+    width: 40%;
+}
+.ProcessGrid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust gap as needed */
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aquamarine; */
+    width: 80%;
+}
+.ProcessMain{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5%;
+    /* background-color:blue; */
+}
+.ProcessBox1 {
+    display: flex;
+    width: calc(50% - 20px); /* 50% of the container minus the gap */
+    height: auto;
+    padding: 46.013px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 38.344px;
+    border-radius: 53.682px;
+    background: #090909;
+    box-sizing: border-box;
+}
+
+.ProcessBox1 h1 {
+    color: var(--N6, #666);
+    font-family: Outfit;
+    font-size: 30px;
+    font-style:normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.ProcessBox1Img {
+    height: 287.583px;
+    align-self: stretch;
+    border-radius: 30.675px;
+}
+
+.ProcessBoxHeading {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15.338px;
+    align-self: stretch;
+}
+
+.ProcessBoxHeading h1 {
+    color: var(--white, #FFF);
+    font-family: Outfit;
+    font-size: 26.01px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.ProcessBoxHeading p {
+    width: 330.72px;
+    color: #DDD;
+    font-family: Outfit;
+    font-size: 17.255px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 170%; /* 29.333px */
+    letter-spacing: -0.173px;
+    
+}
+.BlackBg {
+    width: 100%;
+    background-image: url('../Images/WavyDesign.png');
+    background-color: #0F0F0F;
+    background-size:contain;
+    background-repeat: no-repeat;
+    padding: 100px 0; /* Add more padding to the top and bottom */
+    margin-top: 220px;
+}
+.WebDevProjects{
+    display: inline-flex;
+    align-items: flex-end;
+    gap: 284px;
+    /* background-color: #A2FF86; */
+    width: 100%;
+    justify-content: center;
+}
+.WebDevProjectsHeading{
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+    /* background-color: #18400c; */
+    width: 78%;
+}
+.WebDevProjects h1{
+    color: var(--white, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Outfit;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    width: 70%;
+    line-height: 120%; /* 54.902px */
+    letter-spacing: -0.458px;
+}
+.WebDevProjects span{
+    color: var(--white, #A2FF86);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Outfit;
+    font-size: 45.752px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    letter-spacing: -0.458px;
+}
+.WebDevProjects p{
+    color: var(--white, #FFF);
+    font-family: Outfit;
+    font-size: 19.063px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 140%; /* 26.689px */
+    letter-spacing: -0.191px;
+    width: 591px;
+}
+.MoreMain{
+    display: flex;
+    align-items: center;
+    gap: 7.625px;
+    margin-top: 50px;
+    justify-content: center;
+    
+}
+.MoreButton{
+    color: var(--white, #FFF);
+    font-feature-settings: 'liga' off, 'clig' off;
+    font-family: Outfit;
+    font-size: 19.063px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 140%; /* 26.689px */
+    letter-spacing: -0.191px;
+    background-color: transparent;
+    /* border: transparent; */
+    border-color: #A2FF86;
+    width: 114px;
+    height: 55px;
+    border-radius: 10px;
+}
+.MoreIcon{
+    width: 12.391px;
+    height: 14.297px;
+    transform: rotate(360deg);
+}
+
+.AllProjects {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    gap: 60px; /* Adjusted gap between project containers */
+    margin-top: 60px; /* Reduced top margin */
+}
+.proj1, .proj2{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    gap: 22.876px; /* Consistent gap between image, heading, and text */
+    width: 100%; /* Full width on small screens */
+    max-width: 564.273px; /* Desired maximum width for each project */
+    background-color: transparent; /* Ensure transparency if needed */
+}
+
+.proj1 img, .proj2 img{
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent images from exceeding container width */
+    border-radius: 10px; /* Optional: Add rounded corners to images */
+}
+
+.proj1 img:hover, .proj2 img:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+
+.proj1 h1, .proj2 h1{
+    color: white;
+    font-family: Outfit;
+    font-size: 19.063px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.191px;
+    margin: 0; /* Remove margin if needed */
+}
+
+.proj1 p, .proj2 p {
+    color: white;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 140%;
+    margin: 0; /* Remove margin if needed */
+}
+
+
+
+
+.MainCard{
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* background-color: antiquewhite; */
+}
+.Card{
+    width: 1100px;
+    height: 540px;
+    background-color: #0F0F0F;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CardText{
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+.Card h1{
+color: white;
+font-family: Outfit;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 64px;
+width: 70%;
+
+}
+.Card p{
+width: 465.581px;
+height: 65.379px;
+flex-shrink: 0;
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Outfit;
+font-size: 15px;
+font-weight: 100;
+line-height: 31.699px; /* 200% */
+margin-top: 0px;
+}
+.CardImage{
+    width: 430px;
+height: 420px;
+flex-shrink: 0;
+margin-right: 50px;
+}
+.CardButton{
+    display: flex;
+width: 250px;
+padding: 19px 31px 17px 31px;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+background: #A2FF86;
+font-family: outfit;
+display: flex;
+gap: 5px;
+}
+.CardButton:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    background-color: transparent;
+    border-color: #A2FF86;
+    color: #A2FF86;
+}
+
+
+.FooterMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:125px;
+width: 100%;
+height: 549px;
+flex-shrink: 0;
+background-image: url('../Images/WavyDesign.png');
+background-color: #0F0F0F;
+background-size: cover;
+background-repeat: no-repeat;
+
+
+}
+.EveryFooterDiv{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 190px;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+.AllColumn{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 200px;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.RightColumn{
+    display: flex;
+    flex-direction: column;
+
+    /* gap: 10px; */
+    
+}
+.RightColumn h1{
+    color: white;
+    font-family: outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.RightColumn h2{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.RightColumn h3{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.MiddleColumn{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap:20px;
+}
+.MiddleColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.LeftColumn{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+    /* align-items: Right; */
+}
+.LeftColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h4{
+    color: white;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h2,h3,h5,h6{
+        color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.FooterHeading{
+    justify-content:center;
+    display: flex;
+    /* background-color: antiquewhite; */
+}
+.WorkTogether{
+    width: 100%;
+    /* margin-top: 405px; */
+}
+.ThinLine{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 400px;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    margin-bottom: -100px;
+    width: 100%;
+}
+.ThinLine h1{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 30px;
+    line-height: normal;
+}
+.ThinLine h2{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 50px;
+}
+.SocialMedia{
+    width: 81.201px;
+height: 14px;
+flex-shrink: 0;
+display: flex;
+gap: 10px;
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 4.88rem;
+        flex-direction: column;
+        background-color: #1F1F1F;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .DevskiLogo{
+        margin-left: 0px;
+        width: 20%;
+    }
+
+    ul{
+        gap: 10px
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .MainCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Center text */
+        padding: 20px; /* Add padding for better spacing */
+        flex-direction: column; /* Ensure the card stacks vertically if necessary */
+    }
+
+    .Card {
+        width: 90%; /* Adjust width to fit better on smaller screens */
+        height: auto;
+        padding: 30px;
+        background-color: #0F0F0F; /* Ensure card has a background color */
+        border-radius: 36px; /* Maintain rounded corners */
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
+    }
+
+    .CardText {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center text and button horizontally */
+        margin: 0 auto; /* Center block element */
+        text-align: center; /* Center text within the block */
+        padding: 2%;
+    }
+
+    .CardImage {
+        width: 80%; /* Adjust width for better fit */
+        height: auto;
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .Card h1 {
+        font-size: 3.5vmax;
+        line-height: 1.2; /* Adjust line height */
+        /* padding: 4%; */
+    }
+
+    .Card p {
+        font-size: 12px;
+        line-height: 1.5; /* Adjust line height */
+        width: auto;
+        /* padding: 7%; */
+        margin: 0 auto; /* Center paragraph text */
+    }
+
+    .CardButton {
+        width: auto; /* Auto width to fit content */
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: 20px 0; /* Add margin for spacing */
+    }
+}
+
+
+
+@media (max-width: 1080px) {
+    .FooterMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-size:cover;
+        background-position: center;
+        
+    }
+
+    .EveryFooterDiv {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 15px; /* Slightly reduced gap for better spacing */
+        margin: 0;
+        margin-top: 50%;
+        width: 100%;
+        height: 100%;
+        /* background-color: #0F0F0F; */
+    }
+
+    .AllColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduced gap to fit better on smaller screens */
+    }
+
+    .RightColumn{
+        text-align: center;
+        width: 100%;
+        margin-bottom:20px;
+    }
+    .LeftColumn {
+        text-align: right;
+        width: 100%;
+        /* background-color: #A2FF86 */
+
+    }
+
+    .RightColumn h1{
+        text-align: ;
+    }
+    .LeftColumn h1 {
+        font-size: 16px; /* Slightly larger font size for readability */
+        /* margin-bottom: 8px; */
+        
+    }
+
+    .RightColumn h2{
+        font-size: 14px;
+    }
+    .RightColumn h3{
+        font-size: 14px;
+        
+    }
+    .LeftColumn h2{
+        font-size: 14px;
+    }
+    .LeftColumn h3{
+        font-size: 14px;
+    }
+    .LeftColumn h5{
+        font-size: 14px;
+    }
+    .LeftColumn h6 {
+        font-size: 14px; /* Standard font size for all text */
+    }
+
+    .MiddleColumn {
+        text-align: center;
+        width: 100%;
+        gap: 10px; /* Reduced gap for better spacing */
+    }
+
+    .MiddleColumn h1 {
+        font-size: 20px; /* Slightly smaller to fit better on mobile */
+        
+    }
+
+    .CardButton {
+        width: 90%; /* Width adjusted to be responsive */
+        padding: 10px 15px; /* Adjusted padding for mobile */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .SocialMedia {
+        /* display: flex; */
+        justify-content: start;
+        gap: 8px; /* Adjusted gap for smaller icons */
+        width: 25px;
+        height: 25%;
+    }
+
+    .ThinLine {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 1px;
+        /* z-index: 1; */
+        width: 40%;
+        padding: 0%;
+        text-align: start;
+        margin-top: 15%; /* Adjusted margin */
+        /* background-color: blue; */
+    }
+
+    .ThinLine h1{
+        display: none;
+    }
+    .ThinLine h2 {
+        font-size: 10px;
+        
+    }
+
+    .WorkTogether {
+        width: 100%;
+        /* height: 50%; */
+        /* margin-top: 15px; */
+        display: flex;
+        justify-content: bottom;
+        align-items: bottom;
+        margin-top: 35px;
+        /* background-color: aqua; */
+    }
+    .FooterHeading{
+        /* margin-top: 20px; */
+        width: 100%;
+        /* background-color: blueviolet; */
+        height: 100%;
+        margin-top: 20px;
+    }
+}
+
+
+@media (max-width: 1080px) {
+    .AllProjects {
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .proj1, .proj2{
+        width: 80%; /* Ensure full width on smaller screens */
+        max-width: 100%; /* Remove maximum width restriction */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .proj1 img, .proj2 img{
+        width: 100%; /* Full width images on smaller screens */
+    }
+
+    .proj1 h1, .proj2 h1{
+        text-align: center;
+        font-size: 3vmax;
+        margin-top: 2px;
+    }
+    .proj1 p, .proj2 p{
+        text-align: center; /* Center align text on smaller screens */
+        margin-top: -20px;
+        font-size: 2.5vmax;
+    }
+}
+
+/* Media query for devices with a max-width of 767px (phones) */
+@media only screen and (max-width: 767px) {
+    .MainHeading {
+        margin-top: 60px;
+        padding: 0 10px;
+    }
+
+    .ServicesHeading {
+        font-size: 10px;
+        line-height: 18px;
+    }
+
+    .WebDevHeading {
+        font-size: 2vmax;
+        line-height: 40px;
+    }
+
+    .ServiceDescription {
+        margin-top: 50px;
+    }
+    .ServiceDescriptionHeading{
+        font-size: 1.75vmax;
+    }
+
+    .ServiceDescriptionPara {
+        width: 90%;
+        font-size: 1.5vmax;
+        line-height: 140%;
+    }
+
+    .HowWorks {
+        margin-top: 70px;
+        padding: 0 10px;
+    }
+
+    .HowWorksHeading, .HowWorksPara {
+        width: 90%;
+        font-size: 1.5vmax;
+    }
+    .HowWorksHeading span{
+        font-size: 3vmax;
+    }
+
+    .ProcessGrid {
+        width: 90%;
+        gap: 15px;
+    }
+
+    .ProcessBox1 {
+        width: 100%; /* Make the boxes take full width on small screens */
+        padding: 20px;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    .ProcessBox1 h1 {
+        font-size: 24px;
+    }
+
+    .ProcessBox1Img {
+        height: 200px;
+        width: 100%;
+        border-radius: 15px;
+    }
+
+    .ProcessBoxHeading h1 {
+        font-size: 22px;
+    }
+
+    .ProcessBoxHeading p {
+        width: 100%;
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+
+/* Media query for devices with a max-width of 767px (phones) */
+@media only screen and (max-width: 767px) {
+    .WebDevProjects {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Reduce the gap for smaller screens */
+        width: 100%;
+        justify-content: center;
+        padding: 0 10px;
+    }
+
+    .WebDevProjectsHeading {
+        align-items: center;
+        gap: 10px;
+        text-align: center; /* Center text for better readability */
+    }
+
+    .WebDevProjects h1 {
+        font-size: 3.5vmax; /* Reduce font size for smaller screens */
+        width: 100%;
+        line-height: 140%; /* Adjust line height */
+        letter-spacing: -0.3px;
+    }
+
+    .WebDevProjects span {
+        font-size: 28px; /* Adjust size */
+        line-height: 130%;
+        letter-spacing: -0.3px;
+    }
+
+    .WebDevProjects p {
+        font-size: 1.5vmax; /* Make the font smaller */
+        width: 100%; /* Make the paragraph take full width */
+        line-height: 150%; /* Increase line height for better readability */
+        text-align: center;
+    }
+
+    .MoreMain {
+        justify-content: center;
+        gap: 5px; /* Reduce gap */
+    }
+
+    .MoreButton {
+        font-size: 16px; /* Reduce button text size */
+    }
+
+    .MoreIcon {
+        width: 10px; /* Reduce icon size */
+        height: 12px;
+    }
+}

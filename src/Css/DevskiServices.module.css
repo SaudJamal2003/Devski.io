@@ -1,0 +1,1006 @@
+@import url('https://www.dafont.com/highrise.font') ;
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    background-color: #1F1F1F;
+}
+li {
+    list-style: none;
+    font-family: 'Outfit';
+}
+.main1{
+    /* background-color: aqua; */
+}
+.home{
+    background-color: #A2FF86;
+    padding: 8px;
+    border-radius: 1.8rem;
+    cursor: pointer;    
+}
+.services, .projects, .about, .contact{
+    color: white;
+    background-color:#1F1F1F;
+    padding: 8px;
+    border-radius: 1.8rem;
+}
+
+.services:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.projects:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.about:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.contact:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #1F1F1F;
+}
+.DevskiLogo{
+    object-fit: contain;
+    width: 100px;
+    margin-left: 100px;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main{
+
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+.TopDiv{
+    width: 100%;
+height: 476px;
+flex-shrink: 0;
+}
+
+.Topimage{
+    width: 100%;
+    height: 476px;
+    background-image: url('../Images/TopDiv.png');
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-size: contain;
+}
+
+.Topimage h1{
+    color: white;
+    font-family: Outfit;
+    font-size: 92px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 126.034px; /* 137.5% */
+    /* background-color: antiquewhite; */
+    display: flex;
+    justify-content: center;
+    margin-top: -0px;
+}
+
+.Topimage span{
+    color: white;
+    font-family: Outfit;
+    font-size: 92px;
+    font-style: normal;
+    font-weight:600;
+    line-height: 126.034px; /* 137.5% */
+    /* background-color: antiquewhite; */
+    display: flex;
+    padding-left: 10px ;
+    justify-content: center;
+    margin-top: -0px;
+}
+.ArrayofServices {
+    display: flex;
+    flex-direction: column;   
+    gap: 60px;
+    align-items: center; /* Center content horizontally */
+}
+.ArrayofServices h2{
+    color: #0F0F0F;
+    font-family: Outfit;
+    font-size: 44.896px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 62.854px; /* 140% */
+    text-transform: capitalize;
+}
+
+.MainContainer {
+    display: grid; /* Use CSS Grid */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns, each taking up equal space */
+    gap: 30px; /* Gap between grid items */
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Optional: limit the maximum width of the grid */
+}
+
+.Container {
+    display: flex;
+    width: 373.533px;
+    height: 287.333px;
+    padding: 62.854px 35.917px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 28.733px;
+    border-radius: 15px;
+    background: #0F0F0F;
+    box-shadow: 0px 3.592px 8.979px 0px rgba(113, 9, 146, 0.06);
+}
+
+.Container:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+
+.Container h1 {
+    color: white;
+    font-family: outfit;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 0px;
+    line-height: normal;
+}
+
+.Container p {
+    height: auto; /* Adjust height as needed */
+    color: rgba(255, 255, 255, 0.80);
+    font-family: Outfit;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: lighter;
+    line-height: 18px;
+}
+
+.LearnMore {
+    color: #A2FF86;
+    background-color: transparent;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border-style: solid;
+    border-width: 0px 0px 2px 0px;
+    border-color: #A2FF86;
+}
+
+.LearnMore:hover {
+    color: white;
+    border-color: white;
+}
+
+.webdevIcon,
+.MobileDevIcon,
+.softDevIcon,
+.brandingIcon,
+.DigitalIcon,
+.CloudIcon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+/* Base styles (for larger screens) */
+.BlackBg {
+    width: 100%;
+    background-image: url('../Images/WavyDesign.png');
+    background-color: #0F0F0F;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding: 100px 0; /* Add more padding to the top and bottom */
+}
+
+.BlackBg h1 {
+    color: white;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.ProjectButtons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    overflow-x: auto; /* Enables horizontal scrolling */
+    padding: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+    white-space: nowrap; /* Prevents wrapping of buttons */
+    scroll-behavior: smooth; /* Smooth scrolling */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    justify-content: center;
+}
+
+.AllButton, .WebButton, .AppButton, .UIUXButton {
+    display: flex;
+    width: 176.463px;
+    height: 74.06px;
+    padding: 14.629px 45.716px;
+    justify-content: center;
+    align-items: center;
+    gap: 9.143px;
+    flex-shrink: 0;
+    background-color: transparent;
+    border-radius: 10px;
+    border-color: white;
+    font-size: 24px;
+    color: white;
+}
+.AllButton:hover{
+    color:#A2FF86;
+    border-color:#A2FF86;
+}
+.WebButton:hover{
+    color:#A2FF86;
+    border-color:#A2FF86;
+}
+.AppButton:hover{
+    color:#A2FF86;
+    border-color:#A2FF86;
+}
+.UIUXButton:hover{
+    color:#A2FF86;
+    border-color:#A2FF86;
+}
+
+
+.AllProjects, .AllProjects2 {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    width: 100%;
+    gap: 60px; /* Adjusted gap between project containers */
+    margin-top: 70px; /* Reduced top margin */
+}
+
+.AllProjects2 {
+    margin-top: 20px; /* Ensure a consistent gap */
+}
+
+.proj1, .proj2, .proj3, .proj4 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items to the start */
+    gap: 22.876px; /* Consistent gap between image, heading, and text */
+    width: 100%; /* Full width on small screens */
+    max-width: 564.273px; /* Desired maximum width for each project */
+    background-color: transparent; /* Ensure transparency if needed */
+}
+
+.proj1 img, .proj2 img, .proj3 img, .proj4 img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent images from exceeding container width */
+    border-radius: 10px; /* Optional: Add rounded corners to images */
+}
+
+.proj1 img:hover, .proj2 img:hover, .proj3 img:hover, .proj4 img:hover {
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+}
+
+.proj1 h1, .proj2 h1, .proj3 h1, .proj4 h1 {
+    color: white;
+    font-family: Outfit;
+    font-size: 19.063px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: -0.191px;
+    margin: 0; /* Remove margin if needed */
+}
+
+.proj1 p, .proj2 p, .proj3 p, .proj4 p {
+    color: white;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: lighter;
+    line-height: 140%;
+    margin: 0; /* Remove margin if needed */
+}
+
+.MainCard{
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* background-color: antiquewhite; */
+}
+.Card{
+    width: 1100px;
+    height: 540px;
+    background-color: #0F0F0F;
+    border-radius: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CardText{
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+.Card h1{
+color: white;
+font-family: Outfit;
+font-size: 56px;
+font-style: normal;
+font-weight: 700;
+line-height: 64px;
+width: 70%;
+
+}
+.Card p{
+width: 465.581px;
+height: 65.379px;
+flex-shrink: 0;
+color: white;
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: Outfit;
+font-size: 15px;
+font-weight: 100;
+line-height: 31.699px; /* 200% */
+margin-top: 0px;
+}
+.CardImage{
+    width: 430px;
+height: 420px;
+flex-shrink: 0;
+margin-right: 50px;
+}
+.CardButton{
+    display: flex;
+width: 250px;
+padding: 19px 31px 17px 31px;
+justify-content: center;
+align-items: center;
+font-size: 18px;
+font-weight: 600;
+border-radius: 8px;
+background: #A2FF86;
+font-family: outfit;
+display: flex;
+gap: 5px;
+}
+.CardButton:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    background-color: transparent;
+    border-color: #A2FF86;
+    color: #A2FF86;
+}
+
+.FooterMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:125px;
+width: 100%;
+height: 549px;
+flex-shrink: 0;
+background-image: url('../Images/WavyDesign.png');
+background-color: #0F0F0F;
+background-size: cover;
+background-repeat: no-repeat;
+
+
+}
+.EveryFooterDiv{
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 190px;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+.AllColumn{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 200px;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+    /* background-color: antiquewhite; */
+}
+
+.RightColumn{
+    display: flex;
+    flex-direction: column;
+
+    /* gap: 10px; */
+    
+}
+.RightColumn h1{
+    color: white;
+    font-family: outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.RightColumn h2{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.RightColumn h3{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.MiddleColumn{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap:20px;
+}
+.MiddleColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.LeftColumn{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+    /* align-items: Right; */
+}
+.LeftColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h4{
+    color: white;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h2,h3,h5,h6{
+        color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.FooterHeading{
+    justify-content:center;
+    display: flex;
+    /* background-color: antiquewhite; */
+}
+.WorkTogether{
+    width: 100%;
+    /* margin-top: 405px; */
+}
+.ThinLine{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 400px;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    margin-bottom: -100px;
+    width: 100%;
+}
+.ThinLine h1{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 30px;
+    line-height: normal;
+}
+.ThinLine h2{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 50px;
+}
+.SocialMedia{
+    width: 81.201px;
+height: 14px;
+flex-shrink: 0;
+display: flex;
+gap: 10px;
+}
+/* .ArrayofServices p{
+    display: none;
+} */
+    /* .BlackBg p{
+        display: none;
+    } */
+@media (max-width: 1080px){
+    .Topimage{
+        height: 50%;
+    }
+    .Topimage h1{
+        font-size: 4vmax;
+    }
+    .Topimage span{
+        font-size: 4vmax;
+    }
+    .ArrayofServices {
+       
+        flex-direction: column;
+        align-items: flex-start;
+        /* padding: 0%; */
+        gap: 10px;
+        scroll-behavior: smooth; /* Smooth scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS */
+    }
+    .ArrayofServices h2{
+        width: 100%;
+        font-size: 32px;
+        display: flex;
+        font-family: Outfit;
+        justify-content: center;
+        align-items: center;
+        line-height: 40px;
+        text-align: center;
+    }
+    .MainContainer{
+        overflow-x: auto; /* Enable horizontal scrolling */
+        overflow-y: hidden; 
+        display: flex; /* Display items in a row */
+        flex-direction: row; /* Align items horizontally */
+        white-space: nowrap; /* Prevent wrapping */
+        padding: 20px 0; /* Adjust padding as needed */
+        gap: 20px; /* Space between boxes */
+        padding-left: 20px;
+        /* overflow-x: hidden; */
+    }
+    .ArrayofServices .Container {
+        
+        flex-direction: column; /* Align content vertically within each box */
+        flex: 0 0 auto; /* Prevent items from shrinking or growing */
+        align-items: flex-start; /* Align items at the start */
+        width: 100%; /* Adjust width as needed */
+        margin-right: 20px; /* Space between boxes */
+    }
+
+    .ArrayofServices .Container img {
+        width:; /* Full width of the container */
+        height: auto; /* Maintain aspect ratio */
+        object-fit: cover; /* Cover the container */
+    }
+
+    .ArrayofServices .Container h1{
+        width: 100%;
+        flex-direction: column;
+        margin: 0; /* Remove default margins */
+        padding: 0; /* Remove default padding */
+    } 
+    .ArrayofServices .Container p {
+        /* Ensure text wraps within the container */
+        display: block;
+        overflow-wrap: break-word; /* Breaks long words to avoid overflow */
+        word-wrap: break-word; /* For older browsers */
+    
+        /* Text styling */
+        color: white; /* Text color */
+        font-family: Outfit;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: lighter;
+        line-height: 1.5; /* Provides adequate space between lines */
+        
+        /* Layout and alignment */
+        /* Ensure block display for proper wrapping */
+        width: 90%; /* Width of the paragraph relative to its container */
+        margin: 0; /* Remove default margin to prevent extra space */
+        padding: 10px; /* Space between the text and the container edges */
+        text-align: left; /* Align text to the left */
+        
+        /* Ensure text does not overflow outside the container */
+        box-sizing: border-box; /* Includes padding and border in width and height calculations */
+    }
+    
+    .ArrayofServices p{
+        
+            width: 100%;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            color:#0F0F0F;
+            /* background-color: aqua; */
+            display: flex;
+            justify-content: end;
+            font-weight: 700;
+            /* background-color: aqua; */
+            /* align-items: end; */
+    }
+
+}
+@media (max-width: 1080px) {
+    .MainCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center; /* Center text */
+        padding: 20px; /* Add padding for better spacing */
+        flex-direction: column; /* Ensure the card stacks vertically if necessary */
+    }
+
+    .Card {
+        width: 90%; /* Adjust width to fit better on smaller screens */
+        height: auto;
+        padding: 30px;
+        background-color: #0F0F0F; /* Ensure card has a background color */
+        border-radius: 36px; /* Maintain rounded corners */
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center; /* Center content horizontally */
+        justify-content: center; /* Center content vertically */
+    }
+
+    .CardText {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center text and button horizontally */
+        margin: 0 auto; /* Center block element */
+        text-align: center; /* Center text within the block */
+        padding: 2%;
+    }
+
+    .CardImage {
+        width: 80%; /* Adjust width for better fit */
+        height: auto;
+        margin: 20px 0; /* Add margin for spacing */
+    }
+
+    .Card h1 {
+        font-size: 3.5vmax;
+        line-height: 1.2; /* Adjust line height */
+        /* padding: 4%; */
+    }
+
+    .Card p {
+        font-size: 12px;
+        line-height: 1.5; /* Adjust line height */
+        width: auto;
+        /* padding: 7%; */
+        margin: 0 auto; /* Center paragraph text */
+    }
+
+    .CardButton {
+        width: auto; /* Auto width to fit content */
+        padding: 10px 15px;
+        font-size: 14px;
+        margin: 20px 0; /* Add margin for spacing */
+    }
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 4.88rem;
+        flex-direction: column;
+        background-color: #1F1F1F;
+        width: 100%;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .DevskiLogo{
+        margin-left: 0px;
+        width: 20%;
+    }
+
+    ul{
+        gap: 10px
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+    
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+@media (max-width: 1080px) {
+    .FooterMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-size:cover;
+        background-position: center;
+        
+    }
+
+    .EveryFooterDiv {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 15px; /* Slightly reduced gap for better spacing */
+        margin: 0;
+        margin-top: 50%;
+        width: 100%;
+        height: 100%;
+        /* background-color: #0F0F0F; */
+    }
+
+    .AllColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduced gap to fit better on smaller screens */
+    }
+
+    .RightColumn{
+        text-align: center;
+        width: 100%;
+        margin-bottom:20px;
+    }
+    .LeftColumn {
+        text-align: right;
+        width: 100%;
+        /* background-color: #A2FF86 */
+
+    }
+
+    .RightColumn h1{
+        text-align: ;
+    }
+    .LeftColumn h1 {
+        font-size: 16px; /* Slightly larger font size for readability */
+        /* margin-bottom: 8px; */
+        
+    }
+
+    .RightColumn h2{
+        font-size: 14px;
+    }
+    .RightColumn h3{
+        font-size: 14px;
+        
+    }
+    .LeftColumn h2{
+        font-size: 14px;
+    }
+    .LeftColumn h3{
+        font-size: 14px;
+    }
+    .LeftColumn h5{
+        font-size: 14px;
+    }
+    .LeftColumn h6 {
+        font-size: 14px; /* Standard font size for all text */
+    }
+
+    .MiddleColumn {
+        text-align: center;
+        width: 100%;
+        gap: 10px; /* Reduced gap for better spacing */
+    }
+
+    .MiddleColumn h1 {
+        font-size: 20px; /* Slightly smaller to fit better on mobile */
+        
+    }
+
+    .CardButton {
+        width: 90%; /* Width adjusted to be responsive */
+        padding: 10px 15px; /* Adjusted padding for mobile */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .SocialMedia {
+        /* display: flex; */
+        justify-content: start;
+        gap: 8px; /* Adjusted gap for smaller icons */
+        width: 25px;
+        height: 25%;
+    }
+
+    .ThinLine {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 1px;
+        /* z-index: 1; */
+        width: 40%;
+        padding: 0%;
+        text-align: start;
+        margin-top: 15%; /* Adjusted margin */
+        /* background-color: blue; */
+    }
+
+    .ThinLine h1{
+        display: none;
+    }
+    .ThinLine h2 {
+        font-size: 10px;
+        
+    }
+
+    .WorkTogether {
+        width: 100%;
+        /* height: 50%; */
+        /* margin-top: 15px; */
+        display: flex;
+        justify-content: bottom;
+        align-items: bottom;
+        margin-top: 35px;
+        /* background-color: aqua; */
+    }
+    .FooterHeading{
+        /* margin-top: 20px; */
+        width: 100%;
+        /* background-color: blueviolet; */
+        height: 100%;
+        margin-top: 20px;
+    }
+}
+
+/* Media Query for mobile screens (768px and below) */
+@media screen and (max-width: 768px) {
+    .BlackBg {
+        padding: 50px 0; /* Reduce top and bottom padding for smaller screens */
+    }
+
+    .BlackBg h1 {
+        font-size: 36px; /* Smaller font size for mobile */
+        margin-bottom: 40px; /* Reduce bottom margin */
+    }
+    .BlackBg p{
+        color: white;
+        /* background-color: aqua; */
+        display: flex;
+        justify-content: end;
+        /* align-items: end; */
+    }
+    .ProjectButtons {
+        display: flex;
+        gap: 10px;
+        /* align-items: center; */
+        overflow-x: auto; /* Enables horizontal scrolling */
+        padding: 10px 0;
+        width: 100%;
+        /* align-items: flex-start; */
+        justify-content: flex-start;
+        box-sizing: border-box;
+        white-space: nowrap; /* Prevents wrapping of buttons */
+        scroll-behavior: smooth; /* Smooth scrolling */
+    }
+    .ProjectButtons::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for WebKit browsers */
+    }
+}
+
+@media (max-width: 1080px) {
+    .AllProjects, .AllProjects2 {
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .proj1, .proj2, .proj3, .proj4 {
+        width: 80%; /* Ensure full width on smaller screens */
+        max-width: 100%; /* Remove maximum width restriction */
+        text-align: center; /* Center text for smaller screens */
+    }
+
+    .proj1 img, .proj2 img, .proj3 img, .proj4 img {
+        width: 100%; /* Full width images on smaller screens */
+    }
+
+    .proj1 h1, .proj2 h1, .proj3 h1, .proj4 h1{
+        text-align: center;
+        font-size: 3vmax;
+    }
+    .proj1 p, .proj2 p, .proj3 p, .proj4 p {
+        text-align: center; /* Center align text on smaller screens */
+        margin-top: -60px;
+        font-size: 2.5vmax;
+    }
+}
+
+
+
