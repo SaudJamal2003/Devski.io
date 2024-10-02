@@ -1,0 +1,1813 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Roboto', sans-serif;
+}
+ul{
+    display: flex;
+    margin-right: 100px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    background-color: #1F1F1F;
+}
+li {
+    list-style: none;
+    font-family: 'Outfit';
+}
+
+.home{
+    background-color: #A2FF86;
+    padding: 8px;
+    border-radius: 1.8rem;
+    cursor: pointer;    
+}
+.services, .projects, .about, .contact{
+    color: white;
+    background-color:#1F1F1F;
+    padding: 8px;
+    border-radius: 1.8rem;
+}
+
+.services:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.projects:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.about:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+.contact:hover{
+    background-color: #A2FF86;
+    transition: 0.3s ease-in;
+    color: black;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    background-color: #1F1F1F;
+    width: 100%;
+}
+.DevskiLogo{
+    object-fit: contain;
+    width: 80px;
+    margin-left: 100px;
+}
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+.navMenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.turningVisions{
+    width: 100%;
+    height: 890px;
+    background-image: url('../Images/c.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.BlackBg{
+    width: 100%;
+    height: 872px;
+    background-color : black;
+    z-index: -1;
+    margin-top: -1000px;
+    margin-bottom: 100px;
+}
+.coverText{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: fit-content;
+    padding-left: 130px;
+    height: 550px;
+}
+.coverText h1{
+    color: white;
+    font-size: 90px;
+    width: 70%;
+    font-family: Outfit;
+    line-height: 1.2;
+}
+.coverText span{
+    color: #A2FF86;
+    font-family: Outfit;
+}
+.coverText p{
+    color: #ffffffb3;
+    font-family: Outfit;
+    font-size: 17px;
+    width: 44%;
+    text-align: left;
+}
+.coverText button{
+    color: black;
+    font-family: 'Outfit';
+    border-style: none;
+    border-radius: 8px;
+    font-weight: 900;
+    font-size: 11px;    
+    padding: 10px 10px;
+    background-color: #A2FF86;
+    width: 10%;
+    margin-top: 20px;
+    height: 48px;
+}
+.coverText button:hover{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1.2px;
+    color: white;
+    border-color: #A2FF86;
+    transition: 0.3s ease-in-out;
+}
+
+.buildingDesign{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+}
+.chooseUsText{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.firstSection{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 10px;
+}
+.firstSection p{
+    color: #A2FF86;
+    font-family: 'Outfit';
+    font-size: 12px;
+    text-align: left;
+}
+.firstSection h1{
+    font-family: 'Outfit';
+    font-size: 45px;
+    line-height: 1.2;
+}
+.firstSection hr{
+    margin-top: 16px;
+    width: 200px;
+}
+.secondSection{
+    display: flex;
+    flex-direction: column;
+    width: 42%;
+    justify-content: center;
+}
+.secondSection h1{
+    color: #3e3c3c;
+    font-family: 'Outfit';
+    font-size: 15px;
+}
+
+.video{
+    display: flex;
+    justify-content: space-evenly;
+    height: fit-content;
+    width: 90%;
+}
+.projectsCompleted{
+    height: 300px;
+    width: 35%;
+    background-image: url('../Images/projectsComplete.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 0px 14px 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.projectsCompleted h1{
+    color: white;
+    font-family: 'Outfit';
+    font-size: 80px;
+    font-weight: 600;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+.projectsCompleted span{
+    color: #A2FF86;
+}
+.projectsCompleted h2{
+    color: white;
+    font-family: 'Outfit';
+    padding-left: 35px;
+}
+.projectsCompleted img{
+    object-fit: cover;
+    width: 80%;
+    margin-left: 10%;
+
+}
+.playvideo{
+    height: 300px;
+    width: 55%;
+    background-image: url('../Images/howWeWork.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0px 0px 14px 14px;
+    display: flex;
+    flex-direction: column;
+}
+.weWork{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 60%;
+    align-items: flex-end;
+}
+.weWork h1{
+    color: #FFFFFF;
+    font-family: 'Outfit';
+    font-size: 40px;
+    letter-spacing: 8px;
+    font-weight: 500;
+}
+.playBtnDiv{
+    width: 100%;
+    height: 40%;
+}
+.playButton{
+    object-fit: cover;
+    height: 130px;
+    float: right;
+    margin-right: -30px;
+}
+.servicesDiv{
+    background-image: url('../Images/servicesBackground.png');
+    height: 700px;
+    width: 100%;
+    margin-top: 85px;
+    display: flex;
+    padding: 100px;
+    align-items: center;
+}
+
+.servicesContent{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+
+.servicesContent h1{
+    color: #A2FF86;
+    font-weight: 700;
+    font-size: 45.75px;
+    font-family: 'Outfit';
+}
+.servicesContent p{
+    color: #444444;
+    font-weight: 400;
+    font-size: 18.71px;
+    line-height: 25px;
+    font-family: 'Outfit';
+    margin-top: 20px;
+    text-align: left;
+    text-wrap: balance;
+    margin-bottom: 15px;
+}
+
+.servicesContent button{
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    border-style: solid;
+    border-color: #DDDDDD;
+    border-radius: 112.26px;
+    border-width: 1.5px;
+    padding: 29.94px, 37.42px, 29.94px, 37.42px;
+    justify-content: space-between;
+    margin-top: 15px;
+    height: 70px;
+    width: 80%;
+    background-color: transparent;
+    font-family: 'Outfit';
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 24.43px;
+    color: #444444;
+    cursor: pointer;
+}
+
+.bullet{
+    object-fit: cover;
+    height: 20px;
+}
+.arrow{
+    object-fit: cover;
+    height: 15px;
+}
+
+button:hover .arrow {
+    animation: bounce 0.5s ease-in-out infinite;
+}
+
+.projectsImages{
+    display: flex;
+    width: 65%;
+    height: 410px;
+    margin-top: 80px;
+    gap: 10px;
+}
+.UiProjects{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-image: url('../Images/uiPic.png');
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;    
+}
+.UiProjects img{
+    height: 85px;
+    margin-bottom: 18px;
+}
+.UiProjects:hover img{
+    animation: jiggle 0.5s ease-in-out infinite;
+}
+
+@keyframes jiggle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+}
+.UiProjects p{
+    font-size: 35px;
+    text-align: left;
+    text-wrap: balance;
+    width: 30%;
+    font-weight: 600;
+    font-family: Outfit;
+    line-height: 43.1px;
+    margin-bottom: 18px;
+    color: #222222;
+}
+
+.meetExpert{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.howWork{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 47.25%;
+    background-color: #2B2B2B;
+    color: white;
+    border-radius: 29px;
+    font-family: Outfit;
+}
+.howWork h2{
+    text-align: left;
+    text-wrap: balance;
+    width: 50%;
+    font-size: 20px;
+}
+.howWork p{
+    font-size: 15px;
+    width: 80%;
+    text-align: left;
+    text-wrap: balance;
+}
+.howWork img{
+    height: 50px;
+    object-fit: cover;
+}
+.howWork:hover img{
+    animation: jiggle2 0.5s ease-in-out infinite;
+}
+@keyframes jiggle2 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+}
+.innerWork{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ourExpert{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: 47.25%;
+    background-color: #9DFF50;
+    color: white;
+    border-radius: 29px;
+    font-family: Outfit;
+}
+.ourExpert h2{
+    text-align: left;
+    text-wrap: balance;
+    width: 50%;
+    font-size: 20px;
+    color: #222222;
+}
+.ourExpert p{
+    font-size: 15px;
+    width: 75%;
+    text-align: left;
+    text-wrap: balance;
+    color: #222222;
+}
+.ourExpert:hover img{
+    animation: jiggle3 0.5s ease-in-out infinite;
+}
+@keyframes jiggle3 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+}
+.whiteRoundArrow{
+    height: 50px;
+    object-fit: cover;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+}
+
+
+.benefits{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 120px;
+}
+.benefitsText{
+    display: flex;
+    width: 80%;
+    align-items: center;
+
+}
+.benefitsHeader{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+}
+.benefitsHeader p{
+    color: #A2FF86;
+    font-size: 15px;
+    margin-bottom: 8px;
+    font-family: Outfit;
+}
+.benefitsHeader h1{
+    font-size: 45px;
+    font-family: Outfit;
+}
+.benefitsPara{
+    text-align: center;
+    text-wrap: balance;
+    width: 42%;
+    font-size: 18px;
+    color: #0000009d;
+    font-family: Outfit;
+}
+
+.megaGrid{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.grid{
+    display: flex;
+    width: fit-content;
+    justify-content: center;   
+}
+.boxes{
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1.2px 1.2px 1.2px 1.2px;
+    border-color: transparent #A2FF864D #A2FF864D transparent ;
+    height: 180px;
+    width: 28%;
+    padding: 20px;
+    align-items: start;
+}
+
+.boxes:hover .boxIcon{
+    animation: jiggle4 0.5s ease-in-out infinite;
+}
+@keyframes jiggle4 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+}
+.Lastboxes:hover .boxIcon{
+    animation: jiggle5 0.5s ease-in-out infinite;
+}
+@keyframes jiggle5 {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px); /* Moves up by 5px */
+    }
+}
+
+.Lastboxes{
+    border-color: transparent transparent #A2FF864D transparent;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1.2px 1.2px 1.2px 1.2px;
+    height: 180px;
+    width: 28%;
+    padding: 20px;
+    align-items: start
+}
+.boxHeader{
+    color: #080808;
+    font-family: Outfit;
+    font-weight: 500;
+    font-size: 13px;
+}
+.boxText{
+    color: #9593A4;
+    font-family: Outfit;
+    font-weight: 500;
+    font-size: 10px;
+    width: 60%;
+    margin-top: 8px;
+}
+.boxIcon{
+    width: 8%;
+    margin-bottom: 15px;
+}
+
+.ProjectsDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    background-color: #0A0A0A;
+    background-image: url('../Images/projectsWavy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 550px;
+    width: 100%;
+}
+.ProjectBackground{
+    width: 100%;
+    background-color: #0A0A0A;
+    height: 700px;
+}
+.projectContent{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    margin-left: 100px;
+    margin-top: 120px;
+    gap: 16px;
+
+}
+.projectContent h1{
+    color: #A2FF86;
+    font-family: Outfit;
+    font-size: 45.75px;
+    font-weight: 700;
+    line-height: 54.9px;
+}
+.projectContent p{
+    font-family: Outfit;
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: -1%;
+    color: #ffffffa1;
+    width: 90%;
+    text-align: left;
+    text-wrap: balance;
+}
+.projectButtons{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 100px;
+}
+
+.allbtn,.webbtn,.appbtn,.uibtn{
+    height: 55px;
+    width: 12%;
+    text-align: center;
+    font-family: Outfit;
+    color: white;
+    font-size: 15px;
+    padding: 10px 10x;
+    border-style: solid;
+    border-radius: 0.5rem;
+    border-color: #A2FF86;
+    background-color: transparent;
+    border-width: 1.2px;
+    cursor: pointer;
+}
+.allbtn:hover{
+    transition: 0.3s ease-in-out;
+    background-color: #A2FF86;
+}
+.appbtn:hover{
+    transition: 0.3s ease-in-out;
+    background-color: #A2FF86;
+}
+.uibtn:hover{
+    transition: 0.3s ease-in-out;
+    background-color: #A2FF86;
+}
+.webbtn{
+    background-color: #A2FF86;
+}
+.ProjectBackground{
+    width: 100%;
+    display: flex;
+    margin-top: -25px;
+}
+.appProjectsPic{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 100px;
+}
+.appProj{
+    background-image: url('../Images/mobileApp.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+.appProjectsPic p, .uiProjectsPic p{
+    font-family: Outfit;
+    font-weight: 400;
+    font-size: 15px;
+    text-align: left;
+    color: #FFFFFF;
+}
+.uiProjectsPic{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+.uiProj{
+    background-image: url('../Images/webDesign.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
+.qoutes{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.qoutes h1{
+    font-size: 70px;
+    font-weight: 800;
+    font-family: sans-serif;
+}
+.star{
+    height: 50px;
+    object-fit: cover;
+}
+
+.testimonials{
+    background-color: #0A0A0A;
+    height: 660px;
+    width: 100%
+}
+.testimonialContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../Images/projectsWavy.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 510px;
+    gap: 5px;
+    padding: 80px;
+    width: 100%;
+}
+.contentPhrase{
+    color: #A2FF86;
+    font-family: Outfit;
+    font-size: 15px;
+    text-align: center;
+}
+.testimonialContent h1{
+    color: white;
+    font-family: Outfit;
+    text-align: center;
+    text-wrap: balance;
+    font-size: 45px;
+    width: 50%;
+    font-weight: 400;
+}
+.testimonialContent hr{
+    margin-top: 20px;
+    width: 12%;
+}
+.testimonialCard{
+    padding: 30px;
+    display: flex;
+    width: 60%;
+    height: 320px;
+    background-color: white;
+    border-radius: 1.5rem;
+    margin-top: 40px;
+}
+.testimonialText{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.testimonialText h1{
+    color: #14142B;
+    font-family: Outfit;
+    font-size: 16px;
+    text-align: left;
+    width: 100%;
+    font-weight: 600;
+}
+
+.testimonialText p{
+    font-weight: 300;
+    font-size: 14px;
+    text-align: left;
+    color: black;
+}
+.testifier{
+    height: 240px;
+    object-fit: cover;
+}
+.FAQ{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 500px;
+}
+.faqHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* gap: 2px; */
+    margin-top: 80px;
+    gap: 10px;
+}
+.faqHeader h1, p{
+    text-align: center;
+    font-family: Outfit;
+    color: #111204;
+    text-wrap: balance;
+}
+.faqHeader h1{
+    font-size: 32px;
+}
+.faqHeader p{
+    width: 35%;
+    font-size: 12px;
+}
+.faqForm{
+    display: flex;
+    margin-top: 50px;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+.dropdowns{
+    display: flex;
+    flex-direction: column;
+    width: 38%;
+    gap: 20px;
+}
+#question1{
+    display: flex;
+    flex-direction: column;
+    background-color: #111204;
+    width: 100%;
+    height: 65px;
+    border-radius: 1rem;
+}
+#question2{
+    display: flex;
+    flex-direction: column;
+    background-color: #111204;
+    width: 100%;
+    height: 65px;
+    border-radius: 1rem;
+}
+#question3{
+    display: flex;
+    flex-direction: column;
+    background-color: #111204;
+    width: 100%;
+    height: 65px;
+    border-radius: 1rem;
+}
+#question4{
+    display: flex;
+    flex-direction: column;
+    background-color: #111204;
+    width: 100%;
+    height: 65px;
+    border-radius: 1rem;
+}
+#buttonText{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 1rem;
+    padding: 14px;
+}
+#question1 p{
+    color: white;
+    font-family: Outfit;
+    font-size: 15px;
+}
+#question2 p{
+    color: white;
+    font-family: Outfit;
+    font-size: 15px;
+}
+#question3 p{
+    color: white;
+    font-family: Outfit;
+    font-size: 15px;
+}
+#question4 p{
+    color: white;
+    font-family: Outfit;
+    font-size: 15px;
+}
+#question1 button{
+    background-color: #A2FF86;
+    border-radius: 50%;
+    border-style: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+#question2 button{
+    background-color: #A2FF86;
+    border-radius: 50%;
+    border-style: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+#question3 button{
+    background-color: #A2FF86;
+    border-radius: 50%;
+    border-style: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+#question4 button{
+    background-color: #A2FF86;
+    border-radius: 50%;
+    border-style: none;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+.downIcon{
+    height: 5px;
+}
+#expandedBlock1, #expandedBlock2, #expandedBlock3 ,#expandedBlock4 {
+    display: none;
+    width: 100%;
+    height: 80px;
+    border-radius: 0rem 0rem 1rem 1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: #111204;
+}
+.faqTextarea{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    gap: 20px;
+}
+.faqTextarea textarea{
+    border-width: 1.5px;
+    border-radius: .6rem;
+} 
+.faqTextarea textarea::placeholder{
+   padding: 8px;
+}
+.faqTextarea textarea input{
+   padding: 20px;
+}
+.faqButton{
+    display: flex;
+    /* gap: 20px; */
+    justify-content: space-between;
+}
+.faqButton p{
+    font-family: Outfit;
+    color: #11120499;
+    text-align: left;
+    font-size: 15px;
+    width: 65%;
+}
+.faqButton button{
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: #A2FF86;
+    padding: 10px 10px;
+    color: #080808;
+    font-weight: 600;
+    width: 20%;
+    height: 40px;
+}
+
+
+
+
+
+
+
+.FooterMain{
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:125px;
+    width: 100%;
+    height: 549px;
+    flex-shrink: 0;
+    background-image: url('../Images/WavyDesign.png');
+    background-color: #0F0F0F;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+.EveryFooterDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 185px;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+.AllColumn{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    width: 100%;
+}
+
+.RightColumn{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-left: 40px;
+    
+}
+.RightColumn h1{
+    color: white;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.RightColumn h2{
+    color: white;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.RightColumn h3{
+    color: white;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.MiddleColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:20px;
+    width: 60%;
+}
+.CardButton{
+    display: flex;
+    width: 250px;
+    padding: 19px 31px 17px 31px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-style: none;
+    border-radius: 8px;
+    background: #A2FF86;
+    font-family: Outfit;
+    display: flex;
+    gap: 5px;
+}
+.CardButton:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: #A2FF86;
+    color: #A2FF86;
+}
+.MiddleColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.LeftColumn{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    margin-right: 40px;
+}
+.LeftColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h4{
+    color: white;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h2,h3,h5,h6{
+    color: white;
+    font-family: Arial;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.FooterHeading{
+    justify-content:center;
+    display: flex;
+}
+.WorkTogether{
+    display: flex;
+    width: 95%;
+    margin-bottom: -20px;
+
+}
+.ThinLine{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: -80px;
+    width: 95%;
+    margin-left: 30px;
+}
+.ThinLine h1{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.ThinLine h2{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 220px;
+}
+.SocialMedia{
+    width: 81.201px;
+    height: 14px;
+    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+}
+
+
+@media only screen and (max-width: 850px){
+    .qoutes h1{
+        font-size: 4.5vmax;
+    }
+    .chooseUsText{
+        margin-top: 30px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .navMenu {
+        position: fixed;
+        left: -100%;
+        top: 4.88rem;
+        flex-direction: column;
+        background-color: #1F1F1F;
+        width: 100%;
+        height: 280px;
+        border-radius: 0px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    .DevskiLogo{
+        margin-left: 0px;
+    }
+
+    ul{
+        gap: 10px;
+    }
+
+    .navMenu.active {
+        left: 0;
+    }
+    .home,.services, .projects, .about, .contact{
+        border-radius: 1.5rem;
+    }
+
+    .contact{
+        margin-bottom: 20px;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .turningVisions{
+        background-size: cover;
+        height: 300px;
+    }
+    .BlackBg{
+        width: 100%;
+        height: 925px;
+        margin-bottom: 65px;
+    }
+    .coverText{
+        margin-top: 30px;
+        padding-left: 30px;
+        height: 200px;
+        gap: 15px;
+    }
+    .coverText h1{
+        font-size: 4vmax;
+    }
+    .coverText p{
+        font-size: 2.9vmin;
+        width: 80%;
+        letter-spacing: 1px;
+    }
+    .coverText button{
+        font-size: 2.5vmin;
+        width: 25%;
+        height: 35px;
+        padding: 2px;
+        border-radius: 4px;
+    }
+    .firstSection hr{
+        width: 80px;
+    }
+    .firstSection h1{
+        font-size: 4vmax;
+    }
+    .secondSection h1{
+        font-size: 3vmin;
+    } 
+    .video{
+        flex-direction: column-reverse;
+        height: 600px;
+    }
+    .playvideo{
+        height: 300px;
+        border-radius: 0px 8px 8px 0px;
+    }
+    .projectsCompleted{
+        border-radius: 0px 0px 8px 8px;
+        height: 200px;
+    }
+    .playvideo, .projectsCompleted{
+        width: 100%;
+    }
+    .projectsCompleted h1{
+        font-size: 7vmax;
+    }
+    .weWork h1{
+        font-size: 5vmax;
+        font-weight: 600;
+    }
+    .playButton{
+        height: 100px;
+        margin-right: -10px;
+        margin-top: 35px;
+    }
+    .projectsImages{
+        margin-top: 0px;
+    }
+    .servicesDiv{
+        padding: 30px;
+        flex-direction: column;
+        height: fit-content;
+    }
+    .servicesContent{
+        width: 100%;
+        align-items: center;
+    }
+    .servicesDiv h1{
+        font-size: 4vmax;
+    }
+    .servicesDiv p{
+        font-size: 4vmin;
+        text-align: center;
+    }
+    .servicesDiv button{
+        font-size: 3.2vmin;
+    }
+    .bullet, .arrow{
+        height: 10px;
+    }
+    .projectsImages{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .UiProjects{
+        width: 100%;
+        background-size: cover;
+        filter: brightness(85%);
+        border-radius: 29px;
+        height: 150px;
+        align-items: center;
+    }
+    .UiProjects img{
+        height: 60px;
+    }
+    .UiProjects p{
+        font-size: 4vmax;
+    }
+    .meetExpert{
+        align-items: center;
+        flex-direction: row;
+    }
+    .howWork{
+        width: 50%;
+        background: 2B2B2B;
+        border-radius: 29px;
+        height: 150px;
+        align-items: center;
+    }
+    .howWork p{
+        font-size: 3.5vmin;
+    }
+    .ourExpert{
+        width: 50%;
+        background: #9DFF50;
+        border-radius: 29px;
+        height: 150px;
+        align-items: center;
+    }
+    .ourExpert p{
+        font-size: 3.5vmin;
+    }
+    .innerWork h2{
+        font-size: 2vmax;
+    }
+    .innerWork img{
+        height: 35px;
+    }
+    .whiteRoundArrow{
+        height: 35px;
+    }
+    .benefitsText{
+        flex-direction: column;
+        gap: 15px;
+    }
+    .benefitsHeader{
+        width: 100%;
+    }
+    .benefitsHeader h1{
+        font-size: 4vmax;
+        text-align: center;
+        width: 100%;
+    }
+    .benefitsHeader p{
+        font-size: 3.5vmin;
+        width: 100%;
+    }
+    .benefitsPara{
+        font-size: 3.8vmin;
+        text-align: center;
+        width: 100%;
+    }
+    .boxIcon{
+        width: 40%;
+    }
+    .boxes, .Lastboxes{
+        width: 50%;
+    }
+    .boxHeader{
+        font-size: 1.5vmax;
+        text-wrap: balance;
+    }
+    .boxText{
+        width: 100%;
+        font-size: 2.2vmin;
+        text-wrap: balance;
+    }
+    .ProjectsDiv{
+        background-size: contain;
+    }
+    .projectContent{
+        margin-top: 50px;
+        margin-left: 0px;
+        width: 100%;
+        align-items: center;
+        gap: 0px;
+    }
+    .projectContent h1{
+        font-size: 4vmax;
+    }
+    .projectContent p{
+        font-size: 4vmin;
+        text-align: center;
+        letter-spacing: .5px;
+        width: 70%;
+        margin-bottom: -50px;
+    }
+    .projectButtons{
+
+        gap: 8px;
+    }
+    .allbtn,.webbtn,.appbtn,.uibtn{
+        font-size: 3.5vmin;
+        width: 22%;
+    }
+    .ProjectBackground{
+        margin-top: -200px;
+        height: 820px;
+        flex-direction: column;
+    }
+    .appProjectsPic{
+        width: 100%;
+        padding-left: 0px;
+        padding: 15px;
+        height: fit-content;
+        height: 350px;
+    }
+    .uiProjectsPic{
+        width: 100%;
+        padding-left: 0px;
+        padding: 15px;
+        height: 350px;
+    }
+    .qoutes{
+        gap: 5px;
+        height: 150px;
+    }
+    .qoutes h1{
+        font-size: 4vmax;
+    }
+    .star{
+        height: 20px;
+    }
+    .testimonialContent{
+        background-size: cover;
+        height: 200px;
+        padding: 0px;
+    }
+    .contentPhrase{
+        margin-top: 60px;
+    }
+    .testimonials{
+        height: 580px;
+    }
+    .testimonialContent h1{
+        width: 100%;
+        font-size: 3.4vmax;
+    }
+    .testimonialContent hr{
+        width: 18%;
+    }
+    .testimonialCard{
+        width: 95%;
+        padding: 15px;
+        align-items: flex-start;
+    }
+    .testimonialText h1{
+        font-size: 2.2vmax;
+    }
+    .testimonialText p{
+        font-size: 3.5vmin;
+    }
+    .testifier{
+        margin-top: 15px;
+        height: 80px;
+    }
+    .faqHeader h1{
+        font-size: 4vmax;
+    }
+    .faqHeader p{
+        font-size: 3.6vmin;
+        width: 100%;
+    }
+    .faqForm{
+        align-items: center;
+        flex-direction: column;
+    }
+    .dropdowns{
+        width: 90%;
+    }
+    #question1 button{
+        width: 40px;
+    }
+    #question2 button{
+        width: 40px;
+    }
+    #question3 button{
+        width: 36px;
+    }
+    #question4 button{
+        width: 40px;
+    }
+    #expandedBlock1 p{
+        font-size: 3.5vmin;
+    }
+    #expandedBlock2 p{
+        font-size: 3.5vmin;
+    }
+    #expandedBlock3 p{
+        font-size: 3.5vmin;
+    }
+    #expandedBlock4 p{
+        font-size: 3.5vmin;
+    }
+    .faqTextarea{
+        width: 90%;
+    }
+    .faqButton p{
+        font-size: 3.4vmin;
+    }
+    .faqButton button{
+        font-size: 3.6vmin;
+    }
+
+    /* FOOTER CODE */
+    .FooterMain{
+        margin-top: 540px;
+        background-size: contain;
+        height: fit-content;
+    }
+    .AllColumn{
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 15px;
+        margin-top: 120px;
+        padding-left: 20px;
+    }
+    .RightColumn{
+        margin-left: 0px;
+        width: fit-content;
+        gap: 5px;
+    }
+    .RightColumn h1{
+        font-size: 2.5vmax;
+        margin-bottom: 0px;
+    }
+    .RightColumn h2{
+        font-size: 3vmax;
+        margin-bottom: 0px;
+    }
+    .RightColumn h3{
+        font-size: 2vmax;
+        margin-bottom: 0px;
+    }
+    .LeftColumn{
+        margin-right: 0px;
+    }
+    .LeftColumn h1,h2,h3,h4,h5,h6{
+        font-size: 3vmin;
+    }
+    .MiddleColumn{
+        width: 100%;
+        padding: 20px;
+    }
+    .MiddleColumn h1{
+        font-size: 3vmax;
+    }
+    .CardButton{
+        width: 100%;
+        font-size: 2.5vmax;
+    }
+    .ThinLine{
+        margin-bottom: 0px;
+        justify-content: space-around;
+        width: 100%;
+        margin-left: -.5px;
+    }
+    .ThinLine h1{
+        font-size: 2vmin;
+    }
+    .ThinLine h2{
+        margin-right: 20px;
+        font-size: 2vmin;
+    }
+    .SocialMedia{
+        height: 8px;
+        width: fit-content;
+    }
+    .FooterHeading{
+        margin-top: -80px;
+    }
+    .WorkTogether{
+        margin-bottom: 0px;
+        /* margin-top: -50px; */
+    }
+
+
+}
+
+@media (max-width:500px){
+    .firstSection h1{
+        font-size: 3vmax;
+    }
+    .weWork h1{
+        font-size: 4vmax;
+    }
+    .projectsCompleted{
+        gap: 20px;
+    }
+    .projectsCompleted img{
+        width: 60%;
+    }
+}
+
+@media (max-width: 344px){
+    .coverText{
+        margin-top: 20px;
+    }
+    .coverText button{
+        padding: 5px;
+        width: 23%;
+    }
+    .weWork h1{
+        font-size: 3.5vmax;
+    }
+}
+
+@media (max-width:450px){
+    .qoutes h1{
+        font-size: 3vmax;
+    }
+}
+@media (max-width:350px){
+    .qoutes h1{
+        font-size: 2.5vmax;
+    }
+}
+/* @media (min-height: 960px){
+    .turningVisions{
+        height: 550px;
+    }
+    .coverText h1{
+       margin-top: 100px;
+    }
+    .coverText p{
+        font-size: 2.5vmin;
+    }
+    .coverText button{
+        font-size: 2.5vmin;
+        height: 40px;
+    }
+    .buildingDesign{
+        margin-top: 50px;
+    }
+    .firstSection p{
+        text-align: left;
+    }
+    .video{
+        gap: 50px;
+    }
+    .projectsCompleted {
+        margin-top: 20px;
+        height: 350px;
+        padding: 20px;
+    }
+    .projectsCompleted img{
+        height: 100px;
+        object-fit: contain;
+    }
+    .servicesContent p{
+        font-size: 3vmin;
+    }
+    .howWork{
+        padding: 25px;
+        height: fit-content;
+        gap: 10px;
+    }
+    .howWork p{
+        font-size: 3vmin;
+    }
+    .ourExpert{
+        padding: 23px;
+        height: fit-content;
+        gap: 10px;
+    }
+    .innerWork{
+        gap: 10px;
+    }
+    .ourExpert p{
+        font-size: 3vmin;
+    }
+    .benefitsPara{
+        font-size: 3vmin;
+    }
+    .boxIcon{
+        height: 30px;
+        width: 30px;
+    }
+    .grid{
+        column-gap: 20px;
+    }
+    .boxes p{
+        font-size: 2vmin;
+    }
+    .Lastboxes p{
+        font-size: 1.8vmin;
+    }
+    .projectContent p{
+        margin-top: 10px;
+        font-size: 2.5vmin;
+    }
+    .ProjectBackground{
+        height: 400px;
+        flex-direction: row;
+    }
+    .testimonialText p{
+        font-size: 2.5vmin;
+    }
+    .faqTextarea textarea::placeholder{
+        font-size: 3vmin;
+    }
+    .faqButton p{
+        font-size: 3vmin;
+    }
+    .faqButton button{
+        font-size: 3vmin;
+        height: 50px;
+    }
+    .FooterMain{
+        margin-top: 680px;
+    }
+    .SocialMedia{
+        height: 15px;
+    }
+    .EveryFooterDiv{
+        gap: 250px;
+    }
+} */
+
+/* @media screen and (max-width: 1366px){
+    .turningVisions{
+        height: 720px;
+
+    }
+    .coverText{
+        margin-top: 0px;
+    }
+    .coverText h1{
+        width: 100%;
+    }
+    .coverText p {
+        width: 90%;
+        font-size: 2.5vmin;
+    }
+    .coverText button{
+        width: 18%;
+        height: 60px;
+        text-align: left;
+        font-size: 1.8vmin;
+    }
+    .BlackBg{
+        height: 900px;
+    }
+    .video{
+        align-items: center;
+    }
+} */
