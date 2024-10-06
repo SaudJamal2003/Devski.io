@@ -98,7 +98,7 @@ li {
 }
 .turningVisions{
     width: 100%;
-    height: 890px;
+    height: 1100px;
     background-image: url('../Images/c.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -146,12 +146,12 @@ li {
     border-style: none;
     border-radius: 8px;
     font-weight: 900;
-    font-size: 11px;    
+    font-size: 14px;    
     padding: 10px 10px;
     background-color: #A2FF86;
-    width: 10%;
+    width: 12%;
     margin-top: 20px;
-    height: 48px;
+    height: 55px;
 }
 .coverText button:hover{
     background-color: transparent;
@@ -243,18 +243,19 @@ li {
 }
 .projectsCompleted img{
     object-fit: cover;
-    width: 80%;
-    margin-left: 10%;
+    width: 60%;
+    margin-left: 20%;
 
 }
 .playvideo{
     height: 300px;
-    width: 55%;
+    width: 50%;
     background-image: url('../Images/howWeWork.png');
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0px 0px 14px 14px;
     display: flex;
+    padding: 5px;
     flex-direction: column;
 }
 .weWork{
@@ -283,6 +284,7 @@ li {
 }
 .servicesDiv{
     background-image: url('../Images/servicesBackground.png');
+    background-size: contain;
     height: 700px;
     width: 100%;
     margin-top: 85px;
@@ -304,7 +306,7 @@ li {
     font-family: 'Outfit';
 }
 .servicesContent p{
-    color: #444444;
+    color: #828080;
     font-weight: 400;
     font-size: 18.71px;
     line-height: 25px;
@@ -327,14 +329,19 @@ li {
     justify-content: space-between;
     margin-top: 15px;
     height: 70px;
-    width: 80%;
+    width: 78%;
     background-color: transparent;
     font-family: 'Outfit';
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 600;
     line-height: 24.43px;
     color: #444444;
     cursor: pointer;
+}
+
+.servicesContent button:hover{
+    transition: 0.5s ease-in-out;
+    color: white;
 }
 
 .bullet{
@@ -345,6 +352,41 @@ li {
     object-fit: cover;
     height: 15px;
 }
+.number1{
+    color: #A2FF86;
+    font-weight: 900;
+    font-family: Outfit;
+    font-size: 20px;
+    transform: scaleX(2); /* Adjust the scale factor as needed */
+    display: inline-block;
+    padding: 10px; 
+    background-color: beige;
+    /* width: 16%; */
+    /* display: flex; */
+    /* justify-content: flex-start; */
+    /* margin-left: 6%; */
+    /* padding-right: ; */
+    /* position: absolute; */
+}
+#number2, #number3, #number4{
+    color: #444444;
+    font-weight: 900;
+    font-family: Outfit;
+    font-size: 20px;
+    transform: scaleX(2); /* Adjust the scale factor as needed */
+    display: inline-block; 
+    padding: 10px; 
+    /* width: 16%;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 6%;
+    position: absolute; */
+}
+#number2:hover{
+    color: #A2FF86;
+    transition: 0.3s ease-in-out;
+}
+
 
 button:hover .arrow {
     animation: bounce 0.5s ease-in-out infinite;
@@ -363,12 +405,12 @@ button:hover .arrow {
     align-items: flex-end;
     justify-content: space-around;
     background-image: url('../Images/uiPic.png');
-    width: 100%;
+    width: 50%;
     background-repeat: no-repeat;
     background-size: contain;    
 }
 .UiProjects img{
-    height: 85px;
+    height: 80px;
     margin-bottom: 18px;
 }
 .UiProjects:hover img{
@@ -405,7 +447,7 @@ button:hover .arrow {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 60%;
     height: 47.25%;
     background-color: #2B2B2B;
     color: white;
@@ -419,8 +461,9 @@ button:hover .arrow {
     font-size: 20px;
 }
 .howWork p{
-    font-size: 15px;
-    width: 80%;
+    font-size: 16px;
+    color: white;
+    width: 75%;
     text-align: left;
     text-wrap: balance;
 }
@@ -449,7 +492,7 @@ button:hover .arrow {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 80%;
+    width: 60%;
     height: 47.25%;
     background-color: #9DFF50;
     color: white;
@@ -520,6 +563,7 @@ button:hover .arrow {
     font-size: 15px;
     margin-bottom: 8px;
     font-family: Outfit;
+    text-align: left;
 }
 .benefitsHeader h1{
     font-size: 45px;
@@ -546,13 +590,14 @@ button:hover .arrow {
 .grid{
     display: flex;
     width: fit-content;
-    justify-content: center;   
+    justify-content: center;  
+    width: 90%; 
 }
 .boxes{
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-width: 1.2px 1.2px 1.2px 1.2px;
+    border-width: 1.6px 1.6px 1.6px 1.6px;
     border-color: transparent #A2FF864D #A2FF864D transparent ;
     height: 180px;
     width: 28%;
@@ -588,7 +633,7 @@ button:hover .arrow {
     display: flex;
     flex-direction: column;
     border-style: solid;
-    border-width: 1.2px 1.2px 1.2px 1.2px;
+    border-width: 1.6px 1.6px 1.6px 1.6px;
     height: 180px;
     width: 28%;
     padding: 20px;
@@ -607,6 +652,7 @@ button:hover .arrow {
     font-size: 10px;
     width: 60%;
     margin-top: 8px;
+    text-align: left;
 }
 .boxIcon{
     width: 8%;
@@ -621,13 +667,13 @@ button:hover .arrow {
     background-image: url('../Images/projectsWavy.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 550px;
+    height: 620px;
     width: 100%;
 }
 .ProjectBackground{
     width: 100%;
     background-color: #0A0A0A;
-    height: 700px;
+    height: 650px;
 }
 .projectContent{
     display: flex;
@@ -660,17 +706,17 @@ button:hover .arrow {
     width: 100%;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    margin-top: 100px;
+    gap: 16px;
+    margin-top: 50px;
 }
 
 .allbtn,.webbtn,.appbtn,.uibtn{
     height: 55px;
-    width: 12%;
+    width: 8%;
     text-align: center;
     font-family: Outfit;
     color: white;
-    font-size: 15px;
+    font-size: 16px;
     padding: 10px 10x;
     border-style: solid;
     border-radius: 0.5rem;
@@ -697,21 +743,22 @@ button:hover .arrow {
 .ProjectBackground{
     width: 100%;
     display: flex;
-    margin-top: -25px;
+    justify-content: center;
 }
 .appProjectsPic{
-    width: 50%;
+    width: 52%;
     display: flex;
     flex-direction: column;
-    padding-left: 100px;
+    padding-left: 130px;    
 }
 .appProj{
     background-image: url('../Images/mobileApp.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 480px;
     width: 100%;
     margin-bottom: 12px;
+    margin-top: -80px;
 }
 .appProjectsPic p, .uiProjectsPic p{
     font-family: Outfit;
@@ -729,9 +776,10 @@ button:hover .arrow {
     background-image: url('../Images/webDesign.png');
     background-size: contain;
     background-repeat: no-repeat;
-    height: 400px;
+    height: 480px;
     width: 100%;
     margin-bottom: 12px;
+    margin-top: -80px;
 }
 
 .qoutes{
@@ -740,7 +788,7 @@ button:hover .arrow {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 25px;
 }
 .qoutes h1{
     font-size: 70px;
@@ -764,7 +812,7 @@ button:hover .arrow {
     background-image: url('../Images/projectsWavy.png');
     background-size: cover;
     background-repeat: no-repeat;
-    height: 510px;
+    height: 600px;
     gap: 5px;
     padding: 80px;
     width: 100%;
@@ -791,7 +839,7 @@ button:hover .arrow {
 .testimonialCard{
     padding: 30px;
     display: flex;
-    width: 60%;
+    width: 50%;
     height: 320px;
     background-color: white;
     border-radius: 1.5rem;
@@ -821,9 +869,10 @@ button:hover .arrow {
     height: 240px;
     object-fit: cover;
 }
-.FAQ{
+#FAQ{
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     height: 500px;
 }
@@ -850,13 +899,11 @@ button:hover .arrow {
     width: 35%;
     font-size: 12px;
 }
-.faqForm{
+#faqForm{
     display: flex;
     margin-top: 50px;
-    /* align-items: center; */
     justify-content: center;
-    gap: 30px;
-    width: 100%;
+    width: 90%;
 }
 .dropdowns{
     display: flex;
@@ -868,32 +915,32 @@ button:hover .arrow {
     display: flex;
     flex-direction: column;
     background-color: #111204;
-    width: 100%;
-    height: 65px;
+    width: 95%;
+    height: 75px;
     border-radius: 1rem;
 }
 #question2{
     display: flex;
     flex-direction: column;
     background-color: #111204;
-    width: 100%;
-    height: 65px;
+    width: 95%;
+    height: 75px;
     border-radius: 1rem;
 }
 #question3{
     display: flex;
     flex-direction: column;
     background-color: #111204;
-    width: 100%;
-    height: 65px;
+    width: 95%;
+    height: 75px;
     border-radius: 1rem;
 }
 #question4{
     display: flex;
     flex-direction: column;
     background-color: #111204;
-    width: 100%;
-    height: 65px;
+    width: 95%;
+    height: 75px;
     border-radius: 1rem;
 }
 #buttonText{
@@ -902,7 +949,7 @@ button:hover .arrow {
     align-items: center;
     justify-content: space-between;
     border-radius: 1rem;
-    padding: 14px;
+    padding: 20px;
 }
 #question1 p{
     color: white;
@@ -962,10 +1009,10 @@ button:hover .arrow {
 #expandedBlock1, #expandedBlock2, #expandedBlock3 ,#expandedBlock4 {
     display: none;
     width: 100%;
-    height: 80px;
+    height: 85px;
     border-radius: 0rem 0rem 1rem 1rem;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 16px;
+    padding-bottom: 16px;
     text-align: left;
     background-color: #111204;
 }
@@ -987,7 +1034,6 @@ button:hover .arrow {
 }
 .faqButton{
     display: flex;
-    /* gap: 20px; */
     justify-content: space-between;
 }
 .faqButton p{
@@ -1008,27 +1054,19 @@ button:hover .arrow {
     height: 40px;
 }
 
-
-
-
-
-
-
 .FooterMain{
-    margin-top: 200px;
+    margin-top: 220px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap:125px;
     width: 100%;
-    height: 549px;
+    height: 580px;
     flex-shrink: 0;
     background-image: url('../Images/WavyDesign.png');
     background-color: #0F0F0F;
     background-size: cover;
     background-repeat: no-repeat;
-
-
 }
 .EveryFooterDiv{
     display: flex;
@@ -1043,7 +1081,8 @@ button:hover .arrow {
     justify-content: space-between;
     height: 100px;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    margin-left: 84px;
 }
 
 .RightColumn{
@@ -1162,9 +1201,9 @@ button:hover .arrow {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    align-items: baseline;
     margin-bottom: -80px;
-    width: 95%;
-    margin-left: 30px;
+    width: 94%;
 }
 .ThinLine h1{
     color:white;
@@ -1173,6 +1212,8 @@ button:hover .arrow {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-left: 84px;
+
 }
 .ThinLine h2{
     color:white;
@@ -1181,7 +1222,8 @@ button:hover .arrow {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-right: 220px;
+    margin-right: 180px;
+
 }
 .SocialMedia{
     width: 81.201px;
@@ -1313,7 +1355,7 @@ button:hover .arrow {
     }
     .playButton{
         height: 100px;
-        margin-right: -10px;
+        margin-right: -18px;
         margin-top: 35px;
     }
     .projectsImages{
@@ -1323,6 +1365,8 @@ button:hover .arrow {
         padding: 30px;
         flex-direction: column;
         height: fit-content;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
     .servicesContent{
         width: 100%;
@@ -1367,7 +1411,7 @@ button:hover .arrow {
     }
     .howWork{
         width: 50%;
-        background: 2B2B2B;
+        background: #2B2B2B;
         border-radius: 29px;
         height: 150px;
         align-items: center;
@@ -1409,19 +1453,24 @@ button:hover .arrow {
     .benefitsHeader p{
         font-size: 3.5vmin;
         width: 100%;
+        text-align: center;
     }
     .benefitsPara{
         font-size: 3.8vmin;
         text-align: center;
         width: 100%;
     }
+    .grid{
+        width: 100%;
+    }
     .boxIcon{
-        width: 40%;
+        width: 30%;
     }
     .boxes, .Lastboxes{
         width: 50%;
     }
     .boxHeader{
+        text-align: left;
         font-size: 1.5vmax;
         text-wrap: balance;
     }
@@ -1432,13 +1481,14 @@ button:hover .arrow {
     }
     .ProjectsDiv{
         background-size: contain;
+        gap: 20px;
     }
     .projectContent{
         margin-top: 50px;
         margin-left: 0px;
         width: 100%;
         align-items: center;
-        gap: 0px;
+        gap: 10px;
     }
     .projectContent h1{
         font-size: 4vmax;
@@ -1451,7 +1501,6 @@ button:hover .arrow {
         margin-bottom: -50px;
     }
     .projectButtons{
-
         gap: 8px;
     }
     .allbtn,.webbtn,.appbtn,.uibtn{
@@ -1526,9 +1575,11 @@ button:hover .arrow {
         font-size: 3.6vmin;
         width: 100%;
     }
-    .faqForm{
+    #faqForm{
         align-items: center;
         flex-direction: column;
+        width: 100%;
+        gap: 20px;
     }
     .dropdowns{
         width: 90%;
@@ -1579,7 +1630,8 @@ button:hover .arrow {
         align-items: flex-start;
         gap: 15px;
         margin-top: 120px;
-        padding-left: 20px;
+        margin-left:0px;
+        padding: 10px;
     }
     .RightColumn{
         margin-left: 0px;
@@ -1619,10 +1671,11 @@ button:hover .arrow {
         margin-bottom: 0px;
         justify-content: space-around;
         width: 100%;
-        margin-left: -.5px;
+        margin-left: 0px;
     }
     .ThinLine h1{
-        font-size: 2vmin;
+        font-size: 1.8vmin;
+        margin-left: 0px;
     }
     .ThinLine h2{
         margin-right: 20px;
@@ -1681,133 +1734,3 @@ button:hover .arrow {
         font-size: 2.5vmax;
     }
 }
-/* @media (min-height: 960px){
-    .turningVisions{
-        height: 550px;
-    }
-    .coverText h1{
-       margin-top: 100px;
-    }
-    .coverText p{
-        font-size: 2.5vmin;
-    }
-    .coverText button{
-        font-size: 2.5vmin;
-        height: 40px;
-    }
-    .buildingDesign{
-        margin-top: 50px;
-    }
-    .firstSection p{
-        text-align: left;
-    }
-    .video{
-        gap: 50px;
-    }
-    .projectsCompleted {
-        margin-top: 20px;
-        height: 350px;
-        padding: 20px;
-    }
-    .projectsCompleted img{
-        height: 100px;
-        object-fit: contain;
-    }
-    .servicesContent p{
-        font-size: 3vmin;
-    }
-    .howWork{
-        padding: 25px;
-        height: fit-content;
-        gap: 10px;
-    }
-    .howWork p{
-        font-size: 3vmin;
-    }
-    .ourExpert{
-        padding: 23px;
-        height: fit-content;
-        gap: 10px;
-    }
-    .innerWork{
-        gap: 10px;
-    }
-    .ourExpert p{
-        font-size: 3vmin;
-    }
-    .benefitsPara{
-        font-size: 3vmin;
-    }
-    .boxIcon{
-        height: 30px;
-        width: 30px;
-    }
-    .grid{
-        column-gap: 20px;
-    }
-    .boxes p{
-        font-size: 2vmin;
-    }
-    .Lastboxes p{
-        font-size: 1.8vmin;
-    }
-    .projectContent p{
-        margin-top: 10px;
-        font-size: 2.5vmin;
-    }
-    .ProjectBackground{
-        height: 400px;
-        flex-direction: row;
-    }
-    .testimonialText p{
-        font-size: 2.5vmin;
-    }
-    .faqTextarea textarea::placeholder{
-        font-size: 3vmin;
-    }
-    .faqButton p{
-        font-size: 3vmin;
-    }
-    .faqButton button{
-        font-size: 3vmin;
-        height: 50px;
-    }
-    .FooterMain{
-        margin-top: 680px;
-    }
-    .SocialMedia{
-        height: 15px;
-    }
-    .EveryFooterDiv{
-        gap: 250px;
-    }
-} */
-
-/* @media screen and (max-width: 1366px){
-    .turningVisions{
-        height: 720px;
-
-    }
-    .coverText{
-        margin-top: 0px;
-    }
-    .coverText h1{
-        width: 100%;
-    }
-    .coverText p {
-        width: 90%;
-        font-size: 2.5vmin;
-    }
-    .coverText button{
-        width: 18%;
-        height: 60px;
-        text-align: left;
-        font-size: 1.8vmin;
-    }
-    .BlackBg{
-        height: 900px;
-    }
-    .video{
-        align-items: center;
-    }
-} */

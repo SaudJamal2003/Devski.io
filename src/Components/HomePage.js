@@ -54,6 +54,8 @@ function HomePage() {
     const expandAnswer1 = () => {
         var open = document.getElementById(`${HomePageCss.expandedBlock1}`)
         var parentDiv = document.getElementById(`${HomePageCss.question1}`)
+        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
+        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
 
         if (open.style.display === "block") {
             open.style.display = "none";
@@ -64,11 +66,17 @@ function HomePage() {
             open.style.display = "block";
             parentDiv.style.marginBottom = "80px";
             parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        }    
+        }
+        
+        if(formHeight.style.height > '600px'){
+            footer.style.marginTop = '200px';
+        }
     }
     const expandAnswer2 = () => {
         var open = document.getElementById(`${HomePageCss.expandedBlock2}`)
         var parentDiv = document.getElementById(`${HomePageCss.question2}`)
+        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
+        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
 
         if (open.style.display === "block") {
             open.style.display = "none";
@@ -79,11 +87,16 @@ function HomePage() {
             open.style.display = "block";
             parentDiv.style.marginBottom = "80px";
             parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        }    
+        } 
+        if(formHeight.style.height > '600px'){
+            footer.style.marginTop = '200px';
+        }   
     }
     const expandAnswer3 = () => {
         var open = document.getElementById(`${HomePageCss.expandedBlock3}`)
         var parentDiv = document.getElementById(`${HomePageCss.question3}`)
+        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
+        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
 
         if (open.style.display === "block") {
             open.style.display = "none";
@@ -94,11 +107,16 @@ function HomePage() {
             open.style.display = "block";
             parentDiv.style.marginBottom = "80px";
             parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        }    
+        } 
+        if(formHeight.style.height > '600px'){
+            footer.style.marginTop = '200px';
+        }   
     }
     const expandAnswer4 = () => {
         var open = document.getElementById(`${HomePageCss.expandedBlock4}`)
         var parentDiv = document.getElementById(`${HomePageCss.question4}`)
+        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
+        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
 
         if (open.style.display === "block") {
             open.style.display = "none";
@@ -109,8 +127,44 @@ function HomePage() {
             open.style.display = "block";
             parentDiv.style.marginBottom = "80px";
             parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        }    
+            // open.style.marginBottom = '200px';
+        } 
+        if(formHeight.style.height > '600px'){
+            footer.style.marginTop = '200px';
+        }  
     }
+
+   // Get the button element
+   useEffect(() => {
+    const button = document.getElementById(`.${HomePageCss.buttonHover}`);
+    const number = document.getElementById(`.${HomePageCss.number2}`);
+
+    if (button && number) {
+      // Add a mouseover event listener
+      button.addEventListener('mouseover', () => {
+        number.style.backgroundColor = '#A2FF86';
+      });
+
+      // Add a mouseout event listener
+      button.addEventListener('mouseout', () => {
+        button.style.backgroundColor = '#444444';
+      });
+
+      // Clean up the event listeners on component unmount
+      return () => {
+        button.addEventListener('mouseover', () => {
+          number.style.backgroundColor = '#A2FF86';
+        });
+        button.addEventListener('mouseout', () => {
+          button.style.backgroundColor = '#444444';
+        });
+      };
+    } else {
+      console.error('Button or number element not found!');
+    }
+  }, []); // Empty dependency array to run this once when the component mounts
+
+       
     
     
   return (
@@ -189,10 +243,10 @@ function HomePage() {
             <div className={HomePageCss.servicesContent}>
                 <h1>Our Services</h1>
                 <p>Devski offers a range of design services that are tailored to meet the unique needs of each client</p>
-                <button className={HomePageCss.selectedBtn} style={{color: 'white'}}><img src={o1} className={HomePageCss.bullet} alt='o1'/> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
-                <button><img src={o2} className={HomePageCss.bullet} alt='o2'/> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
-                <button><img src={o3} className={HomePageCss.bullet} alt='o3'/> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
-                <button><img src={o4} className={HomePageCss.bullet} alt='o4'/> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <button id={HomePageCss.buttonHover} className={HomePageCss.selectedBtn} style={{color: 'white'}}><span className={HomePageCss.number1}>01</span> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <button id={HomePageCss.buttonHover}><span id={HomePageCss.number2}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <button id={HomePageCss.buttonHover}><span id={HomePageCss.number3}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <button id={HomePageCss.buttonHover}><span id={HomePageCss.number4}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
 
             </div>
 
@@ -268,17 +322,17 @@ function HomePage() {
                     </div>
                 </div>
                 <div className={HomePageCss.grid}>
-                    <div className={HomePageCss.boxes}>
+                    <div className={HomePageCss.boxes} style={{borderColor: 'transparent #A2FF864D transparent transparent'}}>
                         <img src={icon7}  className={HomePageCss.boxIcon} alt='icon'/>
                         <p className={HomePageCss.boxHeader}>7. Customized for you</p>
                         <p className={HomePageCss.boxText}>PWe design and build custom for you. We’re never starting from a template unless you want that? You don't, right?.</p>
                     </div>
-                    <div className={HomePageCss.boxes}>
+                    <div className={HomePageCss.boxes}  style={{borderColor: 'transparent #A2FF864D transparent transparent'}}>
                         <img src={icon8}  className={HomePageCss.boxIcon} alt='icon'/>
                         <p className={HomePageCss.boxHeader}>8. Creative paying</p>
                         <p className={HomePageCss.boxText}>We’re here when you need us and not on payroll when you don’t.</p>
                     </div>
-                    <div className={HomePageCss.Lastboxes}>
+                    <div className={HomePageCss.Lastboxes}  style={{borderColor: 'transparent transparent transparent transparent'}}>
                         <img src={icon9}  className={HomePageCss.boxIcon} alt='icon'/>
                         <p className={HomePageCss.boxHeader}>9. Expert turnoverss</p>
                         <p className={HomePageCss.boxText}>You’re getting 10+ years of design experience with every request. No hand-holding required.</p>
@@ -345,12 +399,12 @@ function HomePage() {
             </div>
         </div>
 
-        <div className={HomePageCss.FAQ}>
+        <div id={HomePageCss.FAQ}>
             <div className={HomePageCss.faqHeader}>
                 <h1>FAQs</h1>
                 <p>Life is short why spent to design from scratch, Use finalui templates and its dummy text like lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
             </div>
-            <div className={HomePageCss.faqForm}>
+            <div id={HomePageCss.faqForm}>
                 <div className={HomePageCss.dropdowns}>
                     <div id={HomePageCss.question1}>
                          <div id={HomePageCss.buttonText}>
