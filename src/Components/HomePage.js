@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import Devski_Logo from '../Images/Devski_Logo.png';
 import Clients from '../Images/Clients.png';
 import PlayButton from '../Images/PlayButton.png';
@@ -176,10 +177,19 @@ function HomePage() {
             <img src={Devski_Logo} className={HomePageCss.DevskiLogo} alt='logo'/>
             <ul className={HomePageCss.navMenu}>
                 <li className={HomePageCss.home}>Home</li>
-                <li className={HomePageCss.services}>Services</li>
-                <li className={HomePageCss.projects}>Projects</li>
-                <li className={HomePageCss.about}>About Us</li>
-                <li className={HomePageCss.contact}>Contact Us</li>
+                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                    <li className={HomePageCss.services}>Services</li>
+                </Link>
+                <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                    <li className={HomePageCss.projects}>Projects</li>
+                </Link>
+                <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                    <li className={HomePageCss.about}>About Us</li>
+                </Link>
+                <Link to='/' style={{textDecoration: 'none'}}>
+                    <li className={HomePageCss.contact}>Contact Us</li>
+                </Link>
+
             </ul>
             <div className={HomePageCss.hamburger}>
                 <span className={HomePageCss.bar}></span>

@@ -1,4 +1,5 @@
 import React, {useEffect} from "react";
+import { Link } from 'react-router-dom';
 import Devski_Logo from '../Images/Devski_Logo.png'
 import webdevIcon from '../Images/webdevIcon.png';
 import MobileDevIcon from '../Images/MobileDevIcon.png';
@@ -63,11 +64,18 @@ function DevskiServices(){
         <nav className={DevskiServicesCss.navbar}>
             <img src={Devski_Logo} className={DevskiServicesCss.DevskiLogo} alt='logo'/>
             <ul className={DevskiServicesCss.navMenu}>
-                <li className={DevskiServicesCss.home}>Home</li>
-                <li className={DevskiServicesCss.services}>Services</li>
-                <li className={DevskiServicesCss.projects}>Projects</li>
-                <li className={DevskiServicesCss.about}>About Us</li>
-                <li className={DevskiServicesCss.contact}>Contact Us</li>
+                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                    <li className={DevskiServicesCss.services}>Services</li>
+                </Link>
+                <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                    <li className={DevskiServicesCss.projects}>Projects</li>
+                </Link>
+                <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                    <li className={DevskiServicesCss.about}>About Us</li>
+                </Link>
+                <Link to='/' style={{textDecoration: 'none'}}>
+                    <li className={DevskiServicesCss.contact}>Contact Us</li>
+                </Link>
             </ul>
             <div className={DevskiServicesCss.hamburger}>
                 <span className={DevskiServicesCss.bar}></span>

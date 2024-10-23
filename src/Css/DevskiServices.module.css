@@ -648,7 +648,7 @@ gap: 10px;
     }
 
     .ArrayofServices .Container img {
-        width:; /* Full width of the container */
+        /* width:; Full width of the container */
         height: auto; /* Maintain aspect ratio */
         object-fit: cover; /* Cover the container */
     }
@@ -848,7 +848,7 @@ gap: 10px;
     }
 
     .RightColumn h1{
-        text-align: ;
+        /* text-align: ; */
     }
     .LeftColumn h1 {
         font-size: 16px; /* Slightly larger font size for readability */
