@@ -64,6 +64,9 @@ function DevskiServices(){
         <nav className={DevskiServicesCss.navbar}>
             <img src={Devski_Logo} className={DevskiServicesCss.DevskiLogo} alt='logo'/>
             <ul className={DevskiServicesCss.navMenu}>
+                <Link to='/' style={{textDecoration: 'none'}}>
+                    <li className={DevskiServicesCss.home}>Home</li>
+                </Link>
                 <Link to='/devskiServices' style={{textDecoration: 'none'}}>
                     <li className={DevskiServicesCss.services}>Services</li>
                 </Link>

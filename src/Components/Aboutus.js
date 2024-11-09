@@ -39,6 +39,9 @@ function Aboutus() {
                     <img src={Devski_Logo} className={AboutUsCss.DevskiLogo} alt='logo'/>
                     <ul className={AboutUsCss.navMenu}>
                         <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                        <li className={AboutUsCss.home}>Home</li>
+                        </Link>
+                        <Link to='/devskiServices' style={{textDecoration: 'none'}}>
                         <li className={AboutUsCss.services}>Services</li>
                         </Link>
                         <Link to='/projectsPage' style={{textDecoration: 'none'}}>

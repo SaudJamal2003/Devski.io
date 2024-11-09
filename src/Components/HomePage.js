@@ -136,35 +136,41 @@ function HomePage() {
     }
 
    // Get the button element
-   useEffect(() => {
-    const button = document.getElementById(`.${HomePageCss.buttonHover}`);
-    const number = document.getElementById(`.${HomePageCss.number2}`);
+//    useEffect(() => {
+//     const button = document.getElementById(`.${HomePageCss.buttonHover}`);
+//     const number = document.getElementById(`.${HomePageCss.number2}`);
 
-    if (button && number) {
-      // Add a mouseover event listener
-      button.addEventListener('mouseover', () => {
-        number.style.backgroundColor = '#A2FF86';
-      });
+//     if (button && number) {
+//       // Add a mouseover event listener
+//       button.addEventListener('mouseover', () => {
+//         number.style.backgroundColor = '#A2FF86';
+//       });
 
-      // Add a mouseout event listener
-      button.addEventListener('mouseout', () => {
-        button.style.backgroundColor = '#444444';
-      });
+//       // Add a mouseout event listener
+//       button.addEventListener('mouseout', () => {
+//         button.style.backgroundColor = '#444444';
+//       });
 
-      // Clean up the event listeners on component unmount
-      return () => {
-        button.addEventListener('mouseover', () => {
-          number.style.backgroundColor = '#A2FF86';
-        });
-        button.addEventListener('mouseout', () => {
-          button.style.backgroundColor = '#444444';
-        });
-      };
-    } else {
-      console.error('Button or number element not found!');
+//       // Clean up the event listeners on component unmount
+//       return () => {
+//         button.addEventListener('mouseover', () => {
+//           number.style.backgroundColor = '#A2FF86';
+//         });
+//         button.addEventListener('mouseout', () => {
+//           button.style.backgroundColor = '#444444';
+//         });
+//       };
+//     } else {
+//       console.error('Button or number element not found!');
+//     }
+//   }, []); // Empty dependency array to run this once when the component mounts
+    const changeColor = () => {
+        const button = document.getElementById(`.${HomePageCss.buttonHover}`);
+        const number = document.getElementById(`.${HomePageCss.number2}`);
+        if (button && number){
+            number.style.color = '#A2FF86';
+        }
     }
-  }, []); // Empty dependency array to run this once when the component mounts
-
        
     
     
@@ -254,7 +260,9 @@ function HomePage() {
                 <h1>Our Services</h1>
                 <p>Devski offers a range of design services that are tailored to meet the unique needs of each client</p>
                 <button id={HomePageCss.buttonHover} className={HomePageCss.selectedBtn} style={{color: 'white'}}><span className={HomePageCss.number1}>01</span> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
-                <button id={HomePageCss.buttonHover}><span id={HomePageCss.number2}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <Link to= '/devskiWebDev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                    <button id={HomePageCss.buttonHover} onMouseEnter={changeColor} classsName={HomePageCss.webDevService}><span id={HomePageCss.number2}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                </Link>
                 <button id={HomePageCss.buttonHover}><span id={HomePageCss.number3}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 <button id={HomePageCss.buttonHover}><span id={HomePageCss.number4}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
 

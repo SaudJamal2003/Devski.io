@@ -20,7 +20,8 @@ ul{
     justify-content: center;
     gap: 20px;
     font-size: 14px;
-    background-color: #1F1F1F;
+    background-color: transparent;
+    ;
 }
 li {
     list-style: none;
@@ -33,9 +34,9 @@ li {
     border-radius: 1.8rem;
     cursor: pointer;    
 }
-.services, .projects, .about, .contact{
+.services, .about, .projects, .contact{
     color: white;
-    background-color:#1F1F1F;
+    background-color: transparent;
     padding: 8px;
     border-radius: 1.8rem;
 }
@@ -46,13 +47,13 @@ li {
     color: black;
     cursor: pointer;
 }
-.projects:hover{
+.about:hover{
     background-color: #A2FF86;
     transition: 0.3s ease-in;
     color: black;
     cursor: pointer;
 }
-.about:hover{
+.projects:hover{
     background-color: #A2FF86;
     transition: 0.3s ease-in;
     color: black;
@@ -70,12 +71,13 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: #1F1F1F;
+    background-color: #131212f1;
     width: 100%;
+    height: 80px;
 }
 .DevskiLogo{
     object-fit: contain;
-    width: 80px;
+    width: 130px;
     margin-left: 100px;
 }
 .hamburger {
@@ -338,7 +340,6 @@ li {
     color: #444444;
     cursor: pointer;
 }
-
 .servicesContent button:hover{
     transition: 0.5s ease-in-out;
     color: white;
@@ -359,14 +360,6 @@ li {
     font-size: 20px;
     transform: scaleX(2); /* Adjust the scale factor as needed */
     display: inline-block;
-    padding: 10px; 
-    background-color: beige;
-    /* width: 16%; */
-    /* display: flex; */
-    /* justify-content: flex-start; */
-    /* margin-left: 6%; */
-    /* padding-right: ; */
-    /* position: absolute; */
 }
 #number2, #number3, #number4{
     color: #444444;
@@ -376,22 +369,23 @@ li {
     transform: scaleX(2); /* Adjust the scale factor as needed */
     display: inline-block; 
     padding: 10px; 
-    /* width: 16%;
-    display: flex;
-    justify-content: flex-start;
-    margin-left: 6%;
-    position: absolute; */
 }
-#number2:hover{
+button:hover #number2{
+    color: #A2FF86;
+    transition: 0.3s ease-in-out;
+}
+button:hover #number3{
+    color: #A2FF86;
+    transition: 0.3s ease-in-out;
+}
+button:hover #number4{
     color: #A2FF86;
     transition: 0.3s ease-in-out;
 }
 
-
 button:hover .arrow {
     animation: bounce 0.5s ease-in-out infinite;
 }
-
 .projectsImages{
     display: flex;
     width: 65%;
@@ -643,13 +637,13 @@ button:hover .arrow {
     color: #080808;
     font-family: Outfit;
     font-weight: 500;
-    font-size: 13px;
+    font-size: 15px;
 }
 .boxText{
     color: #9593A4;
     font-family: Outfit;
-    font-weight: 500;
-    font-size: 10px;
+    font-weight: 400;
+    font-size: 12px;
     width: 60%;
     margin-top: 8px;
     text-align: left;
@@ -693,7 +687,7 @@ button:hover .arrow {
 }
 .projectContent p{
     font-family: Outfit;
-    font-weight: 300;
+    font-weight: 200;
     font-size: 15px;
     letter-spacing: -1%;
     color: #ffffffa1;
@@ -1054,7 +1048,7 @@ button:hover .arrow {
     height: 40px;
 }
 
-.FooterMain{
+/* .FooterMain{
     margin-top: 220px;
     display: flex;
     flex-direction: column;
@@ -1233,6 +1227,308 @@ button:hover .arrow {
     gap: 10px;
 }
 
+ */
+ .CardButton{
+    display: flex;
+    width: 250px;
+    padding: 19px 31px 17px 31px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 8px;
+    background: #A2FF86;
+    font-family: outfit;
+    display: flex;
+    gap: 5px;
+}
+.CardButton:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    background-color: transparent;
+    border-color: #A2FF86;
+    color: #A2FF86;
+}
+ .FooterMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:125px;
+    width: 100%;
+    height: 549px;
+    flex-shrink: 0;
+    background-image: url('../Images/WavyDesign.png');
+    background-color: #0F0F0F;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 300px;
+}
+.EveryFooterDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 190px;
+    margin-top: 100px;
+    margin-bottom: -30px;
+}
+.AllColumn{
+    display: flex;
+    gap: 200px;
+    justify-content: center;
+    height: 100px;
+    align-items: center;
+}
+
+.RightColumn{
+    display: flex;
+    flex-direction: column;
+}
+.RightColumn h1{
+    color: white;
+    font-family: outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 20px;
+}
+.RightColumn h2{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.RightColumn h3{
+    color: white;
+    font-family: outfit;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.MiddleColumn{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    gap:20px;
+}
+.MiddleColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.LeftColumn{
+    display: flex;
+    flex-direction: column;
+    gap:5px
+    /* align-items: Right; */
+}
+.LeftColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h4{
+    color: white;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h2,h3,h5,h6{
+        color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.FooterHeading{
+    justify-content:center;
+    display: flex;
+    /* background-color: antiquewhite; */
+}
+.WorkTogether{
+    width: 100%;
+    /* margin-top: 405px; */
+}
+.ThinLine{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 400px;
+    justify-content: center;
+    /* background-color: aliceblue; */
+    margin-bottom: -100px;
+    width: 100%;
+}
+.ThinLine h1{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    margin-right: 30px;
+    line-height: normal;
+}
+.ThinLine h2{
+    color:white;
+    font-family: Arial;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-right: 50px;
+}
+.SocialMedia{
+    width: 81.201px;
+    height: 14px;
+    flex-shrink: 0;
+    display: flex;
+    gap: 10px;
+}
+@media (max-width: 1080px) {
+    .FooterMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-size:cover;
+        background-position: center;
+        margin-top: 500px;
+    }
+
+    .EveryFooterDiv {
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 15px; /* Slightly reduced gap for better spacing */
+        margin: 0;
+        margin-top: 50%;
+        width: 100%;
+        height: 100%;
+        /* background-color: #0F0F0F; */
+    }
+
+    .AllColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; /* Reduced gap to fit better on smaller screens */
+    }
+
+    .RightColumn{
+        text-align: center;
+        width: 100%;
+        margin-bottom:20px;
+    }
+    .LeftColumn {
+        text-align: right;
+        width: 100%;
+        /* background-color: #A2FF86 */
+
+    }
+    .LeftColumn h1 {
+        font-size: 16px; /* Slightly larger font size for readability */
+        /* margin-bottom: 8px; */
+        
+    }
+
+    .RightColumn h2{
+        font-size: 14px;
+    }
+    .RightColumn h3{
+        font-size: 14px;
+        
+    }
+    .LeftColumn h2{
+        font-size: 14px;
+    }
+    .LeftColumn h3{
+        font-size: 14px;
+    }
+    .LeftColumn h5{
+        font-size: 14px;
+    }
+    .LeftColumn h6 {
+        font-size: 14px; /* Standard font size for all text */
+    }
+
+    .MiddleColumn {
+        text-align: center;
+        width: 100%;
+        gap: 10px; /* Reduced gap for better spacing */
+    }
+
+    .MiddleColumn h1 {
+        font-size: 20px; /* Slightly smaller to fit better on mobile */
+        
+    }
+
+    .CardButton {
+        width: 90%; /* Width adjusted to be responsive */
+        padding: 10px 15px; /* Adjusted padding for mobile */
+        font-size: 14px; /* Slightly smaller font size */
+    }
+
+    .SocialMedia {
+        /* display: flex; */
+        justify-content: start;
+        gap: 8px; /* Adjusted gap for smaller icons */
+        width: 20px;
+        height: 20%;
+        margin-top: 10px;
+    }
+
+    .ThinLine {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 1px;
+        /* z-index: 1; */
+        width: 40%;
+        padding: 0%;
+        text-align: start;
+        margin-top: 15%; /* Adjusted margin */
+        /* background-color: blue; */
+    }
+
+    .ThinLine h1{
+        display: none;
+    }
+    .ThinLine h2 {
+        font-size: 10px;
+        
+    }
+
+    .WorkTogether {
+        width: 100%;
+        height: 95%;
+        /* margin-top: 18px; */
+        display: flex;
+        justify-content: bottom;
+        align-items: bottom;
+        margin-bottom: 0px;
+        /* background-color: aqua; */
+    }
+    .FooterHeading{
+        /* margin-top: 20px; */
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+    }
+}
 
 @media only screen and (max-width: 850px){
     .qoutes h1{
@@ -1244,33 +1540,59 @@ button:hover .arrow {
 }
 
 @media only screen and (max-width: 768px) {
+    .navbar{
+        position: fixed;
+        background-color: #232222;
+    }
     .navMenu {
         position: fixed;
         left: -100%;
-        top: 4.88rem;
+        top: 8rem;
         flex-direction: column;
-        background-color: #1F1F1F;
+        justify-content:flex-start;
+        align-items: center;
+        padding: 20px;
+        gap: 15px;
+        background-color: #232222;
         width: 100%;
-        height: 280px;
+        height: 100vh;
         border-radius: 0px;
         text-align: center;
         transition: 0.3s;
         box-shadow:0 10px 27px rgba(0, 0, 0, 0.05);
     }
+    .navMenu hr{
+        color: #A2FF86;
+        width: 100%;
+    }
+    ul{
+        gap: 0px;
+    }
+
+    li{
+        font-size: 15px;
+        text-align: left;
+        margin-bottom: -2px;
+    }
 
     .DevskiLogo{
         margin-left: 0px;
-    }
-
-    ul{
-        gap: 10px;
+        width: 80px ;
     }
 
     .navMenu.active {
-        left: 0;
+        left: -140px;
     }
     .home,.services, .projects, .about, .contact{
         border-radius: 1.5rem;
+    }
+    .home{
+        background-color: transparent;
+        color: #A2FF86;
+    }
+    .services:hover, .projects:hover, .about:hover, .contact:hover{
+        color: #A2FF86;
+        transition: 0.3s ease-in-out;
     }
 
     .contact{
@@ -1295,6 +1617,7 @@ button:hover .arrow {
     .turningVisions{
         background-size: cover;
         height: 300px;
+        margin-top: 6vh;
     }
     .BlackBg{
         width: 100%;
@@ -1312,11 +1635,13 @@ button:hover .arrow {
     }
     .coverText p{
         font-size: 2.9vmin;
+        font-weight: 300;
         width: 80%;
         letter-spacing: 1px;
     }
     .coverText button{
         font-size: 2.5vmin;
+        font-weight: 400;
         width: 25%;
         height: 35px;
         padding: 2px;
@@ -1372,6 +1697,11 @@ button:hover .arrow {
         width: 100%;
         align-items: center;
     }
+   .webLink{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+   }
     .servicesDiv h1{
         font-size: 4vmax;
     }
@@ -1398,6 +1728,7 @@ button:hover .arrow {
         border-radius: 29px;
         height: 150px;
         align-items: center;
+        /* position: relative; */
     }
     .UiProjects img{
         height: 60px;
@@ -1609,6 +1940,8 @@ button:hover .arrow {
         font-size: 3.5vmin;
     }
     .faqTextarea{
+        /* margin-top: 100px; */
+        height: 200px;
         width: 90%;
     }
     .faqButton p{
@@ -1619,7 +1952,7 @@ button:hover .arrow {
     }
 
     /* FOOTER CODE */
-    .FooterMain{
+    /* .FooterMain{
         margin-top: 540px;
         background-size: contain;
         height: fit-content;
@@ -1690,9 +2023,8 @@ button:hover .arrow {
     }
     .WorkTogether{
         margin-bottom: 0px;
-        /* margin-top: -50px; */
     }
-
+ */
 
 }
 

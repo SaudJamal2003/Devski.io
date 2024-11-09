@@ -6,6 +6,7 @@ import HomePage from './Components/HomePage.js';
 import ProjectsPage from './Components/ProjectsPage.js';
 import AboutUs from './Components/Aboutus.js';
 import DevskiServices from './Components/DevskiServices.js';
+// import DevskiProjects from './Components/DevskiProjects.js';
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
         </Routes>
 
       </BrowserRouter>
+      {/* <DevskiProjects /> */}
     </>
   );
 }

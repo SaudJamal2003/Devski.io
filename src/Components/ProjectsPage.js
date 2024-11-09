@@ -43,6 +43,9 @@ function ProjectsPage() {
                 <nav className={ProjectsPageCss.navbar}>
                     <img src={Devski_Logo} className={ProjectsPageCss.DevskiLogo} alt='logo'/>
                     <ul className={ProjectsPageCss.navMenu}>
+                        <Link to='/' style={{textDecoration: 'none'}}>
+                        <li className={ProjectsPageCss.home}>Home</li>
+                        </Link>
                         <Link to='/devskiServices' style={{textDecoration: 'none'}}>
                         <li className={ProjectsPageCss.services}>Services</li>
                         </Link>
