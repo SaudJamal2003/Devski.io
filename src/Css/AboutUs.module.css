@@ -20,7 +20,7 @@ ul{
     gap: 20px;
     font-size: 14px;
     background-color: #0F0F0F;
-    ;
+    
 }
 li {
     list-style: none;
@@ -97,6 +97,7 @@ li {
     justify-content: space-between;
     align-items: center;
     justify-content: center;
+    background-color: #0F0F0F;
 }
 .teamText{
     width: 100%;
@@ -184,10 +185,46 @@ li {
     height: fit-content;
     margin-top: -50px;
 }
+.socialAccounts{
+    background-color: #1F1F1F;
+    padding: 20px;
+    gap: 22px;
+    position: absolute;
+    margin-top: 27%;
+    border-radius: 12px;
+    display: none;
+    transform: translateY(10%);
+}
+.linkedin, .instagram{
+    object-fit: contain;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
 .socialbtn{
     object-fit: contain;
     height: 80px;
 }
+.expandSocials{
+    object-fit: contain;
+    height: 80px;
+    margin-top: -36px;
+    display: none;
+    cursor: pointer;
+}
+.Maryam:hover .expandSocials{
+    transition: 0.5s ease-in-out;
+    display: block;
+}
+.Maryam:hover .socialAccounts{
+    transition: 2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    transform: translateY(0);
+}
+
 
 .FooterMain{
     display: flex;
@@ -503,7 +540,7 @@ li {
 
 @media only screen and (max-width: 768px) {
     .main{
-        gap: 20px;
+        gap: 60px;
     }
     .navbar{
         position: fixed;
@@ -604,6 +641,7 @@ li {
         flex-direction: column;
         justify-content: center;
         padding: 10px;
+        gap: 90px;
     }
     .pictureRow2{
         margin-top: 8px;
@@ -618,12 +656,15 @@ li {
         font-size: 3vmax;
     }
     .saudPic{
-        height: 325px;
+        height: 375px;
     }
     .FooterMain{
         margin-top: 50px;
     }
     .socialbtn{
         height: 70px;
+    }
+    .socialAccounts{
+        margin-top: 50px;
     }
 }

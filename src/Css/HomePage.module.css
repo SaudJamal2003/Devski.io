@@ -125,8 +125,9 @@ li {
     height: 550px;
 }
 .coverText h1{
+    margin-top: 20px;
     color: white;
-    font-size: 90px;
+    font-size: 120px;
     width: 70%;
     font-family: Outfit;
     line-height: 1.2;
@@ -138,7 +139,7 @@ li {
 .coverText p{
     color: #ffffffb3;
     font-family: Outfit;
-    font-size: 17px;
+    font-size: 19px;
     width: 44%;
     text-align: left;
 }
@@ -184,9 +185,10 @@ li {
     gap: 10px;
 }
 .firstSection p{
-    color: #A2FF86;
+    color: #8be96f;
     font-family: 'Outfit';
-    font-size: 12px;
+    font-weight: 600;
+    font-size: 16px;
     text-align: left;
 }
 .firstSection h1{
@@ -543,30 +545,35 @@ button:hover .arrow {
 }
 .benefitsText{
     display: flex;
-    width: 80%;
+    width: 100%;
     align-items: center;
-
+    justify-content: center;
 }
 .benefitsHeader{
     display: flex;
     flex-direction: column;
     width: 55%;
+    gap: 10px;
 }
 .benefitsHeader p{
-    color: #A2FF86;
-    font-size: 15px;
+    color: #8be96f;
+    font-size: 20px;
+    font-weight: 600;
     margin-bottom: 8px;
     font-family: Outfit;
-    text-align: left;
+    text-align: center;
 }
 .benefitsHeader h1{
     font-size: 45px;
     font-family: Outfit;
+    text-wrap: balance;
+    text-align: center;
+    width: 100%;
 }
 .benefitsPara{
     text-align: center;
     text-wrap: balance;
-    width: 42%;
+    width: 0;
     font-size: 18px;
     color: #0000009d;
     font-family: Outfit;
@@ -578,7 +585,7 @@ button:hover .arrow {
     width: 100%;
     align-items: center;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 25px;
 }
 
 .grid{
@@ -593,7 +600,7 @@ button:hover .arrow {
     border-style: solid;
     border-width: 1.6px 1.6px 1.6px 1.6px;
     border-color: transparent #A2FF864D #A2FF864D transparent ;
-    height: 180px;
+    height: 195px;
     width: 28%;
     padding: 20px;
     align-items: start;
@@ -628,7 +635,7 @@ button:hover .arrow {
     flex-direction: column;
     border-style: solid;
     border-width: 1.6px 1.6px 1.6px 1.6px;
-    height: 180px;
+    height: 195px;
     width: 28%;
     padding: 20px;
     align-items: start
@@ -637,15 +644,15 @@ button:hover .arrow {
     color: #080808;
     font-family: Outfit;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 18px;
 }
 .boxText{
     color: #9593A4;
     font-family: Outfit;
     font-weight: 400;
-    font-size: 12px;
-    width: 60%;
-    margin-top: 8px;
+    font-size: 14px;
+    width: 80%;
+    /* margin-bottom: 4px; */
     text-align: left;
 }
 .boxIcon{
@@ -681,14 +688,14 @@ button:hover .arrow {
 .projectContent h1{
     color: #A2FF86;
     font-family: Outfit;
-    font-size: 45.75px;
+    font-size: 55.75px;
     font-weight: 700;
     line-height: 54.9px;
 }
 .projectContent p{
     font-family: Outfit;
     font-weight: 200;
-    font-size: 15px;
+    font-size: 16px;
     letter-spacing: -1%;
     color: #ffffffa1;
     width: 90%;
@@ -702,6 +709,7 @@ button:hover .arrow {
     justify-content: center;
     gap: 16px;
     margin-top: 50px;
+    cursor: pointer;
 }
 
 .allbtn,.webbtn,.appbtn,.uibtn{
@@ -722,17 +730,21 @@ button:hover .arrow {
 .allbtn:hover{
     transition: 0.3s ease-in-out;
     background-color: #A2FF86;
+    color: black;
 }
 .appbtn:hover{
     transition: 0.3s ease-in-out;
     background-color: #A2FF86;
+    color: black;
 }
 .uibtn:hover{
     transition: 0.3s ease-in-out;
     background-color: #A2FF86;
+    color: black;
 }
 .webbtn{
     background-color: #A2FF86;
+    color: black;
 }
 .ProjectBackground{
     width: 100%;
@@ -785,7 +797,7 @@ button:hover .arrow {
     gap: 25px;
 }
 .qoutes h1{
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 800;
     font-family: sans-serif;
 }

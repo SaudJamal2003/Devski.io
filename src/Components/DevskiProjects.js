@@ -28,8 +28,10 @@ function DevskiProjects() {
     <>     
         <header className={DevskiProjectsCss.header}>
         <nav className={DevskiProjectsCss.navbar}>
-            <img src={Devski_Logo} className={DevskiProjectsCss.DevskiLogo} alt='logo'/>
-            <ul className={DevskiProjectsCss.navMenu}>
+            <Link to='/' style={{textDecoration: 'none'}}>
+                <img src={Devski_Logo} className={DevskiProjectsCss.DevskiLogo} alt='logo'/>
+             </Link>
+             <ul className={DevskiProjectsCss.navMenu}>
                 <Link to='/devskiServices' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.services}>Services</li>
                 </Link>

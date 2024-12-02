@@ -1,5 +1,5 @@
 import React, {useEffect} from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Devski_Logo from '../Images/Devski_Logo.png'
 import webdevIcon from '../Images/webdevIcon.png';
 import MobileDevIcon from '../Images/MobileDevIcon.png';
@@ -54,6 +54,18 @@ function DevskiServices(){
         });
 
     }, []);
+
+    const navigate = useNavigate()
+
+    const navigateWebServices = () => {
+        navigate('/devskiUiUx')
+    }
+    const navigateAppServices = () => {
+        navigate('/devskiAppDev')
+    }
+    const navigateUiUXServices = () => {
+        navigate('/devskiWebdev')
+    }
     
     
   return(
@@ -62,12 +74,14 @@ function DevskiServices(){
         <div className={DevskiServicesCss.main1}>
         <header className={DevskiServicesCss.header}>
         <nav className={DevskiServicesCss.navbar}>
-            <img src={Devski_Logo} className={DevskiServicesCss.DevskiLogo} alt='logo'/>
+        <Link to='/' style={{textDecoration: 'none'}}>
+                <img src={Devski_Logo} className={DevskiServicesCss.DevskiLogo} alt='logo'/>
+        </Link>
             <ul className={DevskiServicesCss.navMenu}>
                 <Link to='/' style={{textDecoration: 'none'}}>
                     <li className={DevskiServicesCss.home}>Home</li>
                 </Link>
-                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                <Link to='/devskiServices' style={{textDecoration: 'none', color:'black'}}>
                     <li className={DevskiServicesCss.services}>Services</li>
                 </Link>
                 <Link to='/projectsPage' style={{textDecoration: 'none'}}>
@@ -101,37 +115,37 @@ function DevskiServices(){
                     <div className={DevskiServicesCss.Container}>
                         <img src={webdevIcon} className={DevskiServicesCss.webdevIcon} alt="webdevIcon" />
                         <h1>Web Development</h1>
-                        <p>Non tristique et nec nibh nisl aliquet et amet posuere. Vel nunc aliquam magna lacinia nulla risus.</p>
+                        <p>Our website development services create dynamic and responsive websites specific to your business needs.</p>
                         <button className={DevskiServicesCss.LearnMore}>Learn More</button>
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={MobileDevIcon} className={DevskiServicesCss.MobileDevIcon} alt="MobileDevIcon" />
                         <h1>Mobile Development</h1>
-                        <p>Non tristique et nec nibh nisl aliquet et amet posuere. Vel nunc aliquam magna lacinia nulla risus.</p>
+                        <p>Our application solutions ensure seamless performance and a great user experience across all devices.</p>
                         <button className={DevskiServicesCss.LearnMore}>Learn More</button>
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={softDevIcon} className={DevskiServicesCss.softDevIcon} alt="softDevIcon" />
-                        <h1>Software Development</h1>
-                        <p>Non tristique et nec nibh nisl aliquet et amet posuere. Vel nunc aliquam magna lacinia nulla risus.</p>
+                        <h1>UI/Ux </h1>
+                        <p>Our UI/UX design services focus on creating intuitive and aesthetically pleasing interfaces.</p>
                         <button className={DevskiServicesCss.LearnMore}>Learn More</button>
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={brandingIcon} className={DevskiServicesCss.brandingIcon} alt="brandingIcon" />
                         <h1>Branding</h1>
-                        <p>Non tristique et nec nibh nisl aliquet et amet posuere. Vel nunc aliquam magna lacinia nulla risus.</p>
+                        <p>Our branding services craft strategies that capture the essence of your company.</p>
                         <button className={DevskiServicesCss.LearnMore}>Learn More</button>
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={DigitalIcon} className={DevskiServicesCss.DigitalIcon} alt="DigitalIcon" />
-                        <h1>Digital Marketing</h1>
-                        <p>Non tristique et nec nibh nisl aliquet et amet posuere. Vel nunc aliquam magna lacinia nulla risus.</p>
+                        <h1>Graphic Designing</h1>
+                        <p>Our graphic design services create visually compelling designs that reflect your brand's identity.</p>
                         <button className={DevskiServicesCss.LearnMore}>Learn More</button>
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={CloudIcon} className={DevskiServicesCss.CloudIcon} alt="CloudIcon" />
                         <h1>Cloud Services</h1>
-                        <p>Non tristique et nec nibh nisl aliquet et amet posuere. Vel nunc aliquam magna lacinia nulla risus.</p>
+                        <p>We offer cloud migration, storage, and management solutions for seamless business operations.</p>
                         <button className={DevskiServicesCss.LearnMore}>Learn More</button>
                     </div>
                 </div>
@@ -143,9 +157,9 @@ function DevskiServices(){
             
             <div className={DevskiServicesCss.ProjectButtons}>
             <button className={DevskiServicesCss.AllButton}> All </button>
-            <button className={DevskiServicesCss.WebButton}> Web </button>
-            <button className={DevskiServicesCss.AppButton}> App </button>
-            <button className={DevskiServicesCss.UIUXButton}> UI/UX </button>
+            <button className={DevskiServicesCss.WebButton} onClick={navigateWebServices}> UI/UX </button>
+            <button className={DevskiServicesCss.AppButton} onClick={navigateAppServices}> App </button>
+            <button className={DevskiServicesCss.UIUXButton} onClick={navigateUiUXServices}> Web </button>
             </div>
 
     

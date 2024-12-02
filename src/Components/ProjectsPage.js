@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ProjectsPageCss from "../Css/ProjectsPage.module.css"
 import Devski_Logo from '../Images/Devski_Logo.png';
 import play from '../Images/PlayButton.png';
@@ -33,6 +33,19 @@ function ProjectsPage() {
           };
         }
     }, []);
+
+    const navigate = useNavigate()
+
+    const navigateAllProjects = () => {
+        navigate('/completeProjects')
+    }
+    const navigateAppProjects = () => {
+        navigate('/appDevProjects')
+    }
+    const navigateUiUXProjects = () => {
+        navigate('/UiUXProjects')
+    }
+
   return (
     <>
         <div className={ProjectsPageCss.main}>
@@ -41,8 +54,10 @@ function ProjectsPage() {
 
                 <header className={ProjectsPageCss.header}>
                 <nav className={ProjectsPageCss.navbar}>
+                <Link to='/' style={{textDecoration: 'none'}}>
                     <img src={Devski_Logo} className={ProjectsPageCss.DevskiLogo} alt='logo'/>
-                    <ul className={ProjectsPageCss.navMenu}>
+                </Link>
+                <ul className={ProjectsPageCss.navMenu}>
                         <Link to='/' style={{textDecoration: 'none'}}>
                         <li className={ProjectsPageCss.home}>Home</li>
                         </Link>
@@ -73,10 +88,10 @@ function ProjectsPage() {
 
             <div className={ProjectsPageCss.featuredProjects}>
                 <div className={ProjectsPageCss.projectButtons}>
-                    <button className={ProjectsPageCss.allbtn}>All</button>
+                    <button className={ProjectsPageCss.allbtn} onClick={navigateAllProjects}>All</button>
                     <button className={ProjectsPageCss.webbtn}>Web Dev</button>
-                    <button className={ProjectsPageCss.appbtn}>App Dev</button>
-                    <button className={ProjectsPageCss.uibtn}>UI / UX</button>
+                    <button className={ProjectsPageCss.appbtn} onClick={navigateAppProjects}>App Dev</button>
+                    <button className={ProjectsPageCss.uibtn} onClick={navigateUiUXProjects}>UI / UX</button>
                 </div>
 
                 <div className={ProjectsPageCss.video}>
@@ -119,7 +134,6 @@ function ProjectsPage() {
             <div className={ProjectsPageCss.keyFeatures}>
                 <div className={ProjectsPageCss.keyFeaturesWavy}>
                     <h1><span>Key Features</span> of Our Projects</h1>
-                    <p>Partnering with DigitX offers a multitude of advantages. Experience increased brand visibility, improved customer engagement, and higher ROI. Our tailored solutions are designed to meet your unique business needs, ensuring lasting success.</p>
                 {/* </div> */}
                     <div className={ProjectsPageCss.featureAttributes}>
 
@@ -134,8 +148,8 @@ function ProjectsPage() {
 
                             <div className={ProjectsPageCss.strategicPlan}>
                                 <img src={flameIcon} className={ProjectsPageCss.flameIcon} alt='flameIcon'/>
-                                <h2>Customized Solutions</h2>
-                                <p>We believe in tailoring our services to suit each project's unique requirements, resulting in solutions that perfectly align with our clients' brand identities.</p>
+                                <h2>Collaborative Process</h2>
+                                <p>We work closely with clients throughout the project to ensure alignment with their vision and objectives.</p>
                             </div>
                             <hr></hr>
 

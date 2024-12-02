@@ -6,7 +6,11 @@ import HomePage from './Components/HomePage.js';
 import ProjectsPage from './Components/ProjectsPage.js';
 import AboutUs from './Components/Aboutus.js';
 import DevskiServices from './Components/DevskiServices.js';
-// import DevskiProjects from './Components/DevskiProjects.js';
+import DevskiUiUX from './Components/DevskiUiUx.js';
+import DevskiAppDev from './Components/DevskiAppDev.js';
+import AppDevProjects from './Components/AppDevProjects.js';
+import UiUxProjects from './Components/UiUxProjects.js';
+import CompleteProjects from './Components/CompleteProjects.js';
 
 function App() {
   return (
@@ -14,13 +18,26 @@ function App() {
          <BrowserRouter>
         <Routes>
                       
-            <Route exact path="/devskiWebDev" element={<DevskiWebDev />}>
+            <Route exact path="/devskiUiUx" element={<DevskiWebDev />}>
+            </Route>
+
+            <Route exact path="/devskiWebdev" element={<DevskiUiUX />}>
+            </Route>
+
+            <Route exact path="/devskiAppDev" element={<DevskiAppDev />}>
             </Route>
 
             <Route exact path="/devskiServices" element={<DevskiServices/>}>
             </Route>
 
+            <Route exact path="/completeProjects" element={<CompleteProjects />}>
+            </Route>
+
             <Route exact path="/projectsPage" element={<ProjectsPage />}>
+            </Route>
+            <Route exact path="/appDevProjects" element={<AppDevProjects />}>
+            </Route>
+            <Route exact path="/UiUXProjects" element={<UiUxProjects />}>
             </Route>
 
             <Route exact path="/aboutus" element={<AboutUs />}>

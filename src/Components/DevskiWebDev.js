@@ -36,9 +36,11 @@ function DevskiWebDev(){
         <>
         <header className={DevskiWebDevCss.header}>
         <nav className={DevskiWebDevCss.navbar}>
-            <img src={Devski_Logo} className={DevskiWebDevCss.DevskiLogo} alt='logo'/>
+            <Link to='/' style={{textDecoration: 'none'}}>
+                <img src={Devski_Logo} className={DevskiWebDevCss.DevskiLogo} alt='logo'/>
+            </Link>
             <ul className={DevskiWebDevCss.navMenu}>
-                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                <Link to='/' style={{textDecoration: 'none'}}>
                     <li className={DevskiWebDevCss.home}>Home</li>
                     <hr></hr>
                 </Link>
@@ -67,26 +69,7 @@ function DevskiWebDev(){
             </div>
         </nav>
        </header>
-            {/* <header className={DevskiWebDevCss.header}>
-            <nav className={DevskiWebDevCss.navbar}>
-                <img src={Devski_Logo} className={DevskiWebDevCss.DevskiLogo} alt='logo'/>
-                <ul className={DevskiWebDevCss.navMenu}>
-                    <li className={DevskiWebDevCss.home}>Home</li>
-                    <li className={DevskiWebDevCss.services}>Services</li>
-                    <li className={DevskiWebDevCss.projects}>Projects</li>
-                    <li className={DevskiWebDevCss.about}>About Us</li>
-                    <li className={DevskiWebDevCss.contact}>Contact Us</li>
-                </ul>
-                <div className={DevskiWebDevCss.hamburger}>
-                    <span className={DevskiWebDevCss.bar}></span>
-                    <span className={DevskiWebDevCss.bar}></span>
-                    <span className={DevskiWebDevCss.bar}></span>
-                </div>
-            </nav>
-           </header> */}
-
-
-
+   
            <div className={DevskiWebDevCss.Main}>
 
             
@@ -95,7 +78,7 @@ function DevskiWebDev(){
                         <h1>Services</h1>
                     </div>
                     <div className={DevskiWebDevCss.WebDevHeading}>
-                        <h1>Web Development</h1>
+                        <h1>UI/UX Design</h1>
                     </div>
                 </div>
 
@@ -104,13 +87,13 @@ function DevskiWebDev(){
                         <h1>Service Description</h1>
                     </div>
                     <div className={DevskiWebDevCss.ServiceDescriptionPara}>
-                        <p>Unlock the full potential of your data with Improdata’s advanced analytics services. We leverage sophisticated algorithms and statistical techniques to transform complex datasets into meaningful insights. Whether you're aiming to optimize business processes, enhance customer experiences, or drive strategic decisions, our data analytics services empower you to make data-driven choices with confidence.</p>
+                        <p>Our UI/UX team is mastered in combining aesthetic design with functionality, ensuring that every interaction with your product is seamless and enjoyable. By conducting thorough user research and analysis, we gain deep insights into user behavior to enhance user engagement and satisfaction.</p>
                     </div>
                 </div>
 
                 <div className={DevskiWebDevCss.HowWorks}>
                     <div className={DevskiWebDevCss.HowWorksHeading}>
-                        <h1>How Our<span> Web Development </span> Process Works</h1>
+                        <h1>How Our<span> UI/UX Design </span> Process Works</h1>
                     </div>
                     <div className={DevskiWebDevCss.HowWorksPara}>
                         <p>Devski follows a collaborative and iterative approach to design, with a focus on understanding and meeting the unique needs of each client.</p>
@@ -125,8 +108,10 @@ function DevskiWebDev(){
                             <img src={ProcessBox1Img} className={DevskiWebDevCss.ProcessBox1Img} alt="ProcessBox1Img" />
                         </div>
                         <div className={DevskiWebDevCss.ProcessBoxHeading}>
-                            <h1>Discovery</h1>
-                            <p>We start by getting to know our clients, their business goals, and their target audience.</p>
+                            <h1>Discovery and UX Strategy</h1>
+                            <p>• Understand the client’s vision.</p>
+                            <p>• Competitive analysis of target users.</p>
+                            <p>• Map user journeys.</p>
                         </div>
                     </div>
 
@@ -136,8 +121,10 @@ function DevskiWebDev(){
                             <img src={ProcessBox1Img} className={DevskiWebDevCss.ProcessBox1Img} alt="ProcessBox1Img" />
                         </div>
                         <div className={DevskiWebDevCss.ProcessBoxHeading}>
-                            <h1>Planning</h1>
-                            <p>We plan the project by setting milestones, timelines, and resource allocations.</p>
+                            <h1>Wireframing & Prototyping</h1>
+                            <p>• Create wireframes to outline structure and layout.</p>
+                            <p>• Develop interactive prototypes.</p>
+                            <p>• Gather feedback.</p>
                         </div>
                     </div>
 
@@ -147,8 +134,10 @@ function DevskiWebDev(){
                             <img src={ProcessBox1Img} className={DevskiWebDevCss.ProcessBox1Img} alt="ProcessBox1Img" />
                         </div>
                         <div className={DevskiWebDevCss.ProcessBoxHeading}>
-                            <h1>Design</h1>
-                            <p>We create wireframes and prototypes to visualize the final product.</p>
+                            <h1>Visual Design</h1>
+                            <p>• Design high-fidelity mockups.</p>
+                            <p>• Apply consistent UI elements</p>
+                            <p>• Responsive design across devices.</p>
                         </div>
                     </div>
 
@@ -158,8 +147,10 @@ function DevskiWebDev(){
                             <img src={ProcessBox1Img} className={DevskiWebDevCss.ProcessBox1Img} alt="ProcessBox1Img" />
                         </div>
                         <div className={DevskiWebDevCss.ProcessBoxHeading}>
-                            <h1>Development</h1>
-                            <p>We develop the final product according to the approved design and functionality.</p>
+                            <h1>Handoff & Implementation Support</h1>
+                            <p>• Prepare design assets and guidelines for development teams.</p>
+                            <p>• Collaborate with developers during implementation.</p>
+                            <p>• Ongoing support for any design adjustments.</p>
                         </div>
                     </div>
                 </div>
@@ -170,7 +161,7 @@ function DevskiWebDev(){
         <div className={DevskiWebDevCss.BlackBg}>
             <div className={DevskiWebDevCss.WebDevProjects}>
                     <div className={DevskiWebDevCss.WebDevProjectsHeading}>
-                    <h1>Our Best Work from <span> Web Development </span> Services</h1>
+                    <h1>Our Best Work from <span>  UI/UX </span> Services</h1>
                     <p>As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.</p>
                     </div>
             </div>
@@ -178,13 +169,13 @@ function DevskiWebDev(){
             <div className={DevskiWebDevCss.AllProjects}>
                 <div className={DevskiWebDevCss.proj1}>
                     <img src = {Project1}className={DevskiWebDevCss.Project1} alt = "Project1"/>
-                    <h1>Helping Hands</h1>
-                    <p>Website</p>
+                    <h1>Carreri</h1>
+                    <p>Mobile App</p>
                 </div>
                 
                 <div className={DevskiWebDevCss.proj2}>
                     <img src = {Project2}className={DevskiWebDevCss.Project2} alt = "Project2"/>
-                    <h1>Nom Nom Nerds</h1>
+                    <h1>Helping Hands</h1>
                     <p>Web Design</p>
                 </div>
 

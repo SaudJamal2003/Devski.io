@@ -1,12 +1,8 @@
-import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import React, {useEffect, useState} from 'react';
+import { Link, useNavigate} from 'react-router-dom';
 import Devski_Logo from '../Images/Devski_Logo.png';
 import Clients from '../Images/Clients.png';
 import PlayButton from '../Images/PlayButton.png';
-import o1 from '../Images/01.png';
-import o2 from '../Images/02.png';
-import o3 from '../Images/03.png';
-import o4 from '../Images/04.png';
 import whiteArrow from '../Images/whiteArrow.png';
 import blackArrow from '../Images/blackArrow.png';
 import roundwhiteArrow from '../Images/roundWhiteArrow.png';
@@ -20,8 +16,6 @@ import icon6 from '../Images/dollar.png';
 import icon7 from '../Images/cog.png';
 import icon8 from '../Images/magnify.png';
 import icon9 from '../Images/threeStars.png';
-import Project1 from '../Images/proj1.png';
-import Project2 from '../Images/proj2.png';
 import star from '../Images/star.png';
 import personPic from '../Images/personPic.png';
 import DownIcon from '../Images/DownIcon.png';
@@ -30,7 +24,6 @@ import behance from '../Images/behance.png';
 import Insta from '../Images/Insta.png';
 import linkedin from '../Images/linkedin.png';
 import HomePageCss from '../Css/HomePage.module.css';
-
 
 function HomePage() {
 
@@ -128,42 +121,12 @@ function HomePage() {
             open.style.display = "block";
             parentDiv.style.marginBottom = "80px";
             parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-            // open.style.marginBottom = '200px';
         } 
         if(formHeight.style.height > '600px'){
             footer.style.marginTop = '200px';
         }  
     }
 
-   // Get the button element
-//    useEffect(() => {
-//     const button = document.getElementById(`.${HomePageCss.buttonHover}`);
-//     const number = document.getElementById(`.${HomePageCss.number2}`);
-
-//     if (button && number) {
-//       // Add a mouseover event listener
-//       button.addEventListener('mouseover', () => {
-//         number.style.backgroundColor = '#A2FF86';
-//       });
-
-//       // Add a mouseout event listener
-//       button.addEventListener('mouseout', () => {
-//         button.style.backgroundColor = '#444444';
-//       });
-
-//       // Clean up the event listeners on component unmount
-//       return () => {
-//         button.addEventListener('mouseover', () => {
-//           number.style.backgroundColor = '#A2FF86';
-//         });
-//         button.addEventListener('mouseout', () => {
-//           button.style.backgroundColor = '#444444';
-//         });
-//       };
-//     } else {
-//       console.error('Button or number element not found!');
-//     }
-//   }, []); // Empty dependency array to run this once when the component mounts
     const changeColor = () => {
         const button = document.getElementById(`.${HomePageCss.buttonHover}`);
         const number = document.getElementById(`.${HomePageCss.number2}`);
@@ -171,7 +134,54 @@ function HomePage() {
             number.style.color = '#A2FF86';
         }
     }
-       
+
+    const navigate = useNavigate()
+
+    const navigateAllProjects = () => {
+        navigate('/completeProjects')
+    }
+    const navigateAppProjects = () => {
+        navigate('/appDevProjects')
+    }
+    const navigateWebProjects = () => {
+        navigate('/projectsPage')
+    }
+    const navigateUiUXProjects = () => {
+        navigate('/UiUXProjects')
+    }
+    
+    const [questions, setQuestions] = useState();
+
+    // const handleChange = (e) => {
+    //     const textValue = e.target.value
+    //     setQuestions(textValue)
+    // }
+
+    // const handleSubmitMail = async (e) => { 
+    //     e.preventDefault() 
+    //     try {
+    //       // Make API call to approve volunteer request using fetch
+    //       const response = await fetch('http://localhost:3000/sendMail', {
+    //         method: 'POST',
+    //         headers: {
+    //           'Content-Type': 'application/json'
+    //         },
+    //         // You can pass any necessary data here in the body
+    //         // For example: JSON.stringify({ volunteerId: 'volunteerIdHere' })
+    //         body: JSON.stringify(task) //volEmail instead of this ?
+    //       });
+    
+    //       if (!response.ok) {
+    //         throw new Error('Failed to send mail');
+    //       }
+    
+    //       alert('Task email sent successfully.');
+    //     } 
+    //     catch (error) {
+    //       console.error('Error in sending mail:', error);
+    //       alert('Error in sending mail to volunteer. Please try again later.');
+    //     } 
+    //   };
     
     
   return (
@@ -180,13 +190,15 @@ function HomePage() {
 
       <header className={HomePageCss.header}>
         <nav className={HomePageCss.navbar}>
-            <img src={Devski_Logo} className={HomePageCss.DevskiLogo} alt='logo'/>
+            <Link to='/' style={{textDecoration: 'none'}}>
+                <img src={Devski_Logo} className={HomePageCss.DevskiLogo} alt='logo'/>
+            </Link>
             <ul className={HomePageCss.navMenu}>
                 <li className={HomePageCss.home}>Home</li>
                 <Link to='/devskiServices' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.services}>Services</li>
                 </Link>
-                <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                <Link to='/completeProjects' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.projects}>Projects</li>
                 </Link>
                 <Link to='/aboutus' style={{textDecoration: 'none'}}>
@@ -210,7 +222,7 @@ function HomePage() {
             <div className={HomePageCss.coverText}>
                 
                 <h1>Turning Visions into <span>Reality</span></h1>
-                <p>We increase revenue and ensure sustainable long-term growth for your business through powerful Webflow websites.</p>
+                <p>Unlock your business's potential with our tailored digital solutions. From design to development, we ensure your brand stands out and thrives.</p>
                 <button>Book A Meeting</button>
                 
             </div>
@@ -221,11 +233,11 @@ function HomePage() {
             <div className={HomePageCss.chooseUsText}>
                 <div className={HomePageCss.firstSection}>
                     <p>Why Choose Us</p>
-                    <h1>Building a design easy for business</h1>
+                    <h1>Providing digital solutions for startups and enterprises</h1>
                     <hr></hr>
                 </div>
                 <div className={HomePageCss.secondSection}>
-                    <h1>We never underestimate any parts of each project as they're all essential to meeting the ultimate goal, you'll be engaged in with our positive and enthusiatic attitude</h1>
+                    <h1>At Devski, we believe every project detail is crucial to achieving the goal. Our commitment to excellence ensures you’re fully engaged and satisfied throughout the process.</h1>
                 </div>
             </div>
 
@@ -259,11 +271,15 @@ function HomePage() {
             <div className={HomePageCss.servicesContent}>
                 <h1>Our Services</h1>
                 <p>Devski offers a range of design services that are tailored to meet the unique needs of each client</p>
-                <button id={HomePageCss.buttonHover} className={HomePageCss.selectedBtn} style={{color: 'white'}}><span className={HomePageCss.number1}>01</span> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
-                <Link to= '/devskiWebDev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                <Link to='/devskiUiUx' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                    <button id={HomePageCss.buttonHover} className={HomePageCss.selectedBtn} style={{color: 'white'}}><span className={HomePageCss.number1}>01</span> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                </Link>
+                <Link to= '/devskiWebdev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
                     <button id={HomePageCss.buttonHover} onMouseEnter={changeColor} classsName={HomePageCss.webDevService}><span id={HomePageCss.number2}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
-                <button id={HomePageCss.buttonHover}><span id={HomePageCss.number3}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <Link to= '/devskiAppDev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                    <button id={HomePageCss.buttonHover}><span id={HomePageCss.number3}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                </Link>
                 <button id={HomePageCss.buttonHover}><span id={HomePageCss.number4}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
 
             </div>
@@ -276,7 +292,7 @@ function HomePage() {
 
                 <div className={HomePageCss.meetExpert}>
                     <div className={HomePageCss.howWork}>
-                        <p>Ever wondered how design magic happens?</p>
+                        <p>Ever wondered how exceptional work comes together?</p>
                         <div className={HomePageCss.innerWork}>
                             <h2>See how we work</h2>
                             <img src={roundblackArrow} alt='roundblackArrow'/>
@@ -298,35 +314,34 @@ function HomePage() {
             <div className={HomePageCss.benefitsText}>
                 <div className={HomePageCss.benefitsHeader}>
                     <p>BENEFITS</p>
-                    <h1>The design subscription that connects you to your dream team</h1>
+                    <h1>Range of Unique Offerings that Go Beyond the Ordinary</h1>
                 </div>
-                <p className={HomePageCss.benefitsPara}>A subscription can alleviate the stress of staffing, managing expenses, or make design calls like a Creative Director. We partner with you to ensure that your design elevates your brand to new levels.</p>
             </div>
 
             <div className={HomePageCss.megaGrid}>
                 <div className={HomePageCss.grid}>
                     <div className={HomePageCss.boxes}>
                         <img src={icon1}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>1. On-demand requests</p>
-                        <p className={HomePageCss.boxText}>Put all your requests in the design queue in Trello, and we’ll knock them out 1 by 1.</p>
+                        <p className={HomePageCss.boxHeader}>1. Software Maintenance Support</p>
+                        <p className={HomePageCss.boxText}>PuEnjoy peace of mind with 12 months of free maintenance services, ensuring your website or application runs smoothly and remains updated.</p>
                     </div>
                     <div className={HomePageCss.boxes}>
                         <img src={icon2}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>2. Top-notch quality</p>
-                        <p className={HomePageCss.boxText}>High-end work from a dedicated team of senior designers that's always available when you need it.</p>
+                        <p className={HomePageCss.boxHeader}>2. Zero Investment for Startups</p>
+                        <p className={HomePageCss.boxText}>Start without upfront costs through our profit-sharing model, where we take a percentage of your profits, letting you concentrate on growth.</p>
                     </div>
                     <div className={HomePageCss.Lastboxes}>
                         <img src={icon3}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>3. Powered by - Webflow</p>
-                        <p className={HomePageCss.boxText}>We build every site on Webflow, making them dynamic, accessible, and easily scalable. It’s easy for you like Squarespace but better.
+                        <p className={HomePageCss.boxHeader}>3. User Training</p>
+                        <p className={HomePageCss.boxText}>We provide thorough training sessions to ensure you and your team are well-versed in using your new application to its fullest potential.
                         </p>
                     </div>
                 </div>
                 <div className={HomePageCss.grid}>
                     <div className={HomePageCss.boxes}>
                         <img src={icon4}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>4. Fast. Responsive. Reliable.</p>
-                        <p className={HomePageCss.boxText}>PGet regular updates on your projects and can expect to receive your designs within 2-3 days.</p>
+                        <p className={HomePageCss.boxHeader}>4. Free Basic Branding Package</p>
+                        <p className={HomePageCss.boxText}>Enhance your brand identity with our complimentary branding package, including logo design, color scheme, and typography guidelines.</p>
                     </div>
                     <div className={HomePageCss.boxes}>
                         <img src={icon5}  className={HomePageCss.boxIcon} alt='icon'/>
@@ -335,25 +350,25 @@ function HomePage() {
                     </div>
                     <div className={HomePageCss.Lastboxes}>
                         <img src={icon6}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>6.Great value for moneys</p>
-                        <p className={HomePageCss.boxText}>Get the power of dedicated design team at fraction of the cost of full-time employee. ($54k/yr vs. $112k/yr).</p>
+                        <p className={HomePageCss.boxHeader}>6.Competitive Pricing</p>
+                        <p className={HomePageCss.boxText}>We offer competitive pricing less than the market rates, ensuring you get top-notch services without breaking the bank.</p>
                     </div>
                 </div>
                 <div className={HomePageCss.grid}>
                     <div className={HomePageCss.boxes} style={{borderColor: 'transparent #A2FF864D transparent transparent'}}>
                         <img src={icon7}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>7. Customized for you</p>
-                        <p className={HomePageCss.boxText}>PWe design and build custom for you. We’re never starting from a template unless you want that? You don't, right?.</p>
+                        <p className={HomePageCss.boxHeader}>7. Flexible Software Models</p>
+                        <p className={HomePageCss.boxText}>Choose the software development model that best suits your project requirements. Whether you prefer Agile, Scrum, or Waterfall, we have the expertise to deliver.</p>
                     </div>
                     <div className={HomePageCss.boxes}  style={{borderColor: 'transparent #A2FF864D transparent transparent'}}>
                         <img src={icon8}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>8. Creative paying</p>
-                        <p className={HomePageCss.boxText}>We’re here when you need us and not on payroll when you don’t.</p>
+                        <p className={HomePageCss.boxHeader}>8. Multi-Language Support</p>
+                        <p className={HomePageCss.boxText}>Expand globally with free multi-language support for web and app development, including up to 3 languages in design and branding.</p>
                     </div>
                     <div className={HomePageCss.Lastboxes}  style={{borderColor: 'transparent transparent transparent transparent'}}>
                         <img src={icon9}  className={HomePageCss.boxIcon} alt='icon'/>
-                        <p className={HomePageCss.boxHeader}>9. Expert turnoverss</p>
-                        <p className={HomePageCss.boxText}>You’re getting 10+ years of design experience with every request. No hand-holding required.</p>
+                        <p className={HomePageCss.boxHeader}>9. Custimized for you</p>
+                        <p className={HomePageCss.boxText}>We design and build custom for you. We're never starting from a template unless you want that? You don't, right?</p>
                     </div>
                 </div>
             </div>
@@ -363,14 +378,14 @@ function HomePage() {
         <div className={HomePageCss.ProjectsDiv}>
             <div className={HomePageCss.projectContent}>
                 <h1>Our Projects</h1>
-                <p>As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.</p>
+                <p>As seasoned creators of modern, user-friendly solutions, we aim to help you build the brand of your dreams.</p>
             </div>
 
             <div className={HomePageCss.projectButtons}>
-                <button className={HomePageCss.allbtn}>All</button>
-                <button className={HomePageCss.webbtn}>Web Dev</button>
-                <button className={HomePageCss.appbtn}>App Dev</button>
-                <button className={HomePageCss.uibtn}>UI / UX</button>
+                <button className={HomePageCss.allbtn} onClick={navigateAllProjects}>All</button>
+                <button className={HomePageCss.webbtn} onClick={navigateWebProjects}>Web Dev</button>
+                <button className={HomePageCss.appbtn} onClick={navigateAppProjects}>App Dev</button>
+                <button className={HomePageCss.uibtn}  onClick={navigateUiUXProjects}>UI / UX</button>
             </div>
 
         </div>
@@ -390,11 +405,13 @@ function HomePage() {
         </div>
 
         <div className={HomePageCss.qoutes}>
-            <h1>Innovate</h1>
+            <h1>Create</h1>
+            <img src={star} className={HomePageCss.star} alt='star'/>
+            <h1>Transform</h1>
+            <img src={star} className={HomePageCss.star} alt='star'/>
+            <h1>Empower</h1>
             <img src={star} className={HomePageCss.star} alt='star'/>
             <h1>Inspire</h1>
-            <img src={star} className={HomePageCss.star} alt='star'/>
-            <h1>Create</h1>
         </div>
 
         <div className={HomePageCss.testimonials}>
@@ -466,11 +483,11 @@ function HomePage() {
                     </div>
 
                 </div>
-                <div className={HomePageCss.faqTextarea}>
+                <div className={HomePageCss.faqTextarea} >
                     <textarea rows='21' cols='45' placeholder='Ask us want you want to know...'/>
                     <div className={HomePageCss.faqButton}>
                         <p>We will answer your questions via email within 48 hours.</p>
-                        <button>Send</button>
+                        <button type='submit'>Send</button>
                     </div>
                 </div>
             </div>

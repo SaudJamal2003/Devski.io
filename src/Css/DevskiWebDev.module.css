@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -67,7 +66,7 @@ li {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    background-color: #0F0F0F;
+    background-color: black;
     width: 100%;
     height: 80px;
 }
@@ -110,22 +109,22 @@ li {
     margin-top: 135px;
 }
 .ServicesHeading{
-    color: #A2FF86;
+    color: #9df981;
     font-family: Outfit;
-    font-size: 12px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 600;
     line-height: 24.942px; /* 140% */
     text-transform: capitalize;
 }
-.WebDevHeading{
-    color: #0F0F0F;
+.WebDevHeading h1{
+     color: #0F0F0F;
     font-family: Outfit;
-    font-size: 24px;
+    font-size: 50px;
     font-style: normal;
     font-weight: 600;
-    line-height: 83.806px; /* 140% */
-    text-transform: capitalize;
+    /* line-height: 83.806px;  */
+    text-transform: capitalize; 
 }
 .ServiceDescription{
     display: flex;
@@ -138,7 +137,7 @@ li {
     color: #000;
     text-align: center;
     font-family: Outfit;
-    font-size: 20px;
+    font-size: 25px;
     font-style: normal;
     font-weight: medium;
     line-height: normal;
@@ -264,9 +263,9 @@ li {
     font-size: 17.255px;
     font-style: normal;
     font-weight: 400;
-    line-height: 170%; /* 29.333px */
+    line-height: 50%; /* 29.333px */
     letter-spacing: -0.173px;
-    
+    text-align: left;
 }
 .BlackBg {
     width: 100%;
@@ -305,7 +304,7 @@ li {
     letter-spacing: -0.458px;
 }
 .WebDevProjects span{
-    color: var(--white, #A2FF86);
+    color:  #A2FF86;
     font-feature-settings: 'liga' off, 'clig' off;
     font-family: Outfit;
     font-size: 45.752px;
@@ -323,6 +322,7 @@ li {
     line-height: 140%; /* 26.689px */
     letter-spacing: -0.191px;
     width: 591px;
+    text-align: left;
 }
 .MoreMain{
     display: flex;
