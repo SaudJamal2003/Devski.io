@@ -37,7 +37,8 @@ li {
     background-color: #A2FF86;
     padding: 8px;
     border-radius: 1.8rem;
-    cursor: pointer;    
+    cursor: pointer; 
+    color: black;   
 }
 .services, .home, .about, .contact{
     color: white;
@@ -188,12 +189,11 @@ li {
     text-align: center;
     /* padding: ; */
 }
-.Projectvideo{
+/* .Projectvideo{
     width: 90%;
     border-radius: 8px;
-    /* height: 320px; */
     background: linear-gradient(to right, #f68b6a, #f68b6a);;
-}
+} */
 /* .projectBackground{
     background-image: url('../Images/featuredProject.png');
     background-size: contain;
@@ -214,6 +214,18 @@ li {
 .play{
     object-fit: cover;
     height: 110px;
+}
+.videoDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.videos{
+    margin-top: 50px;
+    width: fit-content;
+    height: 500px;
+    border-radius: 0.6rem;
 }
 .projectPictures{
     width: 100%;
@@ -266,8 +278,18 @@ li {
     display: flex;
     flex-direction: column;
 }
-.uiProj{
-    background-image: url('../Images/Shoplon_app.png');
+.uiProj1{
+    background-image: url('../Images/AppDevtribeMe.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 12px;
+    cursor: pointer;
+    /* margin-top: -80px; */
+}
+.uiProj2{
+    background-image: url('../Images/ExpenseTracker.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 400px;
@@ -802,6 +824,11 @@ li {
     .play{
         height: 80px;  
     }
+    .videos{
+        margin-top: 0;
+        height: 240px;
+        width: 90%;
+    }
 
     .projectPictures{
         flex-direction: column;
@@ -810,17 +837,27 @@ li {
         width: 90%;
         padding-left: 0px;
         height: 330px;
-
+        justify-content: center;
+        align-items: center;
     }
-    .appProj, .uiProj{
+    .appProj1, .uiProj1{
         margin-bottom: 0px;
         height: 350px;
-
+        justify-content: center;
+        align-items: center;
+    }
+    .appProj2, .uiProj2{
+        margin-bottom: 0px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
     }
     .uiProjectsPic{
         margin-top: 20px;
         width: 90%;
         height: 335px;
+        justify-content: center;
+        align-items: center;
     }
     .keyFeatures{
         width: 100%;

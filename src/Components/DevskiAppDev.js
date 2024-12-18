@@ -56,7 +56,7 @@ function DevskiAppDev() {
                      <li className={DevskiWebDevCss.about}>About Us</li>
                      <hr></hr>
                  </Link>
-                 <Link to='/' style={{textDecoration: 'none'}}>
+                 <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                      <li className={DevskiWebDevCss.contact}>Contact Us</li>
                      <hr></hr>
                  </Link>

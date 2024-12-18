@@ -85,7 +85,7 @@ function Aboutus() {
                     <Link to='/aboutus' style={{textDecoration: 'none'}}>
                         <li className={AboutUsCss.about}>About Us</li>
                     </Link>
-                    <Link to='/' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                         <li className={AboutUsCss.contact}>Contact Us</li>
                     </Link>
                 </ul>

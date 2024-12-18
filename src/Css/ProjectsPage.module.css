@@ -38,6 +38,7 @@ li {
     padding: 8px;
     border-radius: 1.8rem;
     cursor: pointer;    
+    color: black;
 }
 .services, .home, .about, .contact{
     color: white;
@@ -186,6 +187,18 @@ li {
     text-align: center;
     padding: 20px;
 }
+.videoDiv{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.videos{
+    margin-top: 50px;
+    width: fit-content;
+    height: 500px;
+    border-radius: 0.6rem;
+}   
 .projectBackground{
     background-image: url('../Images/featuredProject.png');
     background-size: contain;
@@ -220,13 +233,23 @@ li {
     flex-direction: column;
     padding-left: 130px;    
 }
-.appProj{
-    background-image: url('../Images/mobileApp.png');
-    background-size: contain;
+.appProj1{
+    background-image: url('../Images/helpingHands.png');
+    background-size: cover;
     background-repeat: no-repeat;
     height: 480px;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
+    cursor: pointer;
+}
+.appProj2{
+    background-image: url('../Images/simaxWeb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 94%;
+    margin-bottom: -52px;
+    cursor: pointer;
 }
 .appProjectsPic p, .uiProjectsPic p{
     font-family: Outfit;
@@ -247,13 +270,24 @@ li {
     display: flex;
     flex-direction: column;
 }
-.uiProj{
-    background-image: url('../Images/webDesign.png');
-    background-size: contain;
+.uiProj1{
+    background-image: url('../Images/cafestreet.png');
+    background-size:contain;
     background-repeat: no-repeat;
     height: 480px;
     width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    /* margin-top: -80px; */
+}
+.uiProj2{
+    background-image: url('../Images/techtree.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 86%;
+    margin-bottom: -52px;
+    cursor: pointer;
     /* margin-top: -80px; */
 }
 
@@ -759,7 +793,7 @@ li {
     }
 
     .video{
-        margin-top: 20px;
+        /* margin-top: 20px; */
         width: 90%;
         height: fit-content;
     }
@@ -770,6 +804,11 @@ li {
         margin-left: 10px;
     }
 
+    .videos{
+        margin-top: 0;
+        width: 90%;
+        height: 240px;
+    }
     .projectBackground{
         background-size: contain;
         width: 95%;
@@ -790,17 +829,28 @@ li {
         width: 90%;
         padding-left: 0px;
         height: 330px;
+        justify-content: center;
+        align-items: center;
 
     }
-    .appProj, .uiProj{
+    .appProj1, .uiProj1{
         margin-bottom: 0px;
         height: 350px;
-
+    }
+    .appProj2, .uiProj2{
+        margin-bottom: 0px;
+        height: 350px;
+    }
+    .uiProj1{
+        background-size: cover;
+        width: 90%;
     }
     .uiProjectsPic{
         margin-top: 20px;
         width: 90%;
         height: 335px;
+        justify-content: center;
+        align-items: center;
     }
     .keyFeatures{
         width: 100%;

@@ -41,7 +41,7 @@ function DevskiProjects() {
                 <Link to='/aboutus' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.about}>About Us</li>
                 </Link>
-                <Link to='/' style={{textDecoration: 'none'}}>
+                <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.contact}>Contact Us</li>
                 </Link>
             </ul>

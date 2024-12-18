@@ -12,6 +12,8 @@ import WorkTogether from '../Images/WorkTogether.png'
 import behance from '../Images/behance.png'
 import Insta from '../Images/Insta.png'
 import linkedin from '../Images/linkedin.png'
+import CafeStreetVideo from '../Images/CafeStreetVideo.mp4'
+
 
 
 
@@ -70,7 +72,7 @@ function ProjectsPage() {
                         <Link to='/aboutus' style={{textDecoration: 'none'}}>
                             <li className={ProjectsPageCss.about}>About Us</li>
                         </Link>
-                        <Link to='/' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                             <li className={ProjectsPageCss.contact}>Contact Us</li>
                         </Link>
                     </ul>
@@ -94,38 +96,47 @@ function ProjectsPage() {
                     <button className={ProjectsPageCss.uibtn} onClick={navigateUiUXProjects}>UI / UX</button>
                 </div>
 
-                <div className={ProjectsPageCss.video}>
+                {/* <div className={ProjectsPageCss.video}>
                     <h1>Featured Project</h1>
                     <div className={ProjectsPageCss.projectBackground}>
                         <button><img src={play} className={ProjectsPageCss.play} alt='play'/></button>
                     </div>
+                </div> */}
+                <div className={ProjectsPageCss.videoDiv}>
+                    <video autoPlay
+                        muted
+                        controls
+                        loop className={ProjectsPageCss.videos}>
+                        <source src={CafeStreetVideo} type="video/mp4"  autoplay loop/>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
 
                 <div className={ProjectsPageCss.projectPictures}>
                     <div className={ProjectsPageCss.appProjectsPic}>
-                        <div className={ProjectsPageCss.appProj}></div>
-                        <h2>Carreri</h2>
-                        <p>Mobile App</p>
+                        <div className={ProjectsPageCss.appProj1}></div>
+                        <h2>Helping Hands</h2>
+                        <p>Website</p>
                     </div>
 
                     <div className={ProjectsPageCss.uiProjectsPic}>
-                        <div className={ProjectsPageCss.uiProj}></div>
-                        <h2>Tansto</h2>
-                        <p>Web Design</p>
+                        <div className={ProjectsPageCss.uiProj1}></div>
+                        <h2>Cafe Street</h2>
+                        <p>Website</p>
                     </div>
                  </div>
                   
                 <div className={ProjectsPageCss.projectPictures}>
                     <div className={ProjectsPageCss.appProjectsPic}>
-                        <div className={ProjectsPageCss.appProj}></div>
-                        <h2>Carreri</h2>
-                        <p>Mobile App</p>
+                        <div className={ProjectsPageCss.appProj2}></div>
+                        <h2>Simax</h2>
+                        <p>Website</p>
                     </div>
 
                     <div className={ProjectsPageCss.uiProjectsPic}>
-                        <div className={ProjectsPageCss.uiProj}></div>
-                        <h2>Tansto</h2>
-                        <p>Web Design</p>
+                        <div className={ProjectsPageCss.uiProj2}></div>
+                        <h2>Tech Tree</h2>
+                        <p>Website</p>
                     </div>
                  </div>
 

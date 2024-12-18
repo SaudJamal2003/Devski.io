@@ -27,7 +27,8 @@ li {
     background-color: #A2FF86;
     padding: 8px;
     border-radius: 1.8rem;
-    cursor: pointer;    
+    cursor: pointer;  
+    color: black;  
 }
 .home, .about, .projects, .contact{
     color: white;

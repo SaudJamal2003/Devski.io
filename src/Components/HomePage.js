@@ -204,7 +204,7 @@ function HomePage() {
                 <Link to='/aboutus' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.about}>About Us</li>
                 </Link>
-                <Link to='/' style={{textDecoration: 'none'}}>
+                <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.contact}>Contact Us</li>
                 </Link>
 
@@ -393,14 +393,14 @@ function HomePage() {
         <div className={HomePageCss.ProjectBackground}>
             <div className={HomePageCss.appProjectsPic}>
                 <div className={HomePageCss.appProj}></div>
-                <p>Carreri</p>
+                <p>Tribe Me</p>
                 <p>Mobile App</p>
             </div>
 
             <div className={HomePageCss.uiProjectsPic}>
                 <div className={HomePageCss.uiProj}></div>
-                <p>Tansto</p>
-                <p>Web Design</p>
+                <p>Spend It</p>
+                <p>Mobile App </p>
             </div>
         </div>
 

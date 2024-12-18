@@ -67,7 +67,7 @@ function UiUxProjects() {
                         <Link to='/aboutus' style={{textDecoration: 'none'}}>
                             <li className={UiUxProjectsCss.about}>About Us</li>
                         </Link>
-                        <Link to='/' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                             <li className={UiUxProjectsCss.contact}>Contact Us</li>
                         </Link>
                     </ul>
@@ -100,29 +100,29 @@ function UiUxProjects() {
 
                 <div className={UiUxProjectsCss.projectPictures}>
                     <div className={UiUxProjectsCss.appProjectsPic}>
-                        <div className={UiUxProjectsCss.appProj}></div>
-                        <h2>Carreri</h2>
-                        <p>Mobile App</p>
+                        <div className={UiUxProjectsCss.appProj1}></div>
+                        <h2>Tribe Me</h2>
+                        <p>Mobile App Design</p>
                     </div>
 
                     <div className={UiUxProjectsCss.uiProjectsPic}>
-                        <div className={UiUxProjectsCss.uiProj}></div>
-                        <h2>Tansto</h2>
+                        <div className={UiUxProjectsCss.uiProj1}></div>
+                        <h2>BeyondUx</h2>
                         <p>Web Design</p>
                     </div>
                  </div>
                   
                 <div className={UiUxProjectsCss.projectPictures}>
                     <div className={UiUxProjectsCss.appProjectsPic}>
-                        <div className={UiUxProjectsCss.appProj}></div>
-                        <h2>Carreri</h2>
-                        <p>Mobile App</p>
+                        <div className={UiUxProjectsCss.appProj2}></div>
+                        <h2>Woo Commerce</h2>
+                        <p>Web Design</p>
                     </div>
 
                     <div className={UiUxProjectsCss.uiProjectsPic}>
-                        <div className={UiUxProjectsCss.uiProj}></div>
-                        <h2>Tansto</h2>
-                        <p>Web Design</p>
+                        <div className={UiUxProjectsCss.uiProj2}></div>
+                        <h2>Crypto Nyte</h2>
+                        <p>Mobile App Design</p>
                     </div>
                  </div>
 

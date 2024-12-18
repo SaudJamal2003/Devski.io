@@ -38,6 +38,8 @@ li {
     padding: 8px;
     border-radius: 1.8rem;
     cursor: pointer;    
+    color: black;
+
 }
 .services, .home, .about, .contact{
     color: white;
@@ -220,13 +222,24 @@ li {
     flex-direction: column;
     padding-left: 130px;    
 }
-.appProj{
-    background-image: url('../Images/mobileApp.png');
+.appProj1{
+    background-image: url('../Images/tribeMe.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
-    width: 100%;
-    margin-bottom: 12px;
+    width: 96%;
+    margin-bottom: 8px;
+    cursor: pointer;
+
+}
+.appProj2{
+    background-image: url('../Images/wooCommerce.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 96%;
+    margin-bottom: 8px;
+    cursor: pointer;
 }
 .appProjectsPic p, .uiProjectsPic p{
     font-family: Outfit;
@@ -247,14 +260,27 @@ li {
     display: flex;
     flex-direction: column;
 }
-.uiProj{
-    background-image: url('../Images/webDesign.png');
+.uiProj1{
+    background-image: url('../Images/beyondUxDesign.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
     width: 100%;
     margin-bottom: 12px;
     /* margin-top: -80px; */
+    cursor: pointer;
+
+}
+.uiProj2{
+    background-image: url('../Images/crpytoNyte.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 100%;
+    margin-bottom: 12px;
+    /* margin-top: -80px; */
+    cursor: pointer;
+
 }
 
 .keyFeatures{
@@ -790,17 +816,37 @@ li {
         width: 90%;
         padding-left: 0px;
         height: 330px;
-
+        justify-content: center;
+        align-items: center;
     }
-    .appProj, .uiProj{
+    .appProj1, .uiProj1{
         margin-bottom: 0px;
         height: 350px;
-
+        justify-content: center;
+        align-items: center;  
+        gap: 8px;      
+    }
+    .uiProj1{
+        background-size: cover;
+    }
+    .uiProj2{
+        background-size: cover;
+    }
+    .appProj2{
+        background-size: cover;
+    }
+    .appProj2, .uiProj2{
+        margin-bottom: 0px;
+        height: 350px;
+        justify-content: center;
+        align-items: center;
     }
     .uiProjectsPic{
         margin-top: 20px;
         width: 90%;
         height: 335px;
+        justify-content: center;
+        align-items: center;
     }
     .keyFeatures{
         width: 100%;

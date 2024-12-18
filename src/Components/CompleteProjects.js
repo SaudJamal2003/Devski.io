@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import CompleteProjectsCss from "../Css/Complete.module.css"
 import Devski_Logo from '../Images/Devski_Logo.png';
@@ -12,6 +12,10 @@ import WorkTogether from '../Images/WorkTogether.png'
 import behance from '../Images/behance.png'
 import Insta from '../Images/Insta.png'
 import linkedin from '../Images/linkedin.png'
+import CafeStreetVideo from '../Images/CafeStreetVideo.mp4'
+import nomNomNerdsVid from '../Images/NomNomNerdsVideo.mp4'
+
+
 function CompleteProjects() {
     useEffect(() => {
         const hamburgerElement = document.querySelector(`.${CompleteProjectsCss.hamburger}`);
@@ -42,6 +46,38 @@ function CompleteProjects() {
     const navigateUiUXProjects = () => {
         navigate('/UiUXProjects')
     }
+
+    const handleRightVideo = () => {
+        var video1 = document.getElementById('firstVideo');
+        var video2 = document.getElementById('secondVideo');
+        var div = document.getElementById('videoDiv');
+        if(video1 && video2) {
+            video1.style.transform = 'translateX(-150%)';
+            // if(window.width > 768){      
+            video2.style.transform = 'translateX(-117%)';
+            if(window.width < 768){
+                    div.style.paddingLeft = '0px'
+            }
+            
+        }
+            // else{
+                // video2.style.transform = 'translateX(-167%)';
+            // }     
+        // }
+    }
+
+    const handleLeftVideo = () => {
+        var video1 = document.getElementById('firstVideo');
+        var video2 = document.getElementById('secondVideo');
+        if(video1 && video2) {
+            video1.style.transform = 'translateX(0)';        
+            video2.style.transform = 'translateX(75%)';        
+        }
+    }
+
+
+
+
   return (
     <>
         <div className={CompleteProjectsCss.main}>
@@ -66,7 +102,7 @@ function CompleteProjects() {
                         <Link to='/aboutus' style={{textDecoration: 'none'}}>
                             <li className={CompleteProjectsCss.about}>About Us</li>
                         </Link>
-                        <Link to='/' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                             <li className={CompleteProjectsCss.contact}>Contact Us</li>
                         </Link>
                     </ul>
@@ -90,12 +126,32 @@ function CompleteProjects() {
                     <button className={CompleteProjectsCss.uibtn}  onClick={navigateUiUXProjects}>UI / UX</button>
                 </div>
 
-                <div className={CompleteProjectsCss.video}>
-                    <h1>Featured Project</h1>
-                    <div className={CompleteProjectsCss.projectBackground}>
-                        <button><img src={play} className={CompleteProjectsCss.play} alt='play'/></button>
-                    </div>
+                <div className={CompleteProjectsCss.videoDiv} id = 'videoDiv' >
+                    <button onClick={handleLeftVideo} className={CompleteProjectsCss.videoButtons}>&larr;</button>
+                    <video autoPlay
+                        muted
+                        controls
+                        loop className={CompleteProjectsCss.videos} style={{transition: '0.4s', width:'fit-content'}} id = "firstVideo">
+                        <source src={CafeStreetVideo} type="video/mp4"  autoPlay loop/>
+                        Your browser does not support the video tag.
+                    </video>
+                    <button onClick={handleRightVideo} className={CompleteProjectsCss.videoButtons}>&rarr;</button>
+                    <video autoPlay
+                        muted
+                        controls
+                        loop className={CompleteProjectsCss.videos} style={{transform:'translateX(75%)', transition: '0.4s'}} id = "secondVideo">
+                        <source src={nomNomNerdsVid} type="video/mp4"  autoPlay loop/>
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
+
+
+
+
+
+
+
+
 
                 <div className={CompleteProjectsCss.projectPictures}>
                     <div className={CompleteProjectsCss.appProjectsPic}>

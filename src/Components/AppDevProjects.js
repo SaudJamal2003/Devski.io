@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import AppDevProjectsCss from "../Css/AppDevProject.module.css"
+import ReactPlayer from 'react-player';
 import Devski_Logo from '../Images/Devski_Logo.png';
 import play from '../Images/PlayButton.png';
 import strategyIcon from '../Images/strategyIcon.png'
@@ -12,8 +13,7 @@ import WorkTogether from '../Images/WorkTogether.png'
 import behance from '../Images/behance.png'
 import Insta from '../Images/Insta.png'
 import linkedin from '../Images/linkedin.png'
-import nomNomPic from '../Images/NomNomPic.png'
-// import NomNomVideo from '../Images/NomNom'
+import nomNomNerdsVid from '../Images/NomNomNerdsVideo.mp4'
 
 function AppDevProjects() {
     useEffect(() => {
@@ -35,29 +35,29 @@ function AppDevProjects() {
     }, []);
 
   
-    const cloudinaryRef = useRef(null);
-    const videoRef = useRef(null);
+    // const cloudinaryRef = useRef(null);
+    // const videoRef = useRef(null);
 
-    useEffect(() => {
-        if (cloudinaryRef.current) return; // Ensure it initializes only once
-        if (!window.cloudinary) {
-            console.error("Cloudinary is not loaded!");
-            return;
-        }
+    // useEffect(() => {
+    //     if (cloudinaryRef.current) return; // Ensure it initializes only once
+    //     if (!window.cloudinary) {
+    //         console.error("Cloudinary is not loaded!");
+    //         return;
+    //     }
     
-        cloudinaryRef.current = window.cloudinary;
+    //     cloudinaryRef.current = window.cloudinary;
     
-        cloudinaryRef.current.videoPlayer(videoRef.current, {
-            cloud_name: 'saudjamal', // Replace with your actual Cloudinary cloud name
-            public_id: 'NomNomNerdsVideo', // Replace with your video public_id
-            controls: true,
-            autoplay: true,
-            muted: false,
-            height: 400,
-            width: 800,
-            crop: "fit",
-        });
-    }, []);
+    //     cloudinaryRef.current.videoPlayer(videoRef.current, {
+    //         cloud_name: 'saudjamal', // Replace with your actual Cloudinary cloud name
+    //         public_id: 'NomNomNerdsVideo', // Replace with your video public_id
+    //         controls: true,
+    //         autoplay: true,
+    //         muted: false,
+    //         height: 400,
+    //         width: 800,
+    //         crop: "fit",
+    //     });
+    // }, []);
 
     const navigate = useNavigate()
 
@@ -94,7 +94,7 @@ function AppDevProjects() {
                         <Link to='/aboutus' style={{textDecoration: 'none'}}>
                             <li className={AppDevProjectsCss.about}>About Us</li>
                         </Link>
-                        <Link to='/' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
                             <li className={AppDevProjectsCss.contact}>Contact Us</li>
                         </Link>
                     </ul>
@@ -118,69 +118,17 @@ function AppDevProjects() {
                     <button className={AppDevProjectsCss.uibtn} onClick={navigateUiUXProjects}>UI / UX</button>
                 </div>
 
-                {/* <div className={AppDevProjectsCss.video}> */}
-                    {/* <h1>Featured Project</h1> */}
-                    {/* <video ref={videoRef} data-cld-public-id="videos/NomNomNerdsVideo"/> */}
-                        {/* <video  ref={videoRef} data-cld-public-id='NomNomNerdsVideo_fqdc89' className={AppDevProjectsCss.Projectvideo} autoplay loop/> */}
-                        {/* <video style={{display:'none'}} ref={videoRef} data-cld-public-id='CafeStreetVideo_oiwvbb' className={AppDevProjectsCss.Projectvideo} autoplay loop/> */}
-                {/* </div> */}
+          
 
-
-                <div id="carouselExampleControls" className="carousel slide" data-ride="carousel">
-        <div className="carousel-inner">
-            <div className="carousel-item active">
-                <video
-                    ref={videoRef}
-                    data-cld-public-id="NomNomNerdsVideo_fqdc89"
-                    className={AppDevProjectsCss.Projectvideo}
-                    autoPlay
-                    loop
-                />
-            </div>
-            <div className="carousel-item">
-                <img className="d-block w-100" src={CardImage} alt="Second slide" />
-            </div>
-            <div className="carousel-item">
-                <img className="d-block w-100" src={CardImage} alt="Third slide" />
-            </div>
-        </div>
-        <a className="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="sr-only">Previous</span>
-        </a>
-        <a className="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="sr-only">Next</span>
-        </a>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                <div className={AppDevProjectsCss.videoDiv}>
+                    <video autoPlay
+                        muted
+                        controls
+                        loop className={AppDevProjectsCss.videos}>
+                        <source src={nomNomNerdsVid} type="video/mp4"  autoplay loop/>
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
 
 
                 <div className={AppDevProjectsCss.projectPictures}>
@@ -191,23 +139,23 @@ function AppDevProjects() {
                     </div>
 
                     <div className={AppDevProjectsCss.uiProjectsPic}>
-                        <div className={AppDevProjectsCss.uiProj}></div>
-                        <h2>Tansto</h2>
-                        <p>Web Design</p>
+                        <div className={AppDevProjectsCss.uiProj1}></div>
+                        <h2>Tribe Me</h2>
+                        <p>Mobile App</p>
                     </div>
                  </div>
                   
                 <div className={AppDevProjectsCss.projectPictures}>
                     <div className={AppDevProjectsCss.appProjectsPic}>
                         <div className={AppDevProjectsCss.appProj2}></div>
-                        <h2>Carreri</h2>
+                        <h2>Nom Nom Nerds</h2>
                         <p>Mobile App</p>
                     </div>
 
                     <div className={AppDevProjectsCss.uiProjectsPic}>
-                        <div className={AppDevProjectsCss.uiProj}></div>
-                        <h2>Tansto</h2>
-                        <p>Web Design</p>
+                        <div className={AppDevProjectsCss.uiProj2}></div>
+                        <h2>SpendIt</h2>
+                        <p>Mobile App</p>
                     </div>
                  </div>
 

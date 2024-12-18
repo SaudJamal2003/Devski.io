@@ -28,6 +28,7 @@ li {
     padding: 8px;
     border-radius: 1.8rem;
     cursor: pointer;    
+    color: black;
 }
 .home,.about, .home, .projects, .contact{
     color: white;

@@ -360,8 +360,9 @@ li {
     font-weight: 900;
     font-family: Outfit;
     font-size: 20px;
-    transform: scaleX(2); /* Adjust the scale factor as needed */
+    transform: scaleX(2.1); /* Adjust the scale factor as needed */
     display: inline-block;
+    padding: 10px;
 }
 #number2, #number3, #number4{
     color: #444444;
@@ -732,7 +733,7 @@ button:hover .arrow {
     background-color: #A2FF86;
     color: black;
 }
-.appbtn:hover{
+.webbtn:hover{
     transition: 0.3s ease-in-out;
     background-color: #A2FF86;
     color: black;
@@ -742,7 +743,7 @@ button:hover .arrow {
     background-color: #A2FF86;
     color: black;
 }
-.webbtn{
+.appbtn{
     background-color: #A2FF86;
     color: black;
 }
@@ -758,13 +759,15 @@ button:hover .arrow {
     padding-left: 130px;    
 }
 .appProj{
-    background-image: url('../Images/mobileApp.png');
+    background-image: url('../Images/AppDevtribeMe.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
     width: 100%;
     margin-bottom: 12px;
     margin-top: -80px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 .appProjectsPic p, .uiProjectsPic p{
     font-family: Outfit;
@@ -779,13 +782,18 @@ button:hover .arrow {
     flex-direction: column;
 }
 .uiProj{
-    background-image: url('../Images/webDesign.png');
+    background-image: url('../Images/ExpenseTracker.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 12px;
     margin-top: -80px;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+.uiProj:hover{
+    transform: scale(1.2px);
 }
 
 .qoutes{
@@ -1544,7 +1552,7 @@ button:hover .arrow {
 
 @media only screen and (max-width: 850px){
     .qoutes h1{
-        font-size: 4.5vmax;
+        font-size: 3.5vmax;
     }
     .chooseUsText{
         margin-top: 30px;
@@ -1869,11 +1877,11 @@ button:hover .arrow {
         height: 350px;
     }
     .qoutes{
-        gap: 5px;
+        gap: 3px;
         height: 150px;
     }
     .qoutes h1{
-        font-size: 4vmax;
+        font-size: 2vmax;
     }
     .star{
         height: 20px;
@@ -1898,14 +1906,14 @@ button:hover .arrow {
     }
     .testimonialCard{
         width: 95%;
-        padding: 15px;
+        padding: 12px;
         align-items: flex-start;
     }
     .testimonialText h1{
-        font-size: 2.2vmax;
+        font-size: 1.8vmax;
     }
     .testimonialText p{
-        font-size: 3.5vmin;
+        font-size: 3vmin;
     }
     .testifier{
         margin-top: 15px;
@@ -2048,7 +2056,7 @@ button:hover .arrow {
         font-size: 4vmax;
     }
     .projectsCompleted{
-        gap: 20px;
+        gap: 16px;
     }
     .projectsCompleted img{
         width: 60%;
@@ -2070,11 +2078,11 @@ button:hover .arrow {
 
 @media (max-width:450px){
     .qoutes h1{
-        font-size: 3vmax;
+        font-size: 2vmax;
     }
 }
 @media (max-width:350px){
     .qoutes h1{
-        font-size: 2.5vmax;
+        font-size: 1.5vmax;
     }
 }

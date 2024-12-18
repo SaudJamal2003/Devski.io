@@ -11,6 +11,7 @@ import DevskiAppDev from './Components/DevskiAppDev.js';
 import AppDevProjects from './Components/AppDevProjects.js';
 import UiUxProjects from './Components/UiUxProjects.js';
 import CompleteProjects from './Components/CompleteProjects.js';
+import ContactUs from './Components/ContactUs.js';
 
 function App() {
   return (
@@ -35,12 +36,17 @@ function App() {
 
             <Route exact path="/projectsPage" element={<ProjectsPage />}>
             </Route>
+
             <Route exact path="/appDevProjects" element={<AppDevProjects />}>
             </Route>
+
             <Route exact path="/UiUXProjects" element={<UiUxProjects />}>
             </Route>
 
             <Route exact path="/aboutus" element={<AboutUs />}>
+            </Route>
+
+            <Route exact path="/devski-contactus" element={<ContactUs />}>
             </Route>
 
             <Route exact path="/" element={<HomePage />}></Route>
