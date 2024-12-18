@@ -1,8 +1,8 @@
 import React, {useEffect} from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import AboutUsCss from '../Css/AboutUs.module.css';
 import Devski_Logo from '../Images/Devski_Logo.png';
-import maryam from '../Images/maryam.png';
+import maryam from '../Images/Maryam.jpeg';
 import saud from '../Images/saud.jpeg';
 import shaheer from '../Images/shaheer.png';
 import usaid from '../Images/usaid.png';
@@ -12,7 +12,6 @@ import WorkTogether from '../Images/WorkTogether.png'
 import behance from '../Images/behance.png'
 import Insta from '../Images/Insta.png'
 import linkedin from '../Images/linkedin.png'
-import facebook from '../Images/facebook.png'
 
 function Aboutus() {
     useEffect(() => {
@@ -62,6 +61,12 @@ function Aboutus() {
         window.open('https://www.instagram.com/maryam.shahid_/', '_blank');
     }
 
+    const navigate = useNavigate();
+
+    const navigateAboutus = () => {
+        navigate('/devski-contactus')
+    }
+
 
 
   return (
@@ -73,16 +78,16 @@ function Aboutus() {
                     <img src={Devski_Logo} className={AboutUsCss.DevskiLogo} alt='logo'/>
                 </Link>        
                  <ul className={AboutUsCss.navMenu}>
-                    <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={AboutUsCss.home}>Home</li>
                     </Link>
-                    <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={AboutUsCss.services}>Services</li>
                     </Link>
-                    <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
                         <li className={AboutUsCss.projects}>Projects</li>
                     </Link>
-                    <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                         <li className={AboutUsCss.about}>About Us</li>
                     </Link>
                     <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
@@ -121,7 +126,7 @@ function Aboutus() {
                 <div className={AboutUsCss.Maryam}>
                     <h1>Usaid Ahmed</h1>
                     <h2>Co-Founder</h2>
-                    <img src={usaid} className={AboutUsCss.maryamPic} alt='usiad'/>
+                    <img src={usaid} className={AboutUsCss.usaidPic} alt='usiad'/>
                     <div className={AboutUsCss.socialAccounts}>
                         <img src={linkedin} className={AboutUsCss.linkedin} alt='linkedin' onClick={usaidLinkedin}/>
                         <img src={Insta} className={AboutUsCss.instagram} alt='instagram' onClick={usaidInsta}/>
@@ -134,7 +139,7 @@ function Aboutus() {
                 <div className={AboutUsCss.Maryam}>
                     <h1>Shaheer Badar</h1>
                     <h2>Co-Founder</h2>
-                    <img src={shaheer} className={AboutUsCss.maryamPic} alt='shaheer'/>
+                    <img src={shaheer} className={AboutUsCss.shaheerPic} alt='shaheer'/>
                     <div className={AboutUsCss.socialAccounts}>
                         <img src={linkedin} className={AboutUsCss.linkedin} alt='linkedin' onClick={shaheerLinkedin}/>
                         <img src={Insta} className={AboutUsCss.instagram} alt='instagram' onClick={shaheerInsta} />
@@ -170,7 +175,7 @@ function Aboutus() {
                         </div>
                         <div className={AboutUsCss.MiddleColumn}>
                             <h1>Got a project? Want to collaborate? </h1>
-                            <button className={AboutUsCss.CardButton}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <button className={AboutUsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                                 <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                                 </svg></button>
                             </div>
@@ -198,16 +203,8 @@ function Aboutus() {
                     <img src = {WorkTogether}className={AboutUsCss.WorkTogether} alt = "WorkTogether"/>
                 </div>
             </div>
-
-
-
-
         </div>
 
-    
-    
-    
-    
     </>
   )
 }

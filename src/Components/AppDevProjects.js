@@ -34,41 +34,19 @@ function AppDevProjects() {
         }
     }, []);
 
-  
-    // const cloudinaryRef = useRef(null);
-    // const videoRef = useRef(null);
-
-    // useEffect(() => {
-    //     if (cloudinaryRef.current) return; // Ensure it initializes only once
-    //     if (!window.cloudinary) {
-    //         console.error("Cloudinary is not loaded!");
-    //         return;
-    //     }
-    
-    //     cloudinaryRef.current = window.cloudinary;
-    
-    //     cloudinaryRef.current.videoPlayer(videoRef.current, {
-    //         cloud_name: 'saudjamal', // Replace with your actual Cloudinary cloud name
-    //         public_id: 'NomNomNerdsVideo', // Replace with your video public_id
-    //         controls: true,
-    //         autoplay: true,
-    //         muted: false,
-    //         height: 400,
-    //         width: 800,
-    //         crop: "fit",
-    //     });
-    // }, []);
-
     const navigate = useNavigate()
 
     const navigateAllProjects = () => {
-        navigate('/completeProjects')
+        navigate('/devski-completeProjects')
     }
     const navigateWebProjects = () => {
-        navigate('/projectsPage')
+        navigate('/devski-projectsPage')
     }
     const navigateUiUXProjects = () => {
-        navigate('/UiUXProjects')
+        navigate('/devski-UiUXProjects')
+    }
+    const navigateAboutus = () => {
+        navigate('/devski-contactus')
     }
   return (
     <>
@@ -85,13 +63,13 @@ function AppDevProjects() {
                         <Link to='/' style={{textDecoration: 'none'}}>
                         <li className={AppDevProjectsCss.home}>Home</li>
                         </Link>
-                        <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                         <li className={AppDevProjectsCss.services}>Services</li>
                         </Link>
-                        <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
                             <li className={AppDevProjectsCss.projects}>Projects</li>
                         </Link>
-                        <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                             <li className={AppDevProjectsCss.about}>About Us</li>
                         </Link>
                         <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
@@ -216,7 +194,7 @@ function AppDevProjects() {
                     <div className={AppDevProjectsCss.CardText}>
                         <h1>Help To Build Your Dream Project</h1>
                         <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
-                        <button className={AppDevProjectsCss.CardButton}>
+                        <button className={AppDevProjectsCss.CardButton} onClick={navigateAboutus}>
                             Discuss Your Project
                             <span> </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
@@ -241,7 +219,7 @@ function AppDevProjects() {
                         </div>
                         <div className={AppDevProjectsCss.MiddleColumn}>
                             <h1>Got a project? Want to collaborate? </h1>
-                            <button className={AppDevProjectsCss.CardButton}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <button className={AppDevProjectsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                                 <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                                 </svg></button>
                             </div>
@@ -269,16 +247,7 @@ function AppDevProjects() {
                     <img src = {WorkTogether}className={AppDevProjectsCss.WorkTogether} alt = "WorkTogether"/>
                 </div>
             </div>
-
-            
-
-        
-
-
-            
-
         </div>
-    
     </>
 )
 }

@@ -34,15 +34,17 @@ function UiUxProjects() {
     const navigate = useNavigate()
 
     const navigateAllProjects = () => {
-        navigate('/completeProjects')
+        navigate('/devski-completeProjects')
     }
     const navigateAppProjects = () => {
-        navigate('/appDevProjects')
+        navigate('/devski-appDevProjects')
     }
     const navigateWebProjects = () => {
-        navigate('/projectsPage')
+        navigate('/devski-projectsPage')
+    }  
+    const navigateAboutus = () => {
+        navigate('/devski-contactus')
     }
-
   return (
     <>
         <div className={UiUxProjectsCss.main}>
@@ -58,13 +60,13 @@ function UiUxProjects() {
                         <Link to='/' style={{textDecoration: 'none'}}>
                         <li className={UiUxProjectsCss.home}>Home</li>
                         </Link>
-                        <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                         <li className={UiUxProjectsCss.services}>Services</li>
                         </Link>
-                        <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
                             <li className={UiUxProjectsCss.projects}>Projects</li>
                         </Link>
-                        <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                             <li className={UiUxProjectsCss.about}>About Us</li>
                         </Link>
                         <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
@@ -183,7 +185,7 @@ function UiUxProjects() {
                     <div className={UiUxProjectsCss.CardText}>
                         <h1>Help To Build Your Dream Project</h1>
                         <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
-                        <button className={UiUxProjectsCss.CardButton}>
+                        <button className={UiUxProjectsCss.CardButton} onClick={navigateAboutus}>
                             Discuss Your Project
                             <span> </span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
@@ -208,7 +210,7 @@ function UiUxProjects() {
                         </div>
                         <div className={UiUxProjectsCss.MiddleColumn}>
                             <h1>Got a project? Want to collaborate? </h1>
-                            <button className={UiUxProjectsCss.CardButton}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <button className={UiUxProjectsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                                 <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                                 </svg></button>
                             </div>

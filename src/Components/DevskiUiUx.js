@@ -11,7 +11,7 @@ import linkedin from '../Images/linkedin.png';
 import CardImage from '../Images/CardImage.png';
 import DevskiWebDevCss from '../Css/DevskiWebDev.module.css';
 import { Link } from "react-router-dom";
-import { useEffect } from 'react';
+import { useEffect, useNavigate } from 'react';
 
 function DevskiUiUx() {
     useEffect(() => {
@@ -32,6 +32,11 @@ function DevskiUiUx() {
         }
 
     },[]);
+    const navigate = useNavigate();
+    
+    const navigateAboutus = () => {
+        navigate('/devski-contactus')
+    }
 
   return (
     <>
@@ -45,15 +50,15 @@ function DevskiUiUx() {
                     <li className={DevskiWebDevCss.home}>Home</li>
                     <hr></hr>
                 </Link>
-                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={DevskiWebDevCss.services}>Services</li>
                     <hr></hr>
                 </Link>
-                <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
                     <li className={DevskiWebDevCss.projects}>Projects</li>
                     <hr></hr>
                 </Link>
-                <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                     <li className={DevskiWebDevCss.about}>About Us</li>
                     <hr></hr>
                 </Link>
@@ -197,7 +202,7 @@ function DevskiUiUx() {
                 <div className={DevskiWebDevCss.CardText}>
                     <h1>Help To Build Your Dream Project</h1>
                     <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
-                    <button className={DevskiWebDevCss.CardButton}>
+                    <button className={DevskiWebDevCss.CardButton} onClick={navigateAboutus}>
                         Discuss Your Project
                         <span> </span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
@@ -223,7 +228,7 @@ function DevskiUiUx() {
             </div>
             <div className={DevskiWebDevCss.MiddleColumn}>
             <h1>Got a project? Want to collaborate? </h1>
-            <button className={DevskiWebDevCss.CardButton}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+            <button className={DevskiWebDevCss.CardButton} onClick={navigateAboutus} >Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                 <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                 </svg></button>
             </div>

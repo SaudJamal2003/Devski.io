@@ -1039,9 +1039,15 @@ button:hover .arrow {
 .faqTextarea textarea{
     border-width: 1.5px;
     border-radius: .6rem;
+    font-size: 18px;
+    font-family: Outfit;
+    padding: 2px;
 } 
 .faqTextarea textarea::placeholder{
    padding: 8px;
+   padding: 10px;
+   font-size: 18px;
+   font-family: Outfit;
 }
 .faqTextarea textarea input{
    padding: 20px;
@@ -1061,194 +1067,15 @@ button:hover .arrow {
     border-radius: 0.5rem;
     border-style: none;
     background-color: #A2FF86;
-    padding: 10px 10px;
+    padding: 8px 10px;
     color: #080808;
+    font-size: 15px;
+    font-family: Outfit;
     font-weight: 600;
     width: 20%;
     height: 40px;
 }
-
-/* .FooterMain{
-    margin-top: 220px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap:125px;
-    width: 100%;
-    height: 580px;
-    flex-shrink: 0;
-    background-image: url('../Images/WavyDesign.png');
-    background-color: #0F0F0F;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.EveryFooterDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 185px;
-    margin-top: 100px;
-    margin-bottom: -30px;
-}
-.AllColumn{
-    display: flex;
-    justify-content: space-between;
-    height: 100px;
-    align-items: center;
-    width: 90%;
-    margin-left: 84px;
-}
-
-.RightColumn{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    margin-left: 40px;
-    
-}
-.RightColumn h1{
-    color: white;
-    font-family: Outfit;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-bottom: 20px;
-}
-.RightColumn h2{
-    color: white;
-    font-family: Outfit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.RightColumn h3{
-    color: white;
-    font-family: Outfit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.MiddleColumn{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
-    width: 60%;
-}
 .CardButton{
-    display: flex;
-    width: 250px;
-    padding: 19px 31px 17px 31px;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    font-weight: 600;
-    border-style: none;
-    border-radius: 8px;
-    background: #A2FF86;
-    font-family: Outfit;
-    display: flex;
-    gap: 5px;
-}
-.CardButton:hover{
-    transform: scale(1.03);
-    transition: 0.2s ease-in;
-    background-color: transparent;
-    border-style: solid;
-    border-width: 1.5px;
-    border-color: #A2FF86;
-    color: #A2FF86;
-}
-.MiddleColumn h1{
-    color: white;
-    font-family: Arial;
-    font-size: 28px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.LeftColumn{
-    display: flex;
-    flex-direction: column;
-    gap:5px;
-    margin-right: 40px;
-}
-.LeftColumn h1{
-    color: white;
-    font-family: Arial;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.LeftColumn h4{
-    color: white;
-    margin-top: 20px;
-    font-family: Arial;
-    font-size: 15px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-}
-.LeftColumn h2,h3,h5,h6{
-    color: white;
-    font-family: Arial;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-}
-.FooterHeading{
-    justify-content:center;
-    display: flex;
-}
-.WorkTogether{
-    display: flex;
-    width: 95%;
-    margin-bottom: -20px;
-
-}
-.ThinLine{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: -80px;
-    width: 94%;
-}
-.ThinLine h1{
-    color:white;
-    font-family: Arial;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-left: 84px;
-
-}
-.ThinLine h2{
-    color:white;
-    font-family: Arial;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin-right: 180px;
-
-}
-.SocialMedia{
-    width: 81.201px;
-    height: 14px;
-    flex-shrink: 0;
-    display: flex;
-    gap: 10px;
-}
-
- */
- .CardButton{
     display: flex;
     width: 250px;
     padding: 19px 31px 17px 31px;

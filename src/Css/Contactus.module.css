@@ -293,6 +293,10 @@ li {
     background-color: transparent;
     border: 0px 0px 2px 0px;
     border-color: #333333;
+    color: white;
+    font-size: 18px;
+    font-family: Outfit;
+    padding: 10px;
 }
 .message textarea::placeholder{
     font-family: Outfit;

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import DevskiProjectsCss from '../Css/DevskiProjects.module.css';
 import Devski_Logo from '../Images/Devski_Logo.png'
 import Project1 from '../Images/Project1.png';
@@ -23,7 +23,12 @@ function DevskiProjects() {
         hamburgerElement.removeEventListener("click", mobileMenu);
       };
     }
-  },[])  
+  },[]) 
+  const navigate = useNavigate();
+  
+  const navigateAboutus = () => {
+      navigate('/devski-contactus')
+  }
   return (
     <>     
         <header className={DevskiProjectsCss.header}>
@@ -32,13 +37,13 @@ function DevskiProjects() {
                 <img src={Devski_Logo} className={DevskiProjectsCss.DevskiLogo} alt='logo'/>
              </Link>
              <ul className={DevskiProjectsCss.navMenu}>
-                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.services}>Services</li>
                 </Link>
-                <Link to='/projectsPage' style={{textDecoration: 'none'}}>
+                <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.projects}>Projects</li>
                 </Link>
-                <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.about}>About Us</li>
                 </Link>
                 <Link to='/devski-contactus' style={{textDecoration: 'none'}}>

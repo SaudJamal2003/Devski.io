@@ -19,31 +19,31 @@ function App() {
          <BrowserRouter>
         <Routes>
                       
-            <Route exact path="/devskiUiUx" element={<DevskiWebDev />}>
+            <Route exact path="/devski-devskiUiUx" element={<DevskiWebDev />}>
             </Route>
 
-            <Route exact path="/devskiWebdev" element={<DevskiUiUX />}>
+            <Route exact path="/devski-devskiWebdev" element={<DevskiUiUX />}>
             </Route>
 
-            <Route exact path="/devskiAppDev" element={<DevskiAppDev />}>
+            <Route exact path="/devski-devskiAppDev" element={<DevskiAppDev />}>
             </Route>
 
-            <Route exact path="/devskiServices" element={<DevskiServices/>}>
+            <Route exact path="/devski-devskiServices" element={<DevskiServices/>}>
             </Route>
 
-            <Route exact path="/completeProjects" element={<CompleteProjects />}>
+            <Route exact path="/devski-completeProjects" element={<CompleteProjects />}>
             </Route>
 
-            <Route exact path="/projectsPage" element={<ProjectsPage />}>
+            <Route exact path="/devski-projectsPage" element={<ProjectsPage />}>
             </Route>
 
-            <Route exact path="/appDevProjects" element={<AppDevProjects />}>
+            <Route exact path="/devski-appDevProjects" element={<AppDevProjects />}>
             </Route>
 
-            <Route exact path="/UiUXProjects" element={<UiUxProjects />}>
+            <Route exact path="/devski-UiUXProjects" element={<UiUxProjects />}>
             </Route>
 
-            <Route exact path="/aboutus" element={<AboutUs />}>
+            <Route exact path="/devski-aboutus" element={<AboutUs />}>
             </Route>
 
             <Route exact path="/devski-contactus" element={<ContactUs />}>

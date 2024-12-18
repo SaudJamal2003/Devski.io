@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import ContactusCss from '../Css/Contactus.module.css';
 import MultiRangeSlider from './MultiRangeSlider';
 import Devski_Logo from '../Images/Devski_Logo.png';
@@ -32,6 +32,29 @@ function ContactUs() {
           };
         }
     }, []);
+
+
+    const handleSubmit = () => {
+        const _name = document.getElementById('name');
+        const _email = document.getElementById('email');
+        const _message = document.getElementById('message');
+
+        if(_name.value === ""){
+            alert('Enter your full name');
+        }
+        else if(_email.value === ""){
+            alert('Enter your Email');
+        }
+        else if(_message.value === ""){
+            alert('Can not send empty message');
+        }
+        else if (_name.value !== "" && _email.value !== "" && _message.value !== ""){
+            alert('Thank you for the repsonse');
+        }
+        else{
+            alert('Information Empty');
+        }
+    }
   return (
     <>
         <div className={ContactusCss.main}>
@@ -42,14 +65,16 @@ function ContactUs() {
                     <img src={Devski_Logo} className={ContactusCss.DevskiLogo} alt='logo'/>
                 </Link>
                 <ul className={ContactusCss.navMenu}>
+                    <Link to='/' style={{textDecoration: 'none'}}>
                     <li className={ContactusCss.home}>Home</li>
-                    <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                    </Link>
+                    <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                         <li className={ContactusCss.services}>Services</li>
                     </Link>
-                    <Link to='/completeProjects' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                         <li className={ContactusCss.projects}>Projects</li>
                     </Link>
-                    <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                         <li className={ContactusCss.about}>About Us</li>
                     </Link>
                     <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
@@ -81,11 +106,11 @@ function ContactUs() {
                     <div className={ContactusCss.fields}>
                         <div className={ContactusCss.nameField}>
                             <h1>Full Name</h1>
-                            <input type='text' placeholder='Type here'required/>
+                            <input type='text' placeholder='Type here' id='name' required/>
                         </div>
                         <div className={ContactusCss.emailField}>
                             <h1>Email</h1>
-                            <input type='text' placeholder='Type here'required/>
+                            <input type='text' placeholder='Type here' id='email' required/>
                         </div>
                     </div>
 
@@ -123,10 +148,10 @@ function ContactUs() {
 
                     <div className={ContactusCss.message}>
                         <h1>Your Message</h1>
-                        <textarea rows='5' cols='180' placeholder='Type here'/>
+                        <textarea rows='5' cols='180' placeholder='Type here' id= 'message'/>
                     </div>
 
-                    <button type='submit' className={ContactusCss.submitButton}>Submit</button>
+                    <button type='submit' className={ContactusCss.submitButton} onClick={handleSubmit}>Submit</button>
 
                     <div className={ContactusCss.formTail}>
                         <div className={ContactusCss.operatingDays}>

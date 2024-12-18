@@ -135,53 +135,35 @@ function HomePage() {
         }
     }
 
+    const handleSubmit = () => {
+
+        const _message = document.getElementById('message');
+
+        if(_message.value === ""){
+            alert('Can not send empty query');
+        }
+        else{
+            alert('Sent Successfully');
+        }
+    }
+
     const navigate = useNavigate()
 
     const navigateAllProjects = () => {
-        navigate('/completeProjects')
+        navigate('/devski-completeProjects')
     }
     const navigateAppProjects = () => {
-        navigate('/appDevProjects')
+        navigate('/devski-appDevProjects')
     }
     const navigateWebProjects = () => {
-        navigate('/projectsPage')
+        navigate('/devski-projectsPage')
     }
     const navigateUiUXProjects = () => {
-        navigate('/UiUXProjects')
+        navigate('/devski-UiUXProjects')
     }
-    
-    const [questions, setQuestions] = useState();
-
-    // const handleChange = (e) => {
-    //     const textValue = e.target.value
-    //     setQuestions(textValue)
-    // }
-
-    // const handleSubmitMail = async (e) => { 
-    //     e.preventDefault() 
-    //     try {
-    //       // Make API call to approve volunteer request using fetch
-    //       const response = await fetch('http://localhost:3000/sendMail', {
-    //         method: 'POST',
-    //         headers: {
-    //           'Content-Type': 'application/json'
-    //         },
-    //         // You can pass any necessary data here in the body
-    //         // For example: JSON.stringify({ volunteerId: 'volunteerIdHere' })
-    //         body: JSON.stringify(task) //volEmail instead of this ?
-    //       });
-    
-    //       if (!response.ok) {
-    //         throw new Error('Failed to send mail');
-    //       }
-    
-    //       alert('Task email sent successfully.');
-    //     } 
-    //     catch (error) {
-    //       console.error('Error in sending mail:', error);
-    //       alert('Error in sending mail to volunteer. Please try again later.');
-    //     } 
-    //   };
+    const navigateAboutus = () => {
+        navigate('/devski-contactus')
+    }
     
     
   return (
@@ -195,13 +177,13 @@ function HomePage() {
             </Link>
             <ul className={HomePageCss.navMenu}>
                 <li className={HomePageCss.home}>Home</li>
-                <Link to='/devskiServices' style={{textDecoration: 'none'}}>
+                <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.services}>Services</li>
                 </Link>
-                <Link to='/completeProjects' style={{textDecoration: 'none'}}>
+                <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.projects}>Projects</li>
                 </Link>
-                <Link to='/aboutus' style={{textDecoration: 'none'}}>
+                <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
                     <li className={HomePageCss.about}>About Us</li>
                 </Link>
                 <Link to='/devski-contactus' style={{textDecoration: 'none'}}>
@@ -223,7 +205,7 @@ function HomePage() {
                 
                 <h1>Turning Visions into <span>Reality</span></h1>
                 <p>Unlock your business's potential with our tailored digital solutions. From design to development, we ensure your brand stands out and thrives.</p>
-                <button>Book A Meeting</button>
+                <button onClick={navigateAboutus}>Book A Meeting</button>
                 
             </div>
         </div>
@@ -271,13 +253,13 @@ function HomePage() {
             <div className={HomePageCss.servicesContent}>
                 <h1>Our Services</h1>
                 <p>Devski offers a range of design services that are tailored to meet the unique needs of each client</p>
-                <Link to='/devskiUiUx' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                <Link to= '/devski-devskiUiUx' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
                     <button id={HomePageCss.buttonHover} className={HomePageCss.selectedBtn} style={{color: 'white'}}><span className={HomePageCss.number1}>01</span> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
-                <Link to= '/devskiWebdev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                <Link to= '/devski-devskiWebdev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
                     <button id={HomePageCss.buttonHover} onMouseEnter={changeColor} classsName={HomePageCss.webDevService}><span id={HomePageCss.number2}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
-                <Link to= '/devskiAppDev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
+                <Link to= '/devski-devskiAppDev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
                     <button id={HomePageCss.buttonHover}><span id={HomePageCss.number3}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
                 <button id={HomePageCss.buttonHover}><span id={HomePageCss.number4}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
@@ -484,10 +466,10 @@ function HomePage() {
 
                 </div>
                 <div className={HomePageCss.faqTextarea} >
-                    <textarea rows='21' cols='45' placeholder='Ask us want you want to know...'/>
+                    <textarea rows='12' cols='45' placeholder='Ask us want you want to know...' id='message'/>
                     <div className={HomePageCss.faqButton}>
                         <p>We will answer your questions via email within 48 hours.</p>
-                        <button type='submit'>Send</button>
+                        <button type='submit' onClick={handleSubmit}>Send</button>
                     </div>
                 </div>
             </div>
@@ -505,7 +487,7 @@ function HomePage() {
                     </div>
                     <div className={HomePageCss.MiddleColumn}>
                         <h1>Got a project? Want to collaborate? </h1>
-                        <button className={HomePageCss.CardButton}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                        <button className={HomePageCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                             <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                         </svg></button>
                     </div>

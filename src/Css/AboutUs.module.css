@@ -171,11 +171,16 @@ li {
     text-align: center;
     color: #C8CFD5;
 }
-.maryamPic, .saudPic{
+.maryamPic{
+    width: 80%;
+}
+.saudPic, .usaidPic, .shaheerPic{
+    width: 90%;
+}
+.maryamPic, .saudPic, .shaheerPic, .usaidPic{
     margin-top: 20px;
     object-fit: cover;
     height: 460px;
-    width: 90%;
     padding: 5px;
     border-radius: 20px;
 }
@@ -659,6 +664,13 @@ li {
     .saudPic{
         height: 375px;
     }
+    .maryamPic{
+        height: 375px;
+    }
+    .usaidPic{
+        height: 375px;
+    }
+    
     .FooterMain{
         margin-top: 50px;
     }
@@ -666,6 +678,6 @@ li {
         height: 70px;
     }
     .socialAccounts{
-        margin-top: 50px;
+        margin-top: 75%;
     }
 }
