@@ -11,9 +11,9 @@ import Project1 from '../Images/Project1.png';
 import Project2 from '../Images/Project2.png';
 import CardImage from '../Images/CardImage.png';
 import WorkTogether from '../Images/WorkTogether.png';
-import behance from '../Images/behance.png';
 import Insta from '../Images/Insta.png';
 import linkedin from '../Images/linkedin.png';
+import upwork from '../Images/upworkIcon.png';
 import DevskiServicesCss from '../Css/DevskiServices.module.css';
 
 
@@ -35,7 +35,7 @@ function DevskiServices(){
           };
         }
 
-                const containers = document.querySelectorAll('.Container');
+        const containers = document.querySelectorAll('.Container');
         const mainContainer = document.querySelector('.MainContainer');
 
         mainContainer.addEventListener('scroll', () => {
@@ -69,7 +69,15 @@ function DevskiServices(){
     const navigateAboutus = () => {
         navigate('/devski-contactus')
     }
-    
+    const navigateInsta = () => {
+        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
+    }
+    const navigateUpwork = () => {
+        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
+    }
+    const navigateLinkedin = () => {
+        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
+    }    
     
   return(
         <>
@@ -211,44 +219,37 @@ function DevskiServices(){
             </div>
         </div>
 
-        <div className={DevskiServicesCss.FooterMain}>
-            
+        <div className={DevskiServicesCss.FooterMain}> 
             <div className={DevskiServicesCss.EveryFooterDiv}>
-
-            <div className={DevskiServicesCss.AllColumn}>
-            <div className={DevskiServicesCss.RightColumn}>
-                <h1>Contact</h1>
-                <h2>devski@info.io</h2>
-                <h3>d0318-0010470</h3>
-            </div>
-            <div className={DevskiServicesCss.MiddleColumn}>
-            <h1>Got a project? Want to collaborate? </h1>
-            <button className={DevskiServicesCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                </svg></button>
-            </div>
-            <div className={DevskiServicesCss.LeftColumn}>
-                <h1>America</h1>
-                <h2>Jln. Bambu No. 375</h2>
-                <h3>Samarinda, Kalimantan Timur</h3>
-                <h4>Hong Kong</h4>
-                <h5>60 Ya Fung Sung</h5>
-                <h6>San Tsuen, 75129</h6>
-            </div>
-            </div>
-            <div className={DevskiServicesCss.ThinLine}>
-                <h1>© Copyright 2024. Aditama Studio. All rights reserved.</h1>
-                <h2>Terms & Conditions</h2>
-                <div className={DevskiServicesCss.SocialMedia}>
-                    <img src = {behance} className={DevskiServicesCss.behance} alt = "behance"/>
-                    <img src = {Insta} className={DevskiServicesCss.Insta} alt = "Insta"/>
-                    <img src = {linkedin} className={DevskiServicesCss.linkedin} alt = "linkedin"/>
+                <div className={DevskiServicesCss.AllColumn}>
+                    <div className={DevskiServicesCss.RightColumn}>
+                        <h1 style={{marginBottom:'2px'}}>Contact</h1>
+                        <h2>devski@info.io</h2>
+                    </div>
+                    <div className={DevskiServicesCss.MiddleColumn}>
+                        <h1>Got a project? Want to collaborate? </h1>
+                        <button className={DevskiServicesCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
+                        </svg></button>
+                    </div>
+                    <div className={DevskiServicesCss.LeftColumn}>
+                        <h1>United States of America</h1>
+                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
+                        <h3>Frisco, TX 75036</h3>
+                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
+                    </div>
                 </div>
-            </div>
+                <div className={DevskiServicesCss.ThinLine}>
+                    <div className={DevskiServicesCss.SocialMedia}>
+                        <img src = {upwork} className={DevskiServicesCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
+                        <img src = {Insta} className={DevskiServicesCss.Insta} onClick={navigateInsta} alt = "Insta"/>
+                        <img src = {linkedin} className={DevskiServicesCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
+                    </div>
+                </div>
             </div>
             
             <div className={DevskiServicesCss.FooterHeading}>
-            <img src = {WorkTogether}className={DevskiServicesCss.WorkTogether} alt = "WorkTogether"/>
+                 <img src = {WorkTogether}className={DevskiServicesCss.WorkTogether} alt = "WorkTogether"/>
             </div>
         </div>
 

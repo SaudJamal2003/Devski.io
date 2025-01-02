@@ -28,6 +28,7 @@ html {
     align-items: center;
     padding: 1rem 1.5rem;
     background-color: #1F1F1F;
+    z-index: 9999;
 }
 
 ul{

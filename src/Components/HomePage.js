@@ -7,6 +7,7 @@ import whiteArrow from '../Images/whiteArrow.png';
 import blackArrow from '../Images/blackArrow.png';
 import roundwhiteArrow from '../Images/roundWhiteArrow.png';
 import roundblackArrow from '../Images/roundBlackArrow.png';
+import megaphone from '../Images/coverMegaphone.png';
 import icon1 from '../Images/icon1.png';
 import icon2 from '../Images/thunder.png';
 import icon3 from '../Images/webflow.png';
@@ -18,12 +19,15 @@ import icon8 from '../Images/magnify.png';
 import icon9 from '../Images/threeStars.png';
 import star from '../Images/star.png';
 import personPic from '../Images/personPic.png';
-import DownIcon from '../Images/DownIcon.png';
 import WorkTogether from '../Images/WorkTogether.png';
-import behance from '../Images/behance.png';
+import upwork from '../Images/upworkIcon.png';
 import Insta from '../Images/Insta.png';
 import linkedin from '../Images/linkedin.png';
 import HomePageCss from '../Css/HomePage.module.css';
+import UiUxRender from './UiUxRender';
+import WebRender from './WebRender';
+import AppRender from './AppProjectsRender';
+import FAQ from './FAQ';
 
 function HomePage() {
 
@@ -35,7 +39,7 @@ function HomePage() {
           function mobileMenu() {
             hamburgerElement.classList.toggle(HomePageCss.active);
             navMenu.classList.toggle(HomePageCss.active); 
-          }
+          } 
     
           hamburgerElement.addEventListener("click", mobileMenu);
     
@@ -45,107 +49,12 @@ function HomePage() {
         }
     }, []);
 
-    const expandAnswer1 = () => {
-        var open = document.getElementById(`${HomePageCss.expandedBlock1}`)
-        var parentDiv = document.getElementById(`${HomePageCss.question1}`)
-        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
-        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
+    const [renderComponent, setRenderComponent] = useState('UiUX'); // Default state
 
-        if (open.style.display === "block") {
-            open.style.display = "none";
-            parentDiv.style.borderRadius = "1rem 1rem 1rem 1rem";
-            parentDiv.style.marginBottom = "0px";
-        } 
-        else {
-            open.style.display = "block";
-            parentDiv.style.marginBottom = "80px";
-            parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        }
-        
-        if(formHeight.style.height > '600px'){
-            footer.style.marginTop = '200px';
-        }
-    }
-    const expandAnswer2 = () => {
-        var open = document.getElementById(`${HomePageCss.expandedBlock2}`)
-        var parentDiv = document.getElementById(`${HomePageCss.question2}`)
-        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
-        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
-
-        if (open.style.display === "block") {
-            open.style.display = "none";
-            parentDiv.style.borderRadius = "1rem 1rem 1rem 1rem";
-            parentDiv.style.marginBottom = "0px";
-        } 
-        else {
-            open.style.display = "block";
-            parentDiv.style.marginBottom = "80px";
-            parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        } 
-        if(formHeight.style.height > '600px'){
-            footer.style.marginTop = '200px';
-        }   
-    }
-    const expandAnswer3 = () => {
-        var open = document.getElementById(`${HomePageCss.expandedBlock3}`)
-        var parentDiv = document.getElementById(`${HomePageCss.question3}`)
-        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
-        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
-
-        if (open.style.display === "block") {
-            open.style.display = "none";
-            parentDiv.style.borderRadius = "1rem 1rem 1rem 1rem";
-            parentDiv.style.marginBottom = "0px";
-        } 
-        else {
-            open.style.display = "block";
-            parentDiv.style.marginBottom = "80px";
-            parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        } 
-        if(formHeight.style.height > '600px'){
-            footer.style.marginTop = '200px';
-        }   
-    }
-    const expandAnswer4 = () => {
-        var open = document.getElementById(`${HomePageCss.expandedBlock4}`)
-        var parentDiv = document.getElementById(`${HomePageCss.question4}`)
-        var formHeight = document.getElementById(`${HomePageCss.FAQ}`)
-        var footer = document.getElementById(`${HomePageCss.FooterMain}`)
-
-        if (open.style.display === "block") {
-            open.style.display = "none";
-            parentDiv.style.borderRadius = "1rem 1rem 1rem 1rem";
-            parentDiv.style.marginBottom = "0px";
-        } 
-        else {
-            open.style.display = "block";
-            parentDiv.style.marginBottom = "80px";
-            parentDiv.style.borderRadius = "1rem 1rem 0rem 0rem";
-        } 
-        if(formHeight.style.height > '600px'){
-            footer.style.marginTop = '200px';
-        }  
-    }
-
-    const changeColor = () => {
-        const button = document.getElementById(`.${HomePageCss.buttonHover}`);
-        const number = document.getElementById(`.${HomePageCss.number2}`);
-        if (button && number){
-            number.style.color = '#A2FF86';
-        }
-    }
-
-    const handleSubmit = () => {
-
-        const _message = document.getElementById('message');
-
-        if(_message.value === ""){
-            alert('Can not send empty query');
-        }
-        else{
-            alert('Sent Successfully');
-        }
-    }
+   const [flag1, setFlag1] = useState(false);
+   const [flag2, setFlag2] = useState(false);
+   const [flag3, setFlag3] = useState(false);
+   const [flag4, setFlag4] = useState(false);
 
     const navigate = useNavigate()
 
@@ -163,6 +72,15 @@ function HomePage() {
     }
     const navigateAboutus = () => {
         navigate('/devski-contactus')
+    }
+    const navigateInsta = () => {
+        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
+    }
+    const navigateUpwork = () => {
+        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
+    }
+    const navigateLinkedin = () => {
+        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
     }
     
     
@@ -202,12 +120,12 @@ function HomePage() {
 
         <div className={HomePageCss.turningVisions}>
             <div className={HomePageCss.coverText}>
-                
                 <h1>Turning Visions into <span>Reality</span></h1>
                 <p>Unlock your business's potential with our tailored digital solutions. From design to development, we ensure your brand stands out and thrives.</p>
                 <button onClick={navigateAboutus}>Book A Meeting</button>
-                
             </div>
+            <img src={megaphone} className={HomePageCss.megaphone} alt='megaphone'/>
+
         </div>
         <div className={HomePageCss.BlackBg}></div>
         <div className={HomePageCss.buildingDesign}>
@@ -230,9 +148,11 @@ function HomePage() {
                         <h1>90<span>+</span></h1>
                         <h2>Projects Completed</h2>
                     </div>
-                    <img src={Clients} className={HomePageCss.clients} alt='clients'/>
-
-
+                    <div>
+                        <img src={Clients} className={HomePageCss.clients} alt='clients'/>
+                        <p>50+ Clients</p>
+                    </div>
+                    
                 </div>
 
                 <div className={HomePageCss.playvideo}>
@@ -254,41 +174,43 @@ function HomePage() {
                 <h1>Our Services</h1>
                 <p>Devski offers a range of design services that are tailored to meet the unique needs of each client</p>
                 <Link to= '/devski-devskiUiUx' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
-                    <button id={HomePageCss.buttonHover} className={HomePageCss.selectedBtn} style={{color: 'white'}}><span className={HomePageCss.number1}>01</span> UI/UX Design <img src={whiteArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                    <button id={HomePageCss.buttonHoverUiUx} onMouseEnter={() => { setRenderComponent("UiUX"); setFlag1(true); setFlag2(false); setFlag3(false); setFlag4(false)}} style={{color: flag1 ? "white" : "#444444",}}
+                     className={HomePageCss.selectedBtn} ><span id={HomePageCss.number1} style={{color: flag1 ? "#A2FF86" : "#444444",}}>01</span> UI/UX Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
                 <Link to= '/devski-devskiWebdev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
-                    <button id={HomePageCss.buttonHover} onMouseEnter={changeColor} classsName={HomePageCss.webDevService}><span id={HomePageCss.number2}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                    <button id={HomePageCss.buttonHoverWeb} onMouseEnter={() => { setRenderComponent("Web"); setFlag1(false); setFlag2(true); setFlag3(false); setFlag4(false)}} style={{color: flag2 ? "white" : "#444444",}}
+                    classsName={HomePageCss.webDevService}><span id={HomePageCss.number2} style={{color: flag2 ? "#A2FF86" : "#444444",}}>02</span> Web Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
                 <Link to= '/devski-devskiAppDev' style={{textDecoration: 'none'}} className={HomePageCss.webLink}>
-                    <button id={HomePageCss.buttonHover}><span id={HomePageCss.number3}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                    <button id={HomePageCss.buttonHoverApp}  onMouseEnter={() => { setRenderComponent("App"); setFlag1(false); setFlag2(false); setFlag3(true); setFlag4(false);}} style={{color: flag3 ? "white" : "#444444",}}
+                        ><span id={HomePageCss.number3} style={{color: flag3 ? "#A2FF86" : "#444444",}}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
-                <button id={HomePageCss.buttonHover}><span id={HomePageCss.number4}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
+                <button id={HomePageCss.buttonHoverGraphicDesign} onMouseEnter={() =>{setFlag1(false); setFlag2(false); setFlag3(false); setFlag4(true);}} style={{color: flag4 ? "white" : "#444444",}}
+                    ><span id={HomePageCss.number4} style={{color: flag4 ? "#A2FF86" : "#444444",}}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
 
             </div>
-
-            <div className={HomePageCss.projectsImages}>
-                <div className={HomePageCss.UiProjects}>
-                    <p>UI/UX Projects</p>
-                    <img src={roundwhiteArrow} alt='uiuxprojects'/>
+             <div className={HomePageCss.dynamicDiv}>
+                <div
+                    className={`${HomePageCss.component} ${
+                    renderComponent === 'UiUX' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <UiUxRender />
                 </div>
-
-                <div className={HomePageCss.meetExpert}>
-                    <div className={HomePageCss.howWork}>
-                        <p>Ever wondered how exceptional work comes together?</p>
-                        <div className={HomePageCss.innerWork}>
-                            <h2>See how we work</h2>
-                            <img src={roundblackArrow} alt='roundblackArrow'/>
-                        </div>
-                    </div>
-                    <div className={HomePageCss.ourExpert}>
-                        <p>Looking for design experts who can bring your vision to life?</p>
-                        <div className={HomePageCss.innerWork}>
-                            <h2>Meet our expert</h2>
-                            <img src={roundwhiteArrow} className={HomePageCss.whiteRoundArrow} alt='roundblackArrow'/>
-                        </div>
-                    </div>
+                <div
+                    className={`${HomePageCss.component} ${
+                    renderComponent === 'Web' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <WebRender />
                 </div>
-
+                <div
+                    className={`${HomePageCss.component} ${
+                    renderComponent === 'App' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <AppRender />
+                </div>
             </div>
         </div>
 
@@ -305,7 +227,7 @@ function HomePage() {
                     <div className={HomePageCss.boxes}>
                         <img src={icon1}  className={HomePageCss.boxIcon} alt='icon'/>
                         <p className={HomePageCss.boxHeader}>1. Software Maintenance Support</p>
-                        <p className={HomePageCss.boxText}>PuEnjoy peace of mind with 12 months of free maintenance services, ensuring your website or application runs smoothly and remains updated.</p>
+                        <p className={HomePageCss.boxText}>Enjoy peace of mind with 12 months of free maintenance services, ensuring your website or application runs smoothly and remains updated.</p>
                     </div>
                     <div className={HomePageCss.boxes}>
                         <img src={icon2}  className={HomePageCss.boxIcon} alt='icon'/>
@@ -386,14 +308,40 @@ function HomePage() {
             </div>
         </div>
 
-        <div className={HomePageCss.qoutes}>
-            <h1>Create</h1>
-            <img src={star} className={HomePageCss.star} alt='star'/>
-            <h1>Transform</h1>
-            <img src={star} className={HomePageCss.star} alt='star'/>
-            <h1>Empower</h1>
-            <img src={star} className={HomePageCss.star} alt='star'/>
-            <h1>Inspire</h1>
+        <div className={HomePageCss.sliderContainer}>
+            <div className={HomePageCss.slider}>
+                <div className={HomePageCss.qoutes}>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1>Create</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1>Transform</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1>Empower</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1>Inspire</h1><p></p>
+                </div>
+                {/* Repeat the same content to create a seamless loop */}
+                <div className={HomePageCss.qoutes}>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Create</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Transform</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Empower</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Inspire </h1><p></p>
+                </div>
+                <div className={HomePageCss.qoutes}>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Create</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Transform</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Empower</h1>
+                    <img src={star} className={HomePageCss.star} alt="star" />
+                    <h1 className={HomePageCss.qoutesHeader}>Inspire </h1><p></p>
+                </div>
+            </div>
         </div>
 
         <div className={HomePageCss.testimonials}>
@@ -415,75 +363,13 @@ function HomePage() {
                 </div>
             </div>
         </div>
-
-        <div id={HomePageCss.FAQ}>
-            <div className={HomePageCss.faqHeader}>
-                <h1>FAQs</h1>
-                <p>Life is short why spent to design from scratch, Use finalui templates and its dummy text like lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-            <div id={HomePageCss.faqForm}>
-                <div className={HomePageCss.dropdowns}>
-                    <div id={HomePageCss.question1}>
-                         <div id={HomePageCss.buttonText}>
-                            <p>Do you have specific princing plans to show?</p>
-                            <button onClick={expandAnswer1}><img src={DownIcon} className={HomePageCss.downIcon} alt='downicon'/></button>
-                        </div> 
-                        <div id={HomePageCss.expandedBlock1}>
-                            <p>Donec rutrum, mauris at blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.
-                            </p>
-                        </div>  
-                    </div>
-                    <div id={HomePageCss.question2}>
-                         <div id={HomePageCss.buttonText}>
-                            <p>How many years of experience do you have?</p>
-                            <button onClick={expandAnswer2}><img src={DownIcon} className={HomePageCss.downIcon} alt='downicon'/></button>
-                        </div> 
-                        <div id={HomePageCss.expandedBlock2}>
-                            <p>Donec rutrum, mauris at blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.
-                            </p>
-                        </div>  
-                    </div>
-                    <div id={HomePageCss.question3}>
-                         <div id={HomePageCss.buttonText}>
-                            <p>What companies have you worked with?</p>
-                            <button onClick={expandAnswer3}><img src={DownIcon} className={HomePageCss.downIcon} alt='downicon'/></button>
-                        </div> 
-                        <div id={HomePageCss.expandedBlock3}>
-                            <p>Donec rutrum, mauris at blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.
-                            </p>
-                        </div>  
-                    </div>
-                    <div id={HomePageCss.question4}>
-                         <div id={HomePageCss.buttonText}>
-                            <p>Am I safe leaving my company in your hands?</p>
-                            <button onClick={expandAnswer4}><img src={DownIcon} className={HomePageCss.downIcon} alt='downicon'/></button>
-                        </div> 
-                        <div id={HomePageCss.expandedBlock4}>
-                            <p>Donec rutrum, mauris at blandit convallis, orci nulla volutpat sapien, id pulvinar leo ligula eget nunc. In quis magna magna. Nullam mattis eget.
-                            </p>
-                        </div>  
-                    </div>
-
-                </div>
-                <div className={HomePageCss.faqTextarea} >
-                    <textarea rows='12' cols='45' placeholder='Ask us want you want to know...' id='message'/>
-                    <div className={HomePageCss.faqButton}>
-                        <p>We will answer your questions via email within 48 hours.</p>
-                        <button type='submit' onClick={handleSubmit}>Send</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div className={HomePageCss.FooterMain}>
-            
+        <FAQ/>
+        <div className={HomePageCss.FooterMain}> 
             <div className={HomePageCss.EveryFooterDiv}>
-
                 <div className={HomePageCss.AllColumn}>
                     <div className={HomePageCss.RightColumn}>
-                        <h1>Contact</h1>
+                        <h1 style={{marginBottom:'2px'}}>Contact</h1>
                         <h2>devski@info.io</h2>
-                        <h3>d0318-0010470</h3>
                     </div>
                     <div className={HomePageCss.MiddleColumn}>
                         <h1>Got a project? Want to collaborate? </h1>
@@ -492,21 +378,17 @@ function HomePage() {
                         </svg></button>
                     </div>
                     <div className={HomePageCss.LeftColumn}>
-                        <h1>America</h1>
-                        <h2>Jln. Bambu No. 375</h2>
-                        <h3>Samarinda, Kalimantan Timur</h3>
-                        <h4>Hong Kong</h4>
-                        <h5>60 Ya Fung Sung</h5>
-                        <h6>San Tsuen, 75129</h6>
+                        <h1>United States of America</h1>
+                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
+                        <h3>Frisco, TX 75036</h3>
+                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
                     </div>
                 </div>
                 <div className={HomePageCss.ThinLine}>
-                    <h1>© Copyright 2024. Aditama Studio. All rights reserved.</h1>
-                    <h2>Terms & Conditions</h2>
                     <div className={HomePageCss.SocialMedia}>
-                        <img src = {behance} className={HomePageCss.behance} alt = "behance"/>
-                        <img src = {Insta} className={HomePageCss.Insta} alt = "Insta"/>
-                        <img src = {linkedin} className={HomePageCss.linkedin} alt = "linkedin"/>
+                        <img src = {upwork} className={HomePageCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
+                        <img src = {Insta} className={HomePageCss.Insta} onClick={navigateInsta} alt = "Insta"/>
+                        <img src = {linkedin} className={HomePageCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
                     </div>
                 </div>
             </div>

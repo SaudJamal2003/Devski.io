@@ -21,7 +21,6 @@ ul{
     gap: 20px;
     font-size: 14px;
     background-color: transparent;
-    ;
 }
 li {
     list-style: none;
@@ -74,6 +73,7 @@ li {
     background-color: #131212f1;
     width: 100%;
     height: 80px;
+    z-index: 9999;
 }
 .DevskiLogo{
     object-fit: contain;
@@ -100,26 +100,26 @@ li {
 }
 .turningVisions{
     width: 100%;
-    height: 1100px;
-    background-image: url('../Images/c.png');
+    height: 750px;
+    background-image: url('../Images/homePageCover.png');
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
-    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* flex-direction: column; */
 }
-.BlackBg{
-    width: 100%;
-    height: 872px;
-    background-color : black;
-    z-index: -1;
-    margin-top: -1000px;
-    margin-bottom: 100px;
+.megaphone{
+    object-fit: contain;
+    width: 35%;
+    margin-right: 100px;
+    margin-top: -8%;
 }
 .coverText{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 20px;
+    gap: 12px;
     width: fit-content;
     padding-left: 130px;
     height: 550px;
@@ -127,8 +127,8 @@ li {
 .coverText h1{
     margin-top: 20px;
     color: white;
-    font-size: 120px;
-    width: 70%;
+    font-size: 90px;
+    width: 80%;
     font-family: Outfit;
     line-height: 1.2;
 }
@@ -140,7 +140,7 @@ li {
     color: #ffffffb3;
     font-family: Outfit;
     font-size: 19px;
-    width: 44%;
+    width: 75%;
     text-align: left;
 }
 .coverText button{
@@ -148,11 +148,11 @@ li {
     font-family: 'Outfit';
     border-style: none;
     border-radius: 8px;
-    font-weight: 900;
-    font-size: 14px;    
+    font-weight: 600;
+    font-size: 18px;    
     padding: 10px 10px;
     background-color: #A2FF86;
-    width: 12%;
+    width: 20%;
     margin-top: 20px;
     height: 55px;
 }
@@ -170,12 +170,15 @@ li {
     flex-direction: column;
     width: 100%;
     align-items: center;
-    gap: 40px;
+    gap: 30px;
+    margin-top: 60px;
 }
 .chooseUsText{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: flex-start;
     width: 80%;
+    /* background-color: beige; */
 }
 
 .firstSection{
@@ -183,17 +186,18 @@ li {
     flex-direction: column;
     width: 40%;
     gap: 10px;
+    margin-left: -120px;
 }
 .firstSection p{
     color: #8be96f;
     font-family: 'Outfit';
     font-weight: 600;
     font-size: 16px;
-    text-align: left;
+    text-align: left;   
 }
 .firstSection h1{
     font-family: 'Outfit';
-    font-size: 45px;
+    font-size: 38px;
     line-height: 1.2;
 }
 .firstSection hr{
@@ -203,13 +207,17 @@ li {
 .secondSection{
     display: flex;
     flex-direction: column;
-    width: 42%;
+    margin-top: 4%;
+    width: 30%;
     justify-content: center;
 }
 .secondSection h1{
     color: #3e3c3c;
     font-family: 'Outfit';
-    font-size: 15px;
+    font-size: 18px;
+    /* background-color: #080808; */
+    margin-left: 100px;
+    margin-right: -130px;
 }
 
 .video{
@@ -228,14 +236,13 @@ li {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+    padding: 20px;
+}   
 .projectsCompleted h1{
     color: white;
     font-family: 'Outfit';
     font-size: 80px;
     font-weight: 600;
-    padding-left: 30px;
-    padding-top: 20px;
 }
 .projectsCompleted span{
     color: #A2FF86;
@@ -243,13 +250,19 @@ li {
 .projectsCompleted h2{
     color: white;
     font-family: 'Outfit';
-    padding-left: 35px;
 }
-.projectsCompleted img{
-    object-fit: cover;
-    width: 60%;
-    margin-left: 20%;
-
+.projectsCompleted p{
+    color: white;
+    font-family: 'Outfit';
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+.clients{
+    object-fit: contain;
+    width: 30%;
+    display: flex;
+    margin-bottom: -20px;
 }
 .playvideo{
     height: 300px;
@@ -259,22 +272,22 @@ li {
     background-repeat: no-repeat;
     border-radius: 0px 0px 14px 14px;
     display: flex;
+    align-items: flex-end;
     padding: 5px;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .weWork{
     width: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
-    height: 60%;
-    align-items: flex-end;
 }
 .weWork h1{
     color: #FFFFFF;
     font-family: 'Outfit';
     font-size: 40px;
-    letter-spacing: 8px;
-    font-weight: 500;
+    /* letter-spacing: 8px; */
+    font-weight: 600;
 }
 .playBtnDiv{
     width: 100%;
@@ -321,7 +334,7 @@ li {
     margin-bottom: 15px;
 }
 
-.servicesContent button{
+#buttonHoverUiUx, #buttonHoverWeb, #buttonHoverApp, #buttonHoverGraphicDesign{
     display: flex;
     padding: 20px;
     align-items: center;
@@ -329,7 +342,6 @@ li {
     border-color: #DDDDDD;
     border-radius: 112.26px;
     border-width: 1.5px;
-    padding: 29.94px, 37.42px, 29.94px, 37.42px;
     justify-content: space-between;
     margin-top: 15px;
     height: 70px;
@@ -342,10 +354,38 @@ li {
     color: #444444;
     cursor: pointer;
 }
-.servicesContent button:hover{
-    transition: 0.5s ease-in-out;
+#buttonHoverWeb:hover, #buttonHoverUiUx:hover, #buttonHoverApp:hover, #buttonHoverGraphicDesign:hover{
     color: white;
+    transition: 0.5s ease-in-out;
 }
+
+.dynamicDiv{
+    position: relative;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
+    transition: 0.5s ease-in-out;
+    margin-top: -40%;
+}
+.component {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    pointer-events: none; /* Prevent interaction with hidden components */
+  }
+  
+  .component.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
 
 .bullet{
     object-fit: cover;
@@ -355,16 +395,8 @@ li {
     object-fit: cover;
     height: 15px;
 }
-.number1{
-    color: #A2FF86;
-    font-weight: 900;
-    font-family: Outfit;
-    font-size: 20px;
-    transform: scaleX(2.1); /* Adjust the scale factor as needed */
-    display: inline-block;
-    padding: 10px;
-}
-#number2, #number3, #number4{
+
+#number1, #number2, #number3, #number4{
     color: #444444;
     font-weight: 900;
     font-family: Outfit;
@@ -372,6 +404,10 @@ li {
     transform: scaleX(2); /* Adjust the scale factor as needed */
     display: inline-block; 
     padding: 10px; 
+}
+/* button:hover #number1{
+    color: #A2FF86;
+    transition: 0.3s ease-in-out;
 }
 button:hover #number2{
     color: #A2FF86;
@@ -384,14 +420,14 @@ button:hover #number3{
 button:hover #number4{
     color: #A2FF86;
     transition: 0.3s ease-in-out;
-}
+} */
 
 button:hover .arrow {
     animation: bounce 0.5s ease-in-out infinite;
 }
 .projectsImages{
     display: flex;
-    width: 65%;
+    width: 100%;
     height: 410px;
     margin-top: 80px;
     gap: 10px;
@@ -400,17 +436,63 @@ button:hover .arrow {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    justify-content: space-around;
-    background-image: url('../Images/uiPic.png');
-    width: 50%;
+    justify-content: end;
+    background-image: url('../Images/uiuxprojpic.png');
+    width: 55%;
+    height: 105%;
     background-repeat: no-repeat;
-    background-size: contain;    
+    background-size: cover; 
+    border-radius: 2rem;   
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+.WebProjects{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: end;
+    background-image: url('../Images/webProjPic.png');
+    width: 55%;
+    height: 105%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 2rem;   
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
+}
+.AppProjects{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: end;
+    background-image: url('../Images/appProjPic.png');
+    width: 55%;
+    height: 105%;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    border-radius: 2rem;   
+    padding: 10px;
+    gap: 10px;
+    cursor: pointer;
 }
 .UiProjects img{
-    height: 80px;
-    margin-bottom: 18px;
+    height: 60px;
 }
 .UiProjects:hover img{
+    animation: jiggle 0.5s ease-in-out infinite;
+}
+.WebProjects img{
+    height: 60px;
+}
+.WebProjects:hover img{
+    animation: jiggle 0.5s ease-in-out infinite;
+}
+.AppProjects img{
+    height: 60px;
+}
+.AppProjects:hover img{
     animation: jiggle 0.5s ease-in-out infinite;
 }
 
@@ -423,15 +505,40 @@ button:hover .arrow {
     }
 }
 .UiProjects p{
-    font-size: 35px;
+    font-size: 30px;
     text-align: left;
     text-wrap: balance;
-    width: 30%;
-    font-weight: 600;
+    font-weight: 700;
     font-family: Outfit;
-    line-height: 43.1px;
+    line-height: 30px;
     margin-bottom: 18px;
     color: #222222;
+    margin-left: 28px;
+    transition: 0.5s ease-in-out;
+}
+
+.WebProjects p{
+    font-size: 30px;
+    text-align: left;
+    text-wrap: balance;
+    font-weight: 700;
+    font-family: Outfit;
+    line-height: 30px;
+    color: #222222;
+    margin-left: 28px;
+    transition: 0.5s ease-in-out;
+}
+
+.AppProjects p{
+    font-size: 30px;
+    text-align: left;
+    text-wrap: balance;
+    font-weight: 700;
+    font-family: Outfit;
+    line-height: 30px;
+    color: #ffffff;
+    margin-left: 18px;
+    transition: 0.5s ease-in-out;
 }
 
 .meetExpert{
@@ -444,8 +551,8 @@ button:hover .arrow {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
-    height: 47.25%;
+    width: 70%;
+    height: 65%;
     background-color: #2B2B2B;
     color: white;
     border-radius: 29px;
@@ -455,12 +562,12 @@ button:hover .arrow {
     text-align: left;
     text-wrap: balance;
     width: 50%;
-    font-size: 20px;
+    font-size: 24px;
 }
 .howWork p{
     font-size: 16px;
     color: white;
-    width: 75%;
+    width: 80%;
     text-align: left;
     text-wrap: balance;
 }
@@ -470,6 +577,7 @@ button:hover .arrow {
 }
 .howWork:hover img{
     animation: jiggle2 0.5s ease-in-out infinite;
+    cursor: pointer;
 }
 @keyframes jiggle2 {
     0%, 100% {
@@ -482,15 +590,16 @@ button:hover .arrow {
 .innerWork{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
+    width: 100%;
 }
 .ourExpert{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 60%;
-    height: 47.25%;
+    width: 70%;
+    height: 65%;
     background-color: #9DFF50;
     color: white;
     border-radius: 29px;
@@ -500,18 +609,19 @@ button:hover .arrow {
     text-align: left;
     text-wrap: balance;
     width: 50%;
-    font-size: 20px;
+    font-size: 24px;
     color: #222222;
 }
 .ourExpert p{
     font-size: 15px;
-    width: 75%;
+    width: 80%;
     text-align: left;
     text-wrap: balance;
     color: #222222;
 }
 .ourExpert:hover img{
     animation: jiggle3 0.5s ease-in-out infinite;
+    cursor: pointer;
 }
 @keyframes jiggle3 {
     0%, 100% {
@@ -565,11 +675,12 @@ button:hover .arrow {
     text-align: center;
 }
 .benefitsHeader h1{
-    font-size: 45px;
+    font-size: 38px;
     font-family: Outfit;
     text-wrap: balance;
     text-align: center;
     width: 100%;
+    margin-bottom: 10px;
 }
 .benefitsPara{
     text-align: center;
@@ -664,6 +775,7 @@ button:hover .arrow {
 .ProjectsDiv{
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     margin-top: 100px;
     background-color: #0A0A0A;
     background-image: url('../Images/projectsWavy.png');
@@ -682,9 +794,8 @@ button:hover .arrow {
     flex-direction: column;
     width: 30%;
     margin-left: 100px;
-    margin-top: 120px;
+    /* margin-top: 120px; */
     gap: 16px;
-
 }
 .projectContent h1{
     color: #A2FF86;
@@ -706,10 +817,9 @@ button:hover .arrow {
 .projectButtons{
     display: flex;
     width: 100%;
-    align-items: center;
     justify-content: center;
     gap: 16px;
-    margin-top: 50px;
+    margin-top: -20%;
     cursor: pointer;
 }
 
@@ -728,7 +838,7 @@ button:hover .arrow {
     border-width: 1.2px;
     cursor: pointer;
 }
-.allbtn:hover{
+.appbtn:hover{
     transition: 0.3s ease-in-out;
     background-color: #A2FF86;
     color: black;
@@ -743,7 +853,7 @@ button:hover .arrow {
     background-color: #A2FF86;
     color: black;
 }
-.appbtn{
+.allbtn{
     background-color: #A2FF86;
     color: black;
 }
@@ -760,14 +870,15 @@ button:hover .arrow {
 }
 .appProj{
     background-image: url('../Images/AppDevtribeMe.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 480px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 12px;
     margin-top: -80px;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    border-radius: 24px 24px 24px 24px;
 }
 .appProjectsPic p, .uiProjectsPic p{
     font-family: Outfit;
@@ -783,7 +894,7 @@ button:hover .arrow {
 }
 .uiProj{
     background-image: url('../Images/ExpenseTracker.png');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     height: 480px;
     width: 90%;
@@ -791,29 +902,53 @@ button:hover .arrow {
     margin-top: -80px;
     cursor: pointer;
     transition: 0.4s ease-in-out;
+    border-radius: 24px 24px 24px 24px;
 }
 .uiProj:hover{
     transform: scale(1.2px);
 }
 
-.qoutes{
+.sliderContainer {
     width: 100%;
-    height: 200px;
+    overflow: hidden; /* Hide overflowing content */
+    position: relative;
+    height: 150px;
+    padding: 20px;
+  }
+  
+  .slider {
+    display: flex;
+    width: calc(200%); /* Double the width for seamless looping */
+    animation: slide 10s linear infinite; /* Smooth continuous animation */
+  }
+  
+  .qoutes {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 25px;
-}
-.qoutes h1{
+  }
+  
+  .qoutes h1 {
     font-size: 60px;
     font-weight: 800;
     font-family: sans-serif;
-}
-.star{
+  }
+  
+  .star {
     height: 50px;
     object-fit: cover;
-}
-
+  }
+  
+  /* Keyframes for smooth looping */
+  @keyframes slide {
+    0% {
+      transform: translateX(0); /* Start position */
+    }
+    100% {
+      transform: translateX(-50%); /* Slide halfway for seamless loop */
+    }
+  }
+  
 .testimonials{
     background-color: #0A0A0A;
     height: 660px;
@@ -834,7 +969,7 @@ button:hover .arrow {
 .contentPhrase{
     color: #A2FF86;
     font-family: Outfit;
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
 }
 .testimonialContent h1{
@@ -842,7 +977,7 @@ button:hover .arrow {
     font-family: Outfit;
     text-align: center;
     text-wrap: balance;
-    font-size: 45px;
+    font-size: 38px;
     width: 50%;
     font-weight: 400;
 }
@@ -911,7 +1046,7 @@ button:hover .arrow {
 }
 .faqHeader p{
     width: 35%;
-    font-size: 12px;
+    font-size: 14px;
 }
 #faqForm{
     display: flex;
@@ -931,7 +1066,6 @@ button:hover .arrow {
     background-color: #111204;
     width: 95%;
     height: 75px;
-    border-radius: 1rem;
 }
 #question2{
     display: flex;
@@ -939,7 +1073,6 @@ button:hover .arrow {
     background-color: #111204;
     width: 95%;
     height: 75px;
-    border-radius: 1rem;
 }
 #question3{
     display: flex;
@@ -947,7 +1080,6 @@ button:hover .arrow {
     background-color: #111204;
     width: 95%;
     height: 75px;
-    border-radius: 1rem;
 }
 #question4{
     display: flex;
@@ -955,9 +1087,8 @@ button:hover .arrow {
     background-color: #111204;
     width: 95%;
     height: 75px;
-    border-radius: 1rem;
 }
-#buttonText{
+.buttonText{
     width: 100%;
     display: flex;
     align-items: center;
@@ -1020,8 +1151,7 @@ button:hover .arrow {
 .downIcon{
     height: 5px;
 }
-#expandedBlock1, #expandedBlock2, #expandedBlock3 ,#expandedBlock4 {
-    display: none;
+.expandedBlock {
     width: 100%;
     height: 85px;
     border-radius: 0rem 0rem 1rem 1rem;
@@ -1030,6 +1160,32 @@ button:hover .arrow {
     text-align: left;
     background-color: #111204;
 }
+.expandedBlock p{
+    text-align: left;
+    padding-left: 20px;
+    text-wrap: balance;
+}
+.question {
+    margin-bottom: 0;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+  }
+  
+  .question.active {
+    margin-bottom: 80px;
+    border-radius: 1rem 1rem 0 0;
+  }
+  
+  .expandedBlock {
+    display: none;
+    /* margin-top: 10px; */
+  }
+  
+  .question.active .expandedBlock {
+    display: block;
+  }
+
 .faqTextarea{
     display: flex;
     flex-direction: column;
@@ -1046,7 +1202,7 @@ button:hover .arrow {
 .faqTextarea textarea::placeholder{
    padding: 8px;
    padding: 10px;
-   font-size: 18px;
+   font-size: 16px;
    font-family: Outfit;
 }
 .faqTextarea textarea input{
@@ -1063,7 +1219,7 @@ button:hover .arrow {
     font-size: 15px;
     width: 65%;
 }
-.faqButton button{
+.submitButton button{
     border-radius: 0.5rem;
     border-style: none;
     background-color: #A2FF86;
@@ -1243,12 +1399,13 @@ button:hover .arrow {
     flex-shrink: 0;
     display: flex;
     gap: 10px;
+    cursor: pointer;
 }
 @media (max-width: 1080px) {
     .servicesContent button{
         padding: 50px;
     }
-    .number1,#number2,#number3,#number4{
+    #number1,#number2,#number3,#number4{
         font-size: 2.6vmax;
     }
     .FooterMain {
@@ -1373,7 +1530,6 @@ button:hover .arrow {
         justify-content: bottom;
         align-items: bottom;
         margin-bottom: 0px;
-        /* background-color: aqua; */
     }
     .FooterHeading{
         /* margin-top: 20px; */
@@ -1470,44 +1626,65 @@ button:hover .arrow {
     .turningVisions{
         background-size: cover;
         height: 300px;
-        margin-top: 6vh;
+        margin-top: 8vh;
+        gap: 0px;
     }
-    .BlackBg{
-        width: 100%;
-        height: 925px;
-        margin-bottom: 65px;
+    .megaphone{
+        display:none
     }
     .coverText{
         margin-top: 30px;
         padding-left: 30px;
         height: 200px;
-        gap: 15px;
+        gap: 0px;
     }
     .coverText h1{
-        font-size: 4vmax;
+        font-size: 3.5vmax;
     }
     .coverText p{
-        font-size: 2.9vmin;
+        font-size: 2.5vmin;
         font-weight: 300;
-        width: 80%;
+        width: 90%;
         letter-spacing: 1px;
     }
     .coverText button{
-        font-size: 2.5vmin;
+        font-size: 2.4vmin;
         font-weight: 400;
-        width: 25%;
-        height: 35px;
-        padding: 2px;
+        width: 24%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* padding: 2px; */
         border-radius: 4px;
+    }
+    .chooseUsText{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+    .firstSection{
+        width: 100%;
+        align-items: center;
+        gap: 2px;
+        margin-left: 0px;
     }
     .firstSection hr{
         width: 80px;
     }
     .firstSection h1{
         font-size: 4vmax;
+        text-align: center;
+        width: 100%;
+    }
+    .secondSection{
+        width: 100%;
     }
     .secondSection h1{
         font-size: 3vmin;
+        text-align: center;
+        margin-right: 0px;
+        margin-left: 0px;
     } 
     .video{
         flex-direction: column-reverse;
@@ -1519,13 +1696,19 @@ button:hover .arrow {
     }
     .projectsCompleted{
         border-radius: 0px 0px 8px 8px;
-        height: 200px;
+        height: 260px;
+        margin-top: 10px;
     }
     .playvideo, .projectsCompleted{
         width: 100%;
     }
     .projectsCompleted h1{
         font-size: 7vmax;
+    }
+    .clients{
+        height: 50%;
+        margin-left: -14%;
+        margin-top: 20px;
     }
     .weWork h1{
         font-size: 5vmax;
@@ -1542,15 +1725,17 @@ button:hover .arrow {
     .servicesDiv{
         padding: 30px;
         flex-direction: column;
-        height: fit-content;
         background-repeat: no-repeat;
         background-size: cover;
+        height: 880px;
+        gap: 120px;
     }
     .servicesContent{
         width: 100%;
         align-items: center;
+        height: fit-content;
     }
-    .number1,#number2,#number3,#number4{
+    #number1,#number2,#number3,#number4{
         font-size: 2vmax;
     }
    .webLink{
@@ -1565,8 +1750,15 @@ button:hover .arrow {
         font-size: 4vmin;
         text-align: center;
     }
-    .servicesDiv button{
-        font-size: 3.2vmin;
+    #buttonHoverUiUx, #buttonHoverWeb, #buttonHoverApp, #buttonHoverGraphicDesign{
+        font-size: 4vmin;
+        width: 90%;
+    }
+    .dynamicDiv{
+        width: 100%;
+    }
+    .component{
+        width: 100%;
     }
     .bullet, .arrow{
         height: 10px;
@@ -1584,12 +1776,41 @@ button:hover .arrow {
         border-radius: 29px;
         height: 150px;
         align-items: center;
-        /* position: relative; */
     }
     .UiProjects img{
         height: 60px;
     }
     .UiProjects p{
+        font-size: 4vmax;
+    }
+    .WebProjects{
+        width: 100%;
+        background-size: cover;
+        filter: brightness(85%);
+        border-radius: 29px;
+        height: 150px;
+        align-items: center;
+    }
+    .WebProjects img{
+        margin-top: -16%;
+        margin-left: 28px;
+        height: 40px;
+    }
+    .WebProjects p{
+        font-size: 4vmax;
+    }
+    .AppProjects{
+        width: 100%;
+        background-size: cover;
+        filter: brightness(85%);
+        border-radius: 29px;
+        height: 150px;
+        align-items: center;
+    }
+    .AppProjects img{
+        height: 60px;
+    }
+    .AppProjects p{
         font-size: 4vmax;
     }
     .meetExpert{
@@ -1604,7 +1825,8 @@ button:hover .arrow {
         align-items: center;
     }
     .howWork p{
-        font-size: 3.5vmin;
+        font-size: 3.1vmin;
+        text-align: left;
     }
     .ourExpert{
         width: 50%;
@@ -1614,7 +1836,8 @@ button:hover .arrow {
         align-items: center;
     }
     .ourExpert p{
-        font-size: 3.5vmin;
+        font-size: 3vmin;
+        text-align: left;
     }
     .innerWork h2{
         font-size: 2vmax;
@@ -1630,10 +1853,10 @@ button:hover .arrow {
         gap: 15px;
     }
     .benefitsHeader{
-        width: 100%;
+        width: 100%; 
     }
     .benefitsHeader h1{
-        font-size: 4vmax;
+        font-size: 3vmax;
         text-align: center;
         width: 100%;
     }
@@ -1647,57 +1870,70 @@ button:hover .arrow {
         text-align: center;
         width: 100%;
     }
-    .grid{
+    .megaGrid{
         width: 100%;
     }
+    .grid{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
     .boxIcon{
-        width: 30%;
+        width: 10%;
     }
     .boxes, .Lastboxes{
-        width: 50%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
     .boxHeader{
         text-align: left;
-        font-size: 1.5vmax;
+        font-size: 2.6vmax;
         text-wrap: balance;
     }
     .boxText{
         width: 100%;
-        font-size: 2.2vmin;
+        font-size: 3.8vmin;
         text-wrap: balance;
+        text-align: center;
     }
     .ProjectsDiv{
         background-size: contain;
-        gap: 20px;
+        gap: 0px;
     }
     .projectContent{
-        margin-top: 50px;
         margin-left: 0px;
+        margin-top: -20%;
         width: 100%;
         align-items: center;
-        gap: 10px;
+        gap: 0px;
     }
     .projectContent h1{
         font-size: 4vmax;
+        margin-top: -40%;
     }
     .projectContent p{
-        font-size: 4vmin;
+        font-size: 3.8vmin;
         text-align: center;
-        letter-spacing: .5px;
-        width: 70%;
+        width: 100%;
         margin-bottom: -50px;
     }
     .projectButtons{
         gap: 8px;
+        margin-top: -160%;
     }
     .allbtn,.webbtn,.appbtn,.uibtn{
         font-size: 3.5vmin;
         width: 22%;
+        height: 45px;
     }
     .ProjectBackground{
         margin-top: -200px;
         height: 820px;
+        width: 100%;
         flex-direction: column;
+        gap: 50px;
     }
     .appProjectsPic{
         width: 100%;
@@ -1706,36 +1942,42 @@ button:hover .arrow {
         height: fit-content;
         height: 350px;
     }
+    .appProj{
+        width: 100%;
+    }
     .uiProjectsPic{
         width: 100%;
         padding-left: 0px;
         padding: 15px;
         height: 350px;
     }
-    .qoutes{
-        gap: 3px;
-        height: 150px;
+    .uiProj{
+        width: 100%;
     }
-    .qoutes h1{
-        font-size: 2vmax;
+    .sliderContainer{
+        height: 100px;
+        padding: 36px;
+    }
+    .qoutesHeader{
+        font-size: 3.6vmax;
     }
     .star{
-        height: 20px;
+        height: 30px;
     }
     .testimonialContent{
         background-size: cover;
-        height: 200px;
+        height: 240px;
         padding: 0px;
     }
     .contentPhrase{
         margin-top: 60px;
     }
     .testimonials{
-        height: 580px;
+        height: 620px;
     }
     .testimonialContent h1{
         width: 100%;
-        font-size: 3.4vmax;
+        font-size: 3vmax;
     }
     .testimonialContent hr{
         width: 18%;
@@ -1772,22 +2014,25 @@ button:hover .arrow {
         width: 90%;
     }
     #question1 button{
-        width: 40px;
+        width: 35px;
     }
     #question2 button{
-        width: 40px;
+        width:35px;
     }
     #question3 button{
-        width: 36px;
+        width:35px;
     }
     #question4 button{
-        width: 40px;
+        width:35px;
     }
     #expandedBlock1 p{
         font-size: 3.5vmin;
     }
     #expandedBlock2 p{
+        margin-top: -20px;
         font-size: 3.5vmin;
+        padding-top: 0px;
+        padding-bottom: 0px;
     }
     #expandedBlock3 p{
         font-size: 3.5vmin;
@@ -1796,7 +2041,6 @@ button:hover .arrow {
         font-size: 3.5vmin;
     }
     .faqTextarea{
-        /* margin-top: 100px; */
         height: 200px;
         width: 90%;
     }
@@ -1920,5 +2164,8 @@ button:hover .arrow {
 @media (max-width:350px){
     .qoutes h1{
         font-size: 1.5vmax;
+    }
+    .servicesDiv{
+        height: 920px;
     }
 }

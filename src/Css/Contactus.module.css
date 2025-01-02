@@ -66,6 +66,7 @@ li {
     background-color: #131212f1;
     width: 100%;
     height: 80px;
+    z-index: 9999;
 }
 .DevskiLogo{
     object-fit: contain;
