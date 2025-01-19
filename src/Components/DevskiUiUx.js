@@ -10,8 +10,8 @@ import linkedin from '../Images/linkedin.png';
 import upwork from '../Images/upworkIcon.png';
 import CardImage from '../Images/CardImage.png';
 import DevskiWebDevCss from '../Css/DevskiWebDev.module.css';
-import { Link } from "react-router-dom";
-import { useEffect, useNavigate } from 'react';
+import { Link, useNavigate} from "react-router-dom";
+import { useEffect } from 'react';
 
 function DevskiUiUx() {
     useEffect(() => {
@@ -32,6 +32,7 @@ function DevskiUiUx() {
         }
 
     },[]);
+
     const navigate = useNavigate();
     
     const navigateAboutus = () => {
@@ -176,7 +177,7 @@ function DevskiUiUx() {
             <div className={DevskiWebDevCss.WebDevProjects}>
                     <div className={DevskiWebDevCss.WebDevProjectsHeading}>
                     <h1>Our Best Work from <span> Web Development </span> Services</h1>
-                    <p>As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.</p>
+                    <p>We deliver modern, responsive, and scalable websites that combine stunning design with robust functionality. Our focus is on creating websites that captivate your audience while driving measurable results.</p>
                     </div>
             </div>
 
@@ -208,7 +209,8 @@ function DevskiUiUx() {
             <div className={DevskiWebDevCss.Card}>
                 <div className={DevskiWebDevCss.CardText}>
                     <h1>Help To Build Your Dream Project</h1>
-                    <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                    <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow. 
+                    </p>
                     <button className={DevskiWebDevCss.CardButton} onClick={navigateAboutus}>
                         Discuss Your Project
                         <span> </span>

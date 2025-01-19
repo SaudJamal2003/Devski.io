@@ -1,5 +1,6 @@
 import React, {useEffect} from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link} from 'react-router-dom';
+import { useNavigate} from 'react-router-dom';
 import Devski_Logo from '../Images/Devski_Logo.png'
 import webdevIcon from '../Images/webdevIcon.png';
 import MobileDevIcon from '../Images/MobileDevIcon.png';
@@ -57,6 +58,9 @@ function DevskiServices(){
 
     const navigate = useNavigate()
 
+    // const navigateWebServices = () => {
+    //     navigate('/devski-devskiUiUx')
+    // }
     const navigateWebServices = () => {
         navigate('/devski-devskiUiUx')
     }
@@ -127,37 +131,38 @@ function DevskiServices(){
                         <img src={webdevIcon} className={DevskiServicesCss.webdevIcon} alt="webdevIcon" />
                         <h1>Web Development</h1>
                         <p>Our website development services create dynamic and responsive websites specific to your business needs.</p>
-                        <button className={DevskiServicesCss.LearnMore}>Learn More</button>
+                        {/* <button className={DevskiServicesCss.LearnMore}>Learn More</button> */}
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={MobileDevIcon} className={DevskiServicesCss.MobileDevIcon} alt="MobileDevIcon" />
                         <h1>Mobile Development</h1>
                         <p>Our application solutions ensure seamless performance and a great user experience across all devices.</p>
-                        <button className={DevskiServicesCss.LearnMore}>Learn More</button>
+                        {/* <button className={DevskiServicesCss.LearnMore}>Learn More</button> */}
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={softDevIcon} className={DevskiServicesCss.softDevIcon} alt="softDevIcon" />
                         <h1>UI/Ux </h1>
                         <p>Our UI/UX design services focus on creating intuitive and aesthetically pleasing interfaces.</p>
-                        <button className={DevskiServicesCss.LearnMore}>Learn More</button>
+                        {/* <button className={DevskiServicesCss.LearnMore}>Learn More</button> */}
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={brandingIcon} className={DevskiServicesCss.brandingIcon} alt="brandingIcon" />
                         <h1>Branding</h1>
                         <p>Our branding services craft strategies that capture the essence of your company.</p>
-                        <button className={DevskiServicesCss.LearnMore}>Learn More</button>
+                        {/* <button className={DevskiServicesCss.LearnMore}>Learn More</button> */}
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={DigitalIcon} className={DevskiServicesCss.DigitalIcon} alt="DigitalIcon" />
                         <h1>Graphic Designing</h1>
                         <p>Our graphic design services create visually compelling designs that reflect your brand's identity.</p>
-                        <button className={DevskiServicesCss.LearnMore}>Learn More</button>
+                        {/* <button className={DevskiServicesCss.LearnMore}>Learn More</button> */}
                     </div>
                     <div className={DevskiServicesCss.Container}>
                         <img src={CloudIcon} className={DevskiServicesCss.CloudIcon} alt="CloudIcon" />
-                        <h1>Cloud Services</h1>
-                        <p>We offer cloud migration, storage, and management solutions for seamless business operations.</p>
-                        <button className={DevskiServicesCss.LearnMore}>Learn More</button>
+                        <h1>AI Services</h1>
+                        <p>We offer services from predictive analytics to intelligent automation, we deliver solutions for smarter decision-making and enhanced user experiences.
+                        </p>
+                        {/* <button className={DevskiServicesCss.LearnMore}>Learn More</button> */}
                     </div>
                 </div>
             </div>
@@ -206,7 +211,8 @@ function DevskiServices(){
             <div className={DevskiServicesCss.Card}>
                 <div className={DevskiServicesCss.CardText}>
                     <h1>Help To Build Your Dream Project</h1>
-                    <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                    <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow. 
+                    </p>
                     <button className={DevskiServicesCss.CardButton} onClick={navigateAboutus}>
                         Discuss Your Project
                         <span> </span>

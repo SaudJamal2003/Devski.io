@@ -21,10 +21,12 @@ ul{
     gap: 20px;
     font-size: 14px;
     background-color: transparent;
+    z-index: 9999;
 }
 li {
     list-style: none;
     font-family: 'Outfit';
+    
 }
 
 .home{
@@ -38,6 +40,7 @@ li {
     background-color: transparent;
     padding: 8px;
     border-radius: 1.8rem;
+    
 }
 
 .services:hover{

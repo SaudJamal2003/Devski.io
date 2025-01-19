@@ -208,13 +208,17 @@ li {
 .videoButtons{
     border-color: #A2FF86;
     border-radius: 0;
-    border-width: 1.5px;
+    border-width: 2px;
     border-style: solid;
     height: 50px;
-    width: 100px;
-    padding: 16px 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px;
     background-color: transparent;
     cursor: pointer;
+    font-size: 35px;
+    border-radius: 15%;
 }
 .projectBackground{
     background-image: url('../Images/featuredProject.png');
@@ -264,20 +268,37 @@ section .navigation li img:hover{
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    gap: 50px;
 }
 .appProjectsPic{
     width: 48%;
     display: flex;
     flex-direction: column;
-    padding-left: 130px;    
+    padding-left: 130px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
-.appProj{
-    background-image: url('../Images/mobileApp.png');
-    background-size: contain;
+.appProjectsPic:hover{
+    transform: scale(1.05);
+}
+.appProj1{
+    background-image: url('../Images/Shoplon_app.png');
+    background-size: cover;
     background-repeat: no-repeat;
     height: 480px;
     width: 100%;
     margin-bottom: 12px;
+    border-radius: 1.6rem;
+}
+.appProj2{
+    background-image: url('../Images/cafestreet.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 1.6rem;
+
 }
 .appProjectsPic p, .uiProjectsPic p{
     font-family: Outfit;
@@ -297,15 +318,30 @@ section .navigation li img:hover{
     width: 46%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
 }
-.uiProj{
-    background-image: url('../Images/webDesign.png');
+.uiProjectsPic:hover{
+    transform: scale(1.05);
+}
+.uiProj1{
+    background-image: url('../Images/wooCommerce.png');
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
     width: 100%;
     margin-bottom: 12px;
-    /* margin-top: -80px; */
+    border-radius: 1.6rem;
+
+}
+.uiProj2{
+    background-image: url('../Images/AppDevtribeMe.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 480px;
+    width: 100%;
+    margin-bottom: 12px;
+    border-radius: 1.6rem;
 }
 
 .keyFeatures{
@@ -836,6 +872,8 @@ section .navigation li img:hover{
 
     .projectPictures{
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
     .appProjectsPic{
         width: 90%;
@@ -889,25 +927,26 @@ section .navigation li img:hover{
     .edgeTechnology,.TimelyDelivery{
         width: 90%;
     }
-    .videoDiv{
-        padding-left: 50%;
+    .videoDiv {
+        display: flex;
+        overflow-x: scroll; /* Enable horizontal scrolling */
+        scroll-snap-type: x mandatory; /* Smooth scrolling for videos */
         gap: 10px;
         width: 100%;
-        /* overflow-x: scroll; */
-        background-color: blue;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
     }
     
-    .videos{
+    .videos {
         height: 220px;
-        width: 100%;
+        flex: 0 0 100%; /* Make each video take full width */
+        scroll-snap-align: center; /* Ensure each video snaps into place */
         background-color: black;
     }
-    .videoButtons{
-        /* display: none; */
-    }
-    
+
+    .videoButtons {
+        display: none; /* Hide buttons on mobile */
+    } 
 
 }
 

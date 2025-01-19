@@ -452,6 +452,9 @@ li {
     font-weight: 100;
     line-height: 31.699px; /* 200% */
     margin-top: 0px;
+    display: flex;
+    margin-bottom: 40px;
+    text-align: left;
 }
 .CardImage{
     width: 430px;
@@ -767,6 +770,7 @@ li {
         line-height: 1.5; /* Adjust line height */
         width: auto;
         /* padding: 7%; */
+        text-align: center;
         margin: 0 auto; /* Center paragraph text */
     }
 
@@ -948,21 +952,20 @@ li {
 /* Media query for devices with a max-width of 767px (phones) */
 @media only screen and (max-width: 767px) {
     .MainHeading {
-        margin-top: 60px;
         padding: 0 10px;
-        font-family: Outifit;
+        font-family: Outfit;
     }
 
     .ServicesHeading {
         font-size: 10px;
         line-height: 18px;
-        font-family: Outifit;
+        font-family: Outfit;
     }
 
-    .WebDevHeading {
-        font-size: 2vmax;
+    .WebDevHeading h1{
+        font-size: 3.2vmax;
         line-height: 40px;
-        font-family: Outifit;
+        font-family: Outfit;
     }
 
     .ServiceDescription {
@@ -970,7 +973,7 @@ li {
     }
     .ServiceDescriptionHeading{
         font-size: 1.75vmax;
-        font-family: Outifit;
+        font-family: Outfit;
     }
 
     .ServiceDescriptionPara {
@@ -1058,10 +1061,11 @@ li {
     }
 
     .WebDevProjects p {
-        font-size: 1.5vmax; /* Make the font smaller */
+        font-size: 3.6vmin; /* Make the font smaller */
         width: 100%; /* Make the paragraph take full width */
-        line-height: 150%; /* Increase line height for better readability */
+        line-height: 150%; 
         text-align: center;
+        text-wrap: balance;
     }
 
     .MoreMain {

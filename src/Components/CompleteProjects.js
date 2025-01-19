@@ -132,7 +132,7 @@ function CompleteProjects() {
                     <button className={CompleteProjectsCss.uibtn}  onClick={navigateUiUXProjects}>UI / UX</button>
                 </div>
 
-                <div className={CompleteProjectsCss.videoDiv} id = 'videoDiv' >
+                {/* <div className={CompleteProjectsCss.videoDiv} id = 'videoDiv' >
                     <button onClick={handleLeftVideo} className={CompleteProjectsCss.videoButtons}>&larr;</button>
                     <video autoPlay
                         muted
@@ -149,34 +149,71 @@ function CompleteProjects() {
                         <source src={nomNomNerdsVid} type="video/mp4"  autoPlay loop/>
                         Your browser does not support the video tag.
                     </video>
+                </div> */}
+                <div className={CompleteProjectsCss.videoDiv} id="videoDiv">
+                    <button 
+                        onClick={handleLeftVideo} 
+                        className={CompleteProjectsCss.videoButtons}
+                    >
+                        &larr;
+                    </button>
+                    <video 
+                        autoPlay
+                        muted
+                        controls
+                        loop 
+                        className={CompleteProjectsCss.videos} 
+                        style={{ transition: '0.4s', width: 'fit-content' }} 
+                        id="firstVideo"
+                    >
+                        <source src={CafeStreetVideo} type="video/mp4" autoPlay loop />
+                        Your browser does not support the video tag.
+                    </video>
+                    <button 
+                        onClick={handleRightVideo} 
+                        className={CompleteProjectsCss.videoButtons}
+                    >
+                        &rarr;
+                    </button>
+                    <video 
+                        autoPlay
+                        muted
+                        controls
+                        loop 
+                        className={CompleteProjectsCss.videos} 
+                        style={{ transform: 'translateX(75%)', transition: '0.4s' }} 
+                        id="secondVideo"
+                    >
+                        <source src={nomNomNerdsVid} type="video/mp4" autoPlay loop />
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
-
 
                 <div className={CompleteProjectsCss.projectPictures}>
                     <div className={CompleteProjectsCss.appProjectsPic}>
-                        <div className={CompleteProjectsCss.appProj}></div>
-                        <h2>Carreri</h2>
+                        <div className={CompleteProjectsCss.appProj1}></div>
+                        <h2>Shoplon</h2>
                         <p>Mobile App</p>
                     </div>
 
                     <div className={CompleteProjectsCss.uiProjectsPic}>
-                        <div className={CompleteProjectsCss.uiProj}></div>
-                        <h2>Tansto</h2>
+                        <div className={CompleteProjectsCss.uiProj1}></div>
+                        <h2>Woocommerce</h2>
                         <p>Web Design</p>
                     </div>
                  </div>
                   
                 <div className={CompleteProjectsCss.projectPictures}>
                     <div className={CompleteProjectsCss.appProjectsPic}>
-                        <div className={CompleteProjectsCss.appProj}></div>
-                        <h2>Carreri</h2>
-                        <p>Mobile App</p>
+                        <div className={CompleteProjectsCss.appProj2}></div>
+                        <h2>Cafe Street</h2>
+                        <p>Web App</p>
                     </div>
 
                     <div className={CompleteProjectsCss.uiProjectsPic}>
-                        <div className={CompleteProjectsCss.uiProj}></div>
-                        <h2>Tansto</h2>
-                        <p>Web Design</p>
+                        <div className={CompleteProjectsCss.uiProj2}></div>
+                        <h2>Tribe Me</h2>
+                        <p>Mobile App</p>
                     </div>
                  </div>
 
@@ -236,7 +273,7 @@ function CompleteProjects() {
                 <div className={CompleteProjectsCss.Card}>
                     <div className={CompleteProjectsCss.CardText}>
                         <h1>Help To Build Your Dream Project</h1>
-                        <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                        <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow.</p>
                         <button className={CompleteProjectsCss.CardButton} onClick={navigateAboutus}>
                             Discuss Your Project
                             <span> </span>

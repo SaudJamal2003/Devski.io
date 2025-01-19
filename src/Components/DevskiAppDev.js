@@ -175,7 +175,7 @@ function DevskiAppDev() {
              <div className={DevskiWebDevCss.WebDevProjects}>
                      <div className={DevskiWebDevCss.WebDevProjectsHeading}>
                      <h1>Our Best Work from <span>  UI/UX </span> Services</h1>
-                     <p>As a seasoned creator of contemporary, user-friendly web designs and digital solutions, I aim to assist you in constructing the brand of your fantasies.</p>
+                     <p>From concept to deployment, we build feature-rich mobile applications designed for optimal performance. Our apps are user-focused, ensuring smooth navigation and functionality across all devices.</p>
                      </div>
              </div>
 
@@ -207,7 +207,8 @@ function DevskiAppDev() {
              <div className={DevskiWebDevCss.Card}>
                  <div className={DevskiWebDevCss.CardText}>
                      <h1>Help To Build Your Dream Project</h1>
-                     <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                     <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow. 
+                     </p>
                      <button className={DevskiWebDevCss.CardButton} onClick={navigateAboutus}>
                          Discuss Your Project
                          <span> </span>

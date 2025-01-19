@@ -206,7 +206,7 @@ function ProjectsPage() {
                 <div className={ProjectsPageCss.Card}>
                     <div className={ProjectsPageCss.CardText}>
                         <h1>Help To Build Your Dream Project</h1>
-                        <p>A digital agency is a business you hire to outsource your digital marketing efforts, instead of handling in-house.</p>
+                        <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow.</p>
                         <button className={ProjectsPageCss.CardButton} onClick={navigateAboutus}>
                             Discuss Your Project
                             <span> </span>

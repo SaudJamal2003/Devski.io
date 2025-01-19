@@ -175,7 +175,7 @@ function ContactUs() {
                         <div className={ContactusCss.socialsIcons}>
                             <h2>Stay Connected</h2>
                             <img src={fb} className={ContactusCss.fb} alt='fb'/>
-                            <img src={twitter} className={ContactusCss.twitter} alt='tweet'/>
+                            {/* <img src={twitter} className={ContactusCss.twitter} alt='tweet'/> */}
                             <img src={linkedin_logo} className={ContactusCss.linkedin} alt='ln'/>
                         </div>
                     </div> 

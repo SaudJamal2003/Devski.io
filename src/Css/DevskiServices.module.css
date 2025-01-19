@@ -61,7 +61,6 @@ li {
     color: black;
     cursor: pointer;
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -383,6 +382,7 @@ li {
     display: flex;
     flex-direction: column;
     margin-left: 70px;
+    gap: 10px;
 }
 .Card h1{
 color: white;
@@ -405,12 +405,15 @@ font-size: 15px;
 font-weight: 100;
 line-height: 31.699px; /* 200% */
 margin-top: 0px;
+text-align: left;
+display: flex;
+margin-bottom: 40px;
 }
 .CardImage{
     width: 430px;
-height: 420px;
-flex-shrink: 0;
-margin-right: 50px;
+    height: 420px;
+    flex-shrink: 0;
+    margin-right: 50px;
 }
 .CardButton{
     display: flex;
@@ -744,6 +747,7 @@ gap: 10px;
         line-height: 1.5; /* Adjust line height */
         width: auto;
         /* padding: 7%; */
+        text-align: center;
         margin: 0 auto; /* Center paragraph text */
     }
 
