@@ -217,38 +217,37 @@ function AppDevProjects() {
 
             
             <div className={AppDevProjectsCss.FooterMain}> 
-                <div className={AppDevProjectsCss.EveryFooterDiv}>
-                    <div className={AppDevProjectsCss.AllColumn}>
-                        <div className={AppDevProjectsCss.RightColumn}>
-                            <h1 style={{marginBottom:'2px'}}>Contact</h1>
-                            <h2>devski@info.io</h2>
-                        </div>
-                        <div className={AppDevProjectsCss.MiddleColumn}>
-                            <h1>Got a project? Want to collaborate? </h1>
-                            <button className={AppDevProjectsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                                <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                            </svg></button>
-                        </div>
-                        <div className={AppDevProjectsCss.LeftColumn}>
-                            <h1>United States of America</h1>
-                            <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
-                            <h3>Frisco, TX 75036</h3>
-                            <h4 style={{marginTop: '-2px'}}>Texas</h4>
-                        </div>
+            <div className={AppDevProjectsCss.EveryFooterDiv}>
+                <div className={AppDevProjectsCss.AllColumn}>
+                    <div className={AppDevProjectsCss.MiddleColumn}>
+                        <h1>Got a project? Let's build something amazing together! </h1>
+                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
+                        <button className={AppDevProjectsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
+                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
+                        </svg></button>
                     </div>
-                    <div className={AppDevProjectsCss.ThinLine}>
-                        <div className={AppDevProjectsCss.SocialMedia}>
-                            <img src = {upwork} className={AppDevProjectsCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
-                            <img src = {Insta} className={AppDevProjectsCss.Insta} onClick={navigateInsta} alt = "Insta"/>
-                            <img src = {linkedin} className={AppDevProjectsCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
-                        </div>
+                    <div className={AppDevProjectsCss.LeftColumn}>
+                        <h1>United States of America</h1>
+                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
+                        <h3>Frisco, TX 75036</h3>
+                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
+                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
+                        <h2>devski@info.io</h2>
                     </div>
                 </div>
-                
-                <div className={AppDevProjectsCss.FooterHeading}>
-                    <img src = {WorkTogether}className={AppDevProjectsCss.WorkTogether} alt = "WorkTogether"/>
+                <div className={AppDevProjectsCss.ThinLine}>
+                    <div className={AppDevProjectsCss.SocialMedia}>
+                        <img src = {upwork} className={AppDevProjectsCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
+                        <img src = {Insta} className={AppDevProjectsCss.Insta} onClick={navigateInsta} alt = "Insta"/>
+                        <img src = {linkedin} className={AppDevProjectsCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
+                    </div>
                 </div>
             </div>
+            
+            <div className={AppDevProjectsCss.FooterHeading}>
+                 <img src = {WorkTogether}className={AppDevProjectsCss.WorkTogether} alt = "WorkTogether"/>
+            </div>
+        </div>
 
         </div>
     </>

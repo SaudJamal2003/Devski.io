@@ -186,12 +186,9 @@ function ContactUs() {
             <div className={ContactusCss.FooterMain}> 
             <div className={ContactusCss.EveryFooterDiv}>
                 <div className={ContactusCss.AllColumn}>
-                    <div className={ContactusCss.RightColumn}>
-                        <h1 style={{marginBottom:'2px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
                     <div className={ContactusCss.MiddleColumn}>
-                        <h1>Got a project? Want to collaborate? </h1>
+                        <h1>Got a project? Let's build something amazing together! </h1>
+                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
                         <button className={ContactusCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                             <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                         </svg></button>
@@ -201,6 +198,8 @@ function ContactUs() {
                         <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
                         <h3>Frisco, TX 75036</h3>
                         <h4 style={{marginTop: '-2px'}}>Texas</h4>
+                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
+                        <h2>devski@info.io</h2>
                     </div>
                 </div>
                 <div className={ContactusCss.ThinLine}>

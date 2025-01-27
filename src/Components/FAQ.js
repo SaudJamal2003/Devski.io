@@ -18,6 +18,7 @@ const FAQ = () => {
             }
             else{
                 alert('Sent Successfully');
+                _message.value = "";
             }
         }
   return (

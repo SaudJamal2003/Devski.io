@@ -27,6 +27,11 @@ import HomePageCss from '../Css/HomePage.module.css';
 import UiUxRender from './UiUxRender';
 import WebRender from './WebRender';
 import AppRender from './AppProjectsRender';
+import GraphicDesignRender from './GraphicDesignRender';
+import AllProjectsImages from './AllProjectsImages';
+import WebProjectsImages from './WebProjectsImages';
+import AppProjectsImages from './AppProjectsImages';
+import UiUxProjectsImages from './UiUxProjectsImages';
 import FAQ from './FAQ';
 
 function HomePage() {
@@ -51,10 +56,18 @@ function HomePage() {
 
     const [renderComponent, setRenderComponent] = useState('UiUX'); // Default state
 
-   const [flag1, setFlag1] = useState(false);
+   const [flag1, setFlag1] = useState(true);
    const [flag2, setFlag2] = useState(false);
    const [flag3, setFlag3] = useState(false);
    const [flag4, setFlag4] = useState(false);
+
+   const [renderProjects, setProjectComp] = useState('All'); // Default state
+
+
+   const [Projectflag1, setProjectFlag1] = useState(true);
+   const [Projectflag2, setProjectFlag2] = useState(false);
+   const [Projectflag3, setProjectFlag3] = useState(false);
+   const [Projectflag4, setProjectFlag4] = useState(false);
 
     const navigate = useNavigate()
 
@@ -77,7 +90,7 @@ function HomePage() {
         window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
     }
     const navigateUpwork = () => {
-        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
+        window.open('https://www.upwork.com/agencies/1820538096896221184/', '_blank');
     }
     const navigateLinkedin = () => {
         window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
@@ -137,7 +150,7 @@ function HomePage() {
                     <hr></hr>
                 </div>
                 <div className={HomePageCss.secondSection}>
-                    <h1>At Devski, we believe every project detail is crucial to achieving the goal. Our commitment to excellence ensures you’re fully engaged and satisfied throughout the process.</h1>
+                    <h1>At Devski, we believe every project detail is crucial to achieving the goal. Our commitment to excellence ensures you are fully engaged and satisfied throughout the process.</h1>
                 </div>
             </div>
 
@@ -185,7 +198,7 @@ function HomePage() {
                     <button id={HomePageCss.buttonHoverApp}  onMouseEnter={() => { setRenderComponent("App"); setFlag1(false); setFlag2(false); setFlag3(true); setFlag4(false);}} style={{color: flag3 ? "white" : "#444444",}}
                         ><span id={HomePageCss.number3} style={{color: flag3 ? "#A2FF86" : "#444444",}}>03</span> App Development <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
                 </Link>
-                <button id={HomePageCss.buttonHoverGraphicDesign} onMouseEnter={() =>{setFlag1(false); setFlag2(false); setFlag3(false); setFlag4(true);}} style={{color: flag4 ? "white" : "#444444",}}
+                <button id={HomePageCss.buttonHoverGraphicDesign} onMouseEnter={() =>{setRenderComponent("GraphicDesign"); setFlag1(false); setFlag2(false); setFlag3(false); setFlag4(true);}} style={{color: flag4 ? "white" : "#444444",}}
                     ><span id={HomePageCss.number4} style={{color: flag4 ? "#A2FF86" : "#444444",}}>04</span> Graphic Design <img src={blackArrow} className={HomePageCss.arrow} alt='arrow'/></button>
 
             </div>
@@ -210,6 +223,13 @@ function HomePage() {
                     }`}
                 >
                     <AppRender />
+                </div>
+                <div
+                    className={`${HomePageCss.component} ${
+                    renderComponent === 'GraphicDesign' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <GraphicDesignRender />
                 </div>
             </div>
         </div>
@@ -286,25 +306,44 @@ function HomePage() {
             </div>
 
             <div className={HomePageCss.projectButtons}>
-                <button className={HomePageCss.allbtn} onClick={navigateAllProjects}>All</button>
-                <button className={HomePageCss.webbtn} onClick={navigateWebProjects}>Web Dev</button>
-                <button className={HomePageCss.appbtn} onClick={navigateAppProjects}>App Dev</button>
-                <button className={HomePageCss.uibtn}  onClick={navigateUiUXProjects}>UI / UX</button>
+                <button className={HomePageCss.allbtn} onMouseEnter={() => { setProjectComp("All"); setProjectFlag1(true); setProjectFlag2(false); setProjectFlag3(false); setProjectFlag4(false);}} style={{backgroundColor: Projectflag1 ? "#A2FF86" : "transparent",color: Projectflag1 ? "black" : "white",}}>All</button>
+                <button className={HomePageCss.webbtn} onMouseEnter={() => { setProjectComp("Web"); setProjectFlag1(false); setProjectFlag2(true); setProjectFlag3(false); setProjectFlag4(false);}} style={{backgroundColor: Projectflag2 ? "#A2FF86" : "transparent",color: Projectflag2 ? "black" : "white",}}>Web Dev</button>
+                <button className={HomePageCss.appbtn} onMouseEnter={() => { setProjectComp("App"); setProjectFlag1(false); setProjectFlag2(false); setProjectFlag3(true); setProjectFlag4(false);}} style={{backgroundColor: Projectflag3 ? "#A2FF86" : "transparent",color: Projectflag3 ? "black" : "white",}}>App Dev</button>
+                <button className={HomePageCss.uibtn}  onMouseEnter={() => { setProjectComp("UiUx"); setProjectFlag1(false); setProjectFlag2(false); setProjectFlag3(false); setProjectFlag4(true);}} style={{backgroundColor: Projectflag4 ? "#A2FF86" : "transparent", color: Projectflag4 ? "black" : "white",}}>UI / UX</button>
             </div>
 
         </div>
 
-        <div className={HomePageCss.ProjectBackground}>
-            <div className={HomePageCss.appProjectsPic}>
-                <div className={HomePageCss.appProj}></div>
-                <p>Tribe Me</p>
-                <p>Mobile App</p>
-            </div>
-
-            <div className={HomePageCss.uiProjectsPic}>
-                <div className={HomePageCss.uiProj}></div>
-                <p>Spend It</p>
-                <p>Mobile App </p>
+        <div className={HomePageCss.dynamicDiv2}>
+            <div className={HomePageCss.ProjectBackground}>
+                <div
+                    className={`${HomePageCss.component2} ${
+                        renderProjects === 'All' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <AllProjectsImages />
+                </div>
+                <div
+                    className={`${HomePageCss.component2} ${
+                        renderProjects === 'Web' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <WebProjectsImages />
+                </div>
+                <div
+                    className={`${HomePageCss.component2} ${
+                        renderProjects === 'App' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <AppProjectsImages />
+                </div>
+                <div
+                    className={`${HomePageCss.component2} ${
+                        renderProjects === 'UiUx' ? HomePageCss.active : ''
+                    }`}
+                >
+                    <UiUxProjectsImages />
+                </div>
             </div>
         </div>
 
@@ -367,12 +406,9 @@ function HomePage() {
         <div className={HomePageCss.FooterMain}> 
             <div className={HomePageCss.EveryFooterDiv}>
                 <div className={HomePageCss.AllColumn}>
-                    <div className={HomePageCss.RightColumn}>
-                        <h1 style={{marginBottom:'2px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
                     <div className={HomePageCss.MiddleColumn}>
-                        <h1>Got a project? Want to collaborate? </h1>
+                        <h1>Got a project? Let's build something amazing together! </h1>
+                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
                         <button className={HomePageCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
                             <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
                         </svg></button>
@@ -382,6 +418,8 @@ function HomePage() {
                         <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
                         <h3>Frisco, TX 75036</h3>
                         <h4 style={{marginTop: '-2px'}}>Texas</h4>
+                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
+                        <h2>devski@info.io</h2>
                     </div>
                 </div>
                 <div className={HomePageCss.ThinLine}>
