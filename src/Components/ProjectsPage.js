@@ -2,18 +2,12 @@ import React, {useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import ProjectsPageCss from "../Css/ProjectsPage.module.css"
 import Devski_Logo from '../Images/Devski_Logo.png';
-import play from '../Images/PlayButton.png';
 import strategyIcon from '../Images/strategyIcon.png'
 import flameIcon from '../Images/flameIcon.png'
 import userIcon from '../Images/userIcon.png'
 import starsIcon from '../Images/starsIcon.png'
-import CardImage from '../Images/CardImage.png'
-import WorkTogether from '../Images/WorkTogether.png'
-import upwork from '../Images/upworkIcon.png';
-import Insta from '../Images/Insta.png'
-import linkedin from '../Images/linkedin.png'
 import CafeStreetVideo from '../Images/CafeStreetVideo.mp4'
-
+import Footer from './Footer';
 
 function ProjectsPage() {
     useEffect(() => {
@@ -76,7 +70,7 @@ function ProjectsPage() {
                         <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                         <li className={ProjectsPageCss.services}>Services</li>
                         </Link>
-                        <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                             <li className={ProjectsPageCss.projects}>Projects</li>
                         </Link>
                         <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
@@ -106,12 +100,6 @@ function ProjectsPage() {
                     <button className={ProjectsPageCss.uibtn} onClick={navigateUiUXProjects}>UI / UX</button>
                 </div>
 
-                {/* <div className={ProjectsPageCss.video}>
-                    <h1>Featured Project</h1>
-                    <div className={ProjectsPageCss.projectBackground}>
-                        <button><img src={play} className={ProjectsPageCss.play} alt='play'/></button>
-                    </div>
-                </div> */}
                 <div className={ProjectsPageCss.videoDiv}>
                     <video autoPlay
                         muted
@@ -201,57 +189,7 @@ function ProjectsPage() {
                     </div>
                 </div>
             </div>
-
-            <div className={ProjectsPageCss.MainCard}>
-                <div className={ProjectsPageCss.Card}>
-                    <div className={ProjectsPageCss.CardText}>
-                        <h1>Help To Build Your Dream Project</h1>
-                        <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow.</p>
-                        <button className={ProjectsPageCss.CardButton} onClick={navigateAboutus}>
-                            Discuss Your Project
-                            <span> </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                                <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <img src={CardImage} className={ProjectsPageCss.CardImage} alt="CardImage"/>
-                </div>
-            </div>
-
-            
-            <div className={ProjectsPageCss.FooterMain}> 
-            <div className={ProjectsPageCss.EveryFooterDiv}>
-                <div className={ProjectsPageCss.AllColumn}>
-                    <div className={ProjectsPageCss.MiddleColumn}>
-                        <h1>Got a project? Let's build something amazing together! </h1>
-                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
-                        <button className={ProjectsPageCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                        </svg></button>
-                    </div>
-                    <div className={ProjectsPageCss.LeftColumn}>
-                        <h1>United States of America</h1>
-                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
-                        <h3>Frisco, TX 75036</h3>
-                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
-                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
-                </div>
-                <div className={ProjectsPageCss.ThinLine}>
-                    <div className={ProjectsPageCss.SocialMedia}>
-                        <img src = {upwork} className={ProjectsPageCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
-                        <img src = {Insta} className={ProjectsPageCss.Insta} onClick={navigateInsta} alt = "Insta"/>
-                        <img src = {linkedin} className={ProjectsPageCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
-                    </div>
-                </div>
-            </div>
-            
-            <div className={ProjectsPageCss.FooterHeading}>
-                 <img src = {WorkTogether}className={ProjectsPageCss.WorkTogether} alt = "WorkTogether"/>
-            </div>
-        </div>
+            <Footer/>
 
         </div>
     

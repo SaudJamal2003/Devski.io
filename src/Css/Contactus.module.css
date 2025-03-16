@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
 .main{
     width: 100%;
     display: flex;
@@ -16,7 +22,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 
 .contact{
@@ -94,7 +100,7 @@ li {
 
 .coverDiv{
     width: 100%;
-    height: 71vh;
+    height: 75vh;
     background-image: url('../Images/TopDiv.png');
     background-repeat: no-repeat;
     background-size: contain;
@@ -119,11 +125,13 @@ li {
 
 .ContactForm{
     width: 100%;
+    height: 230vh;
     display: flex;
     flex-direction: column;
     background-color: black;
     gap: 100px;
-    margin-top: -5px;
+    margin-top: -20px;
+    margin-bottom: -250px;
 }
 .contactinfo{
     width: 100%;
@@ -149,6 +157,7 @@ li {
     font-size: 16px;
     font-family: Outfit;
     cursor: pointer;
+    outline-style: none;
 }
 .contactinfo button img{
     object-fit: cover;
@@ -193,6 +202,7 @@ li {
     font-size: 12px;
     color: white;
     font-family: Outfit;
+    outline-style: none;
 }
 .nameField input::placeholder, .emailField input::placeholder{
     font-family: Outfit;
@@ -235,6 +245,9 @@ li {
     cursor: pointer;
     width: 18px;
 }
+input[type="checkbox"]:checked {
+    accent-color: #A2FF86;
+}
 .budget{
     display: flex;
     flex-direction: column;
@@ -274,7 +287,7 @@ li {
   }
 .message{
     width: 63.25%;
-    height: 30vh;
+    height: 40vh;
     background-color: #262626;
     border-radius: 6px;
     padding: 10px 40px;
@@ -298,6 +311,7 @@ li {
     font-size: 18px;
     font-family: Outfit;
     padding: 10px;
+    outline-style: none;
 }
 .message textarea::placeholder{
     font-family: Outfit;
@@ -309,13 +323,22 @@ li {
     border: none;
     background-color: #A2FF86;
     color: black;
-    padding: 20px 20px;
-    width: 120px;
+    padding: 14px 14px;
+    width: 150px;
     font-family: Outfit;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 600;
+    font-size: 16px;
     border-radius: 6px;
     cursor: pointer;
+}
+.submitButton:hover{
+    transition: 0.5s ease;
+    background-color: transparent;
+    color: #A2FF86;
+    border-style: solid;
+    border-color: #A2FF86;
+    border-radius: 10px;
+    border-width: 1.4px;
 }
 .formTail{
     display: flex;
@@ -698,6 +721,9 @@ li {
     .coverDiv h1, .coverDiv span{
         font-size: 4vmax;
     }
+    .ContactForm{
+        height: fit-content;
+    }
     .contactinfo{
         flex-direction: column;
     }
@@ -726,6 +752,18 @@ li {
     }
     .formTail{
         flex-direction: column;
+    }
+    .operatingDays h2{
+        font-size: 4vmin;
+    }
+    .operatingDays h3{
+        font-size: 4vmin;
+    }
+    .socialsIcons  h2{
+        font-size: 4vmin;
+    }
+    .message textarea{
+        width: 100%;
     }
 }
 

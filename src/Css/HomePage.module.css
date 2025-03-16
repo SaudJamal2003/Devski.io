@@ -1,3 +1,10 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,7 +32,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
     
 }
 
@@ -148,7 +155,7 @@ li {
 }
 .coverText button{
     color: black;
-    font-family: 'Outfit';
+    font-family: Outfit;
     border-style: none;
     border-radius: 8px;
     font-weight: 600;
@@ -193,13 +200,13 @@ li {
 }
 .firstSection p{
     color: #6bc250;
-    font-family: 'Outfit';
+    font-family: Outfit;
     font-weight: 600;
     font-size: 20px;
     text-align: left;   
 }
 .firstSection h1{
-    font-family: 'Outfit';
+    font-family: Outfit;
     font-size: 38px;
     line-height: 1.2;
 }
@@ -216,7 +223,7 @@ li {
 }
 .secondSection h1{
     color: #3e3c3c;
-    font-family: 'Outfit';
+    font-family: Outfit;
     font-size: 18px;
     /* background-color: #080808; */
     margin-left: 100px;
@@ -243,7 +250,7 @@ li {
 }   
 .projectsCompleted h1{
     color: white;
-    font-family: 'Outfit';
+    font-family: Outfit;
     font-size: 80px;
     font-weight: 600;
 }
@@ -252,11 +259,11 @@ li {
 }
 .projectsCompleted h2{
     color: white;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 .projectsCompleted p{
     color: white;
-    font-family: 'Outfit';
+    font-family: Outfit;
     text-align: left;
     font-size: 14px;
     font-weight: 600;
@@ -287,7 +294,7 @@ li {
 }
 .weWork h1{
     color: #FFFFFF;
-    font-family: 'Outfit';
+    font-family: Outfit;
     font-size: 40px;
     /* letter-spacing: 8px; */
     font-weight: 600;
@@ -323,14 +330,14 @@ li {
     color: #A2FF86;
     font-weight: 700;
     font-size: 45.75px;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 .servicesContent p{
     color: #828080;
     font-weight: 400;
     font-size: 18.71px;
     line-height: 25px;
-    font-family: 'Outfit';
+    font-family: Outfit;
     margin-top: 20px;
     text-align: left;
     text-wrap: balance;
@@ -350,7 +357,7 @@ li {
     height: 70px;
     width: 78%;
     background-color: transparent;
-    font-family: 'Outfit';
+    font-family: Outfit;
     font-size: 16px;
     font-weight: 600;
     line-height: 24.43px;
@@ -373,7 +380,7 @@ li {
     transition: 0.5s ease-in-out;
     margin-top: -40%;
 }
-.dynamicDiv2{
+/* .dynamicDiv2{
     position: relative;
     width: 100%;
     display: flex;
@@ -382,8 +389,7 @@ li {
     align-items: center;
     background-color: beige;
     transition: 0.9s ease-in-out;
-    /* margin-top: -40%; */
-}
+} */
 .component {
     position: absolute;
     top: 0;
@@ -400,7 +406,7 @@ li {
     transform: translateY(0);
     pointer-events: auto;
   }
-.component2 {
+/* .component2 {
     position: absolute;
     top: 0;
     left: 0;
@@ -408,14 +414,14 @@ li {
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 0.5s ease-in-out, transform 0.9s ease-in-out;
-    pointer-events: none; /* Prevent interaction with hidden components */
+    pointer-events: none; 
   }
   
   .component2.active {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-  }
+  } */
 
 .bullet{
     object-fit: cover;
@@ -795,7 +801,6 @@ button:hover .arrow {
     font-weight: 400;
     font-size: 14px;
     width: 80%;
-    /* margin-bottom: 4px; */
     text-align: left;
 }
 .boxIcon{
@@ -803,7 +808,7 @@ button:hover .arrow {
     margin-bottom: 15px;
 }
 
-.ProjectsDiv{
+/* .ProjectsDiv{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -825,7 +830,6 @@ button:hover .arrow {
     flex-direction: column;
     width: 30%;
     margin-left: 100px;
-    /* margin-top: 120px; */
     gap: 16px;
 }
 .projectContent h1{
@@ -871,7 +875,7 @@ button:hover .arrow {
 }
 .allbtn:hover,.webbtn:hover,.appbtn:hover,.uibtn:hover{
     transition: 0.5s ease-in-out;
-}
+} */
 /* .appbtn:hover{
     transition: 0.3s ease-in-out;
     background-color: #A2FF86;
@@ -1008,6 +1012,7 @@ button:hover .arrow {
     position: relative;
     height: 150px;
     padding: 26px;
+    margin-top: 260px;
   }
   
   .slider {
@@ -1680,13 +1685,12 @@ button:hover .arrow {
     }
     .coverText button{
         font-size: 2.4vmin;
-        font-weight: 400;
+        font-weight: 600;
         width: 24%;
-        height: 30px;
+        height: 32px;
         display: flex;
         align-items: center;
         justify-content: center;
-        /* padding: 2px; */
         border-radius: 4px;
     }
     .chooseUsText{
@@ -1919,7 +1923,7 @@ button:hover .arrow {
         align-items: center;
     }
     .boxHeader{
-        text-align: left;
+        text-align: center;
         font-size: 2.6vmax;
         text-wrap: balance;
     }
@@ -1941,8 +1945,9 @@ button:hover .arrow {
         gap: 0px;
     }
     .projectContent h1{
-        font-size: 4vmax;
+        font-size: 3vmax;
         margin-top: -40%;
+        text-align: center;
     }
     .projectContent p{
         font-size: 3.8vmin;
@@ -1965,6 +1970,9 @@ button:hover .arrow {
         width: 100%;
         flex-direction: column;
         gap: 50px;
+        margin-left: 10px;
+        align-items:center;
+        justify-content: center;
     }
     .appProjectsPic{
         width: 100%;
@@ -1974,7 +1982,7 @@ button:hover .arrow {
         height: 350px;
     }
     .appProj{
-        width: 100%;
+        width: 95%;
     }
     .appProj2{
         width: 100%;
@@ -1992,7 +2000,9 @@ button:hover .arrow {
         height: 350px;
     }
     .uiProj{
-        width: 100%;
+        /* margin-top: 2px; */
+        width: 95%;
+
     }
     .uiProj2{
         width: 100%;
@@ -2003,10 +2013,9 @@ button:hover .arrow {
     .sliderContainer{
         height: 100px;
         padding: 36px;
-        margin-top: 0px;
     }
-    .qoutesHeader{
-        font-size: 3.6vmax;
+    .qoutes h1{
+        font-size: 4vmax;
     }
     .star{
         height: 30px;

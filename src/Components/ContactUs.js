@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import ContactusCss from '../Css/Contactus.module.css';
 import MultiRangeSlider from './MultiRangeSlider';
@@ -13,8 +13,24 @@ import location from '../Images/location.png';
 import fb from '../Images/fb_logo_contact.png';
 import twitter from '../Images/twitter_logo_contact.png';
 import linkedin_logo from '../Images/ln_logo_contact.png';
+import Footer from './Footer';
+import emailjs from 'emailjs-com';
 
 function ContactUs() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+        webDesign: false,
+        appDesign: false,
+        collaboration: false,
+        others: false,
+        minBudget: 0,
+        maxBudget: 1000
+    });
+    
+    const [loading, setLoading] = useState(false);
+
     useEffect(() => {
         const hamburgerElement = document.querySelector(`.${ContactusCss.hamburger}`);
         const navMenu = document.querySelector(`.${ContactusCss.navMenu}`);
@@ -48,27 +64,119 @@ function ContactUs() {
         navigate('/devski-contactus')
     }
 
-    const handleSubmit = () => {
-        const _name = document.getElementById('name');
-        const _email = document.getElementById('email');
-        const _message = document.getElementById('message');
+    const handleInputChange = (e) => {
+        const { id, value } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [id]: value
+        }));
+    }
 
-        if(_name.value === ""){
+    const handleCheckboxChange = (e) => {
+        const { name, checked } = e.target;
+        setFormData(prevState => ({
+            ...prevState,
+            [name]: checked
+        }));
+    }
+
+    const handleRangeChange = ({ min, max }) => {
+        setFormData(prevState => ({
+            ...prevState,
+            minBudget: min,
+            maxBudget: max
+        }));
+    }
+
+    const handleSubmit = () => {
+        const { name, email, message } = formData;
+
+        if(name === ""){
             alert('Enter your full name');
         }
-        else if(_email.value === ""){
+        else if(email === ""){
             alert('Enter your Email');
         }
-        else if(_message.value === ""){
+        else if(message === ""){
             alert('Can not send empty message');
         }
-        else if (_name.value !== "" && _email.value !== "" && _message.value !== ""){
-            alert('Thank you for the repsonse');
+        else if (name !== "" && email !== "" && message !== ""){
+            sendEmail();
         }
         else{
             alert('Information Empty');
         }
     }
+
+    const sendEmail = () => {
+        setLoading(true);
+        
+        // For debugging - log what we're sending
+        console.log("Sending form data:", formData);
+        
+        // Create a formatted message that includes all form data
+        const formattedMessage = `
+Message: ${formData.message}
+
+Contact Reason:
+- Web Design: ${formData.webDesign ? 'Yes' : 'No'}
+- Mobile App Design: ${formData.appDesign ? 'Yes' : 'No'}
+- Collaboration: ${formData.collaboration ? 'Yes' : 'No'}
+- Others: ${formData.others ? 'Yes' : 'No'}
+
+Budget Range: $${formData.minBudget} - $${formData.maxBudget}
+`;
+
+        // Prepare the template parameters for EmailJS
+        const templateParams = {
+            to_name: 'Devski Team',
+            user_name: formData.name,
+            user_email: formData.email,
+            message: formattedMessage,
+            reply_to: formData.email,
+            subject: 'New Contact Form Submission',
+            // Include individual fields as well
+            web_design: formData.webDesign ? 'Yes' : 'No',
+            app_design: formData.appDesign ? 'Yes' : 'No',
+            collaboration: formData.collaboration ? 'Yes' : 'No',
+            others: formData.others ? 'Yes' : 'No',
+            budget_range: `$${formData.minBudget} - $${formData.maxBudget}`
+        };
+
+        // Your EmailJS credentials
+        const serviceId = 'service_gztvq7d';
+        const templateId = 'template_ul6ydlj';
+        const userId = 'b0SXVmA7WSxbbjGly';
+
+        emailjs.send(serviceId, templateId, templateParams, userId)
+            .then((response) => {
+                console.log('Email sent successfully!', response.status, response.text);
+                console.log('Budget: ', formData.maxBudget)
+                // Reset form after successful submission
+                setFormData({
+                    name: '',
+                    email: '',
+                    message: '',
+                    webDesign: false,
+                    appDesign: false,
+                    collaboration: false,
+                    others: false,
+                    minBudget: 0,
+                    maxBudget: 1000
+                });
+                
+                setLoading(false);
+                
+                // Only show success alert after everything is done
+                alert('Thank you for your response! We will get back to you soon.');
+            })
+            .catch((error) => {
+                console.error('Error sending email:', error);
+                setLoading(false);
+                alert('There was an error sending your message. Please try again later.');
+            });
+    }
+
   return (
     <>
         <div className={ContactusCss.main}>
@@ -111,20 +219,34 @@ function ContactUs() {
 
             <div className={ContactusCss.ContactForm}>
                 <div className={ContactusCss.contactinfo}>
-                    <button><img src={mail} className={ContactusCss.mailImage} alt='mail'/> hello@squareup.com</button>
-                    <button><img src={telephone} className={ContactusCss.telephone_image} alt='mail'/> +91 91813 23 2309</button>
-                    <button><img src={location} className={ContactusCss.location_image} alt='mail'/> Get Location</button>
+                    <button><img src={mail} className={ContactusCss.mailImage} alt='mail'/>devski@info.com</button>
+                    <button><img src={telephone} className={ContactusCss.telephone_image} alt='mail'/> +92 332 8205514</button>
+                    {/* <button><img src={location} className={ContactusCss.location_image} alt='mail'/> Get Location</button> */}
                 </div>
 
                 <div className={ContactusCss.formBody}>
                     <div className={ContactusCss.fields}>
                         <div className={ContactusCss.nameField}>
                             <h1>Full Name</h1>
-                            <input type='text' placeholder='Type here' id='name' required/>
+                            <input 
+                                type='text' 
+                                placeholder='Type here' 
+                                id='name' 
+                                value={formData.name}
+                                onChange={handleInputChange}
+                                required
+                            />
                         </div>
                         <div className={ContactusCss.emailField}>
                             <h1>Email</h1>
-                            <input type='text' placeholder='Type here' id='email' required/>
+                            <input 
+                                type='email' 
+                                placeholder='Type here' 
+                                id='email' 
+                                value={formData.email}
+                                onChange={handleInputChange}
+                                required
+                            />
                         </div>
                     </div>
 
@@ -133,18 +255,42 @@ function ContactUs() {
                         <div className={ContactusCss.checks}>
                             <div className={ContactusCss.firstCheckCol}>
                                 <div style={{display:'flex', gap: '10px'}}>
-                                    <input type="checkbox" id={ContactusCss.check1} name="web Design" value="web Design"/>Web Design
+                                    <input 
+                                        type="checkbox" 
+                                        id={ContactusCss.check1} 
+                                        name="webDesign" 
+                                        checked={formData.webDesign}
+                                        onChange={handleCheckboxChange}
+                                    />Web Design
                                 </div>
                                 <div style={{display:'flex', gap: '10px'}}>
-                                     <input type="checkbox" id={ContactusCss.check2} name="App Design" value="App Design"/>Mobile App Design
+                                     <input 
+                                        type="checkbox" 
+                                        id={ContactusCss.check2} 
+                                        name="appDesign" 
+                                        checked={formData.appDesign}
+                                        onChange={handleCheckboxChange}
+                                    />Mobile App Design
                                 </div>
                             </div>
                             <div className={ContactusCss.secondCheckCol}>
                                 <div style={{display:'flex', gap: '10px'}}>
-                                    <input type="checkbox" id={ContactusCss.check3} name="collaboration" value="collaboration"/>Collaboration
+                                    <input 
+                                        type="checkbox" 
+                                        id={ContactusCss.check3} 
+                                        name="collaboration" 
+                                        checked={formData.collaboration}
+                                        onChange={handleCheckboxChange}
+                                    />Collaboration
                                 </div>
                                 <div style={{display:'flex', gap: '10px'}}>
-                                    <input type="checkbox" id={ContactusCss.check4} name="others" value="others"/>Others
+                                    <input 
+                                        type="checkbox" 
+                                        id={ContactusCss.check4} 
+                                        name="others" 
+                                        checked={formData.others}
+                                        onChange={handleCheckboxChange}
+                                    />Others
                                 </div>
                             </div>
                         </div>
@@ -152,20 +298,34 @@ function ContactUs() {
 
                     <div className={ContactusCss.budget}>
                         <h1>Your Budget</h1>
-                        <p>Slide to indicate your budget range</p>
+                        <p style={{marginBottom: '30px'}}>Slide to indicate your budget range</p>
                         <MultiRangeSlider
                             min={0}
                             max={1000}
-                            onChange={({ min, max }) => console.log(`min = ${min}, max = ${max}`)}
+                            onChange={handleRangeChange}
                         />
                     </div>
 
                     <div className={ContactusCss.message}>
                         <h1>Your Message</h1>
-                        <textarea rows='5' cols='180' placeholder='Type here' id= 'message'/>
+                        <textarea 
+                            rows='5' 
+                            cols='180' 
+                            placeholder='Type here' 
+                            id='message'
+                            value={formData.message}
+                            onChange={handleInputChange}
+                        />
                     </div>
 
-                    <button type='submit' className={ContactusCss.submitButton} onClick={handleSubmit}>Submit</button>
+                    <button 
+                        type='submit' 
+                        className={ContactusCss.submitButton} 
+                        onClick={handleSubmit}
+                        disabled={loading}
+                    >
+                        {loading ? 'Sending...' : 'Submit'}
+                    </button>
 
                     <div className={ContactusCss.formTail}>
                         <div className={ContactusCss.operatingDays}>
@@ -182,40 +342,7 @@ function ContactUs() {
 
                 </div>
             </div>
-
-            <div className={ContactusCss.FooterMain}> 
-            <div className={ContactusCss.EveryFooterDiv}>
-                <div className={ContactusCss.AllColumn}>
-                    <div className={ContactusCss.MiddleColumn}>
-                        <h1>Got a project? Let's build something amazing together! </h1>
-                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
-                        <button className={ContactusCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                        </svg></button>
-                    </div>
-                    <div className={ContactusCss.LeftColumn}>
-                        <h1>United States of America</h1>
-                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
-                        <h3>Frisco, TX 75036</h3>
-                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
-                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
-                </div>
-                <div className={ContactusCss.ThinLine}>
-                    <div className={ContactusCss.SocialMedia}>
-                        <img src = {upwork} className={ContactusCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
-                        <img src = {Insta} className={ContactusCss.Insta} onClick={navigateInsta} alt = "Insta"/>
-                        <img src = {linkedin} className={ContactusCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
-                    </div>
-                </div>
-            </div>
-            
-            <div className={ContactusCss.FooterHeading}>
-                 <img src = {WorkTogether}className={ContactusCss.WorkTogether} alt = "WorkTogether"/>
-            </div>
-        </div>
-
+            <Footer/>
         </div>
 
     </>

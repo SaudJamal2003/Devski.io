@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DevskiWebDev from './Components/DevskiWebDev';
@@ -12,17 +11,20 @@ import AppDevProjects from './Components/AppDevProjects.js';
 import UiUxProjects from './Components/UiUxProjects.js';
 import CompleteProjects from './Components/CompleteProjects.js';
 import ContactUs from './Components/ContactUs.js';
+import ScrollToTop from './Components/ScrollToTop.js';
+
 
 function App() {
   return (
     <>
-         <BrowserRouter>
+      <BrowserRouter>
+        <ScrollToTop />
         <Routes>
                       
-            <Route exact path="/devski-devskiUiUx" element={<DevskiWebDev />}>
+            <Route exact path="/devski-devskiWebdev" element={<DevskiWebDev />}>
             </Route>
 
-            <Route exact path="/devski-devskiWebdev" element={<DevskiUiUX />}>
+            <Route exact path= "/devski-devskiUiUx" element={<DevskiUiUX />}>
             </Route>
 
             <Route exact path="/devski-devskiAppDev" element={<DevskiAppDev />}>
@@ -50,10 +52,13 @@ function App() {
             </Route>
 
             <Route exact path="/" element={<HomePage />}></Route>
-        </Routes>
+       </Routes>
+     </BrowserRouter>
 
-      </BrowserRouter>
-      {/* <DevskiProjects /> */}
+      
+      {/* <BrowserRouter>
+        <Footer/>
+      </BrowserRouter> */}
     </>
   );
 }

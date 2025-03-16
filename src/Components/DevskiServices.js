@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useState, useEffect} from "react";
 import { Link} from 'react-router-dom';
 import { useNavigate} from 'react-router-dom';
 import Devski_Logo from '../Images/Devski_Logo.png'
@@ -16,6 +16,12 @@ import Insta from '../Images/Insta.png';
 import linkedin from '../Images/linkedin.png';
 import upwork from '../Images/upworkIcon.png';
 import DevskiServicesCss from '../Css/DevskiServices.module.css';
+import AllProjectsImages from './AllProjectsImages';
+import WebProjectsImages from './WebProjectsImages';
+import AppProjectsImages from './AppProjectsImages';
+import UiUxProjectsImages from './UiUxProjectsImages';
+import OurProjects from "./OurProjects";
+import Footer from "./Footer";
 
 
 function DevskiServices(){
@@ -56,32 +62,14 @@ function DevskiServices(){
 
     }, []);
 
-    const navigate = useNavigate()
+    const [renderProjects, setProjectComp] = useState('All'); // Default state
+    
+    
+       const [Projectflag1, setProjectFlag1] = useState(true);
+       const [Projectflag2, setProjectFlag2] = useState(false);
+       const [Projectflag3, setProjectFlag3] = useState(false);
+       const [Projectflag4, setProjectFlag4] = useState(false);
 
-    // const navigateWebServices = () => {
-    //     navigate('/devski-devskiUiUx')
-    // }
-    const navigateWebServices = () => {
-        navigate('/devski-devskiUiUx')
-    }
-    const navigateAppServices = () => {
-        navigate('/devski-devskiAppDev')
-    }
-    const navigateUiUXServices = () => {
-        navigate('/devski-devskiWebdev')
-    }    
-    const navigateAboutus = () => {
-        navigate('/devski-contactus')
-    }
-    const navigateInsta = () => {
-        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
-    }
-    const navigateUpwork = () => {
-        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
-    }
-    const navigateLinkedin = () => {
-        window.open('https://www.instagram.com/wearedevski?igsh=NG9qYnQ3MnY5emMz', '_blank');
-    }    
     
   return(
         <>
@@ -99,7 +87,7 @@ function DevskiServices(){
                 <Link to='/devski-devskiServices' style={{textDecoration: 'none', color:'black'}}>
                     <li className={DevskiServicesCss.services}>Services</li>
                 </Link>
-                <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
+                <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                     <li className={DevskiServicesCss.projects}>Projects</li>
                 </Link>
                 <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
@@ -167,96 +155,8 @@ function DevskiServices(){
                 </div>
             </div>
 
-
-        <div className={DevskiServicesCss.BlackBg}>
-            <h1>Our Projects</h1>
-            
-            <div className={DevskiServicesCss.ProjectButtons}>
-            <button className={DevskiServicesCss.AllButton}> All </button>
-            <button className={DevskiServicesCss.WebButton} onClick={navigateWebServices}> UI/UX </button>
-            <button className={DevskiServicesCss.AppButton} onClick={navigateAppServices}> App </button>
-            <button className={DevskiServicesCss.UIUXButton} onClick={navigateUiUXServices}> Web </button>
-            </div>
-
-    
-            <div className={DevskiServicesCss.AllProjects}>
-                <div className={DevskiServicesCss.proj1}>
-                    <img src = {Project1}className={DevskiServicesCss.Project1} alt = "Project1"/>
-                    <h1>Helping Hands</h1>
-                    <p>Website</p>
-                </div>
-                
-                <div className={DevskiServicesCss.proj2}>
-                    <img src = {Project2}className={DevskiServicesCss.Project2} alt = "Project2"/>
-                    <h1>Nom Nom Nerds</h1>
-                    <p>Web Design</p>
-                </div>
-            </div>
-
-            <div className={DevskiServicesCss.AllProjects2}>
-            <div className={DevskiServicesCss.proj3}>
-            <img src = {Project1}className={DevskiServicesCss.Project1} alt = "Project1"/>
-            <h1>Cafe 90s</h1>
-            <p>Website</p>
-            </div>
-            <div className={DevskiServicesCss.proj4}>
-            <img src = {Project2}className={DevskiServicesCss.Project2} alt = "Project2"/>
-            <h1>TechTree</h1>
-            <p>Web Design</p>
-            </div>
-            </div>
-        </div>
-        
-        <div className={DevskiServicesCss.MainCard}>
-            <div className={DevskiServicesCss.Card}>
-                <div className={DevskiServicesCss.CardText}>
-                    <h1>Help To Build Your Dream Project</h1>
-                    <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow. 
-                    </p>
-                    <button className={DevskiServicesCss.CardButton} onClick={navigateAboutus}>
-                        Discuss Your Project
-                        <span> </span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                        </svg>
-                    </button>
-                </div>
-                <img src={CardImage} className={DevskiServicesCss.CardImage} alt="CardImage"/>
-            </div>
-        </div>
-
-        <div className={DevskiServicesCss.FooterMain}> 
-            <div className={DevskiServicesCss.EveryFooterDiv}>
-                <div className={DevskiServicesCss.AllColumn}>
-                    <div className={DevskiServicesCss.MiddleColumn}>
-                        <h1>Got a project? Let's build something amazing together! </h1>
-                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
-                        <button className={DevskiServicesCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                        </svg></button>
-                    </div>
-                    <div className={DevskiServicesCss.LeftColumn}>
-                        <h1>United States of America</h1>
-                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
-                        <h3>Frisco, TX 75036</h3>
-                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
-                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
-                </div>
-                <div className={DevskiServicesCss.ThinLine}>
-                    <div className={DevskiServicesCss.SocialMedia}>
-                        <img src = {upwork} className={DevskiServicesCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
-                        <img src = {Insta} className={DevskiServicesCss.Insta} onClick={navigateInsta} alt = "Insta"/>
-                        <img src = {linkedin} className={DevskiServicesCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
-                    </div>
-                </div>
-            </div>
-            
-            <div className={DevskiServicesCss.FooterHeading}>
-                 <img src = {WorkTogether}className={DevskiServicesCss.WorkTogether} alt = "WorkTogether"/>
-            </div>
-        </div>
+            <OurProjects className={DevskiServicesCss.projects} allRoute='/devski-completeProjects' webRoute='/devski-devskiWebdev' appRoute='/devski-devskiAppDev' uiRoute='/devski-devskiUiUx'/>
+            <Footer/>
 
         </div> 
 

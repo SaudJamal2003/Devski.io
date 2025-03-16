@@ -1,0 +1,146 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
+.ProjectsDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #0A0A0A;
+    background-image: url('../Images/projectsWavy.png');
+    filter: brightness(80%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 620px;
+    width: 100%;
+    margin-top: 100px;
+}
+.ProjectBackground{
+    width: 100%;
+    background-color: #0A0A0A;
+    height: 620px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.projectContent{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 100px;
+    gap: 16px;
+    margin-top: -80px;
+}
+.projectContent h1{
+    color: #A2FF86;
+    font-family: Outfit;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 54.9px;
+}
+.projectContent p{
+    font-family: Outfit;
+    font-weight: 200;
+    font-size: 20px;
+    letter-spacing: -1%;
+    color: #ffffffa1;
+    width: 90%;
+    text-align: left;
+    text-wrap: balance;
+}
+.projectButtons{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    gap: 16px;
+    margin-top: -20%;
+    cursor: pointer;
+}
+
+.allbtn,.webbtn,.appbtn,.uibtn{
+    height: 55px;
+    width: 8%;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 16px;
+    padding: 10px 10x;
+    border-style: solid;
+    border-radius: 0.5rem;
+    border-color: #A2FF86;
+    color: white;
+    background-color: transparent;
+    border-width: 1.2px;
+    cursor: pointer;
+}
+.allbtn:hover,.webbtn:hover,.appbtn:hover,.uibtn:hover{
+    transition: 0.5s ease-in-out;
+}
+.dynamicDiv2{
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.9s ease-in-out;
+    /* margin-top: -40%; */
+    margin-bottom: -250px;
+}
+.component2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.5s ease-in-out, transform 0.9s ease-in-out;
+    pointer-events: none; /* Prevent interaction with hidden components */
+  }
+  
+  .component2.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  @media (max-width: 768px){
+    .ProjectsDiv{
+        background-size: cover;
+        gap: 50px
+    }
+    .projectContent{
+        width: 100%;
+        margin-left: 0;
+    }
+    .projectContent h1{
+        font-size: 6vmax;
+        width: 100%;
+        text-align: center;
+        line-height: 28px;
+        margin-top: 50px;
+    }
+    .projectContent p{
+        font-size: 4.6vmin;
+        text-align: center;
+        width: 100%;
+    }
+    .projectButtons{
+        width: 100%;
+        margin-top: -450px;
+    }
+    .allbtn,.webbtn,.appbtn,.uibtn{
+        width: 20%;
+        font-size: 3vmin;
+    }
+    .component2{
+        margin-top: 50px;
+    }
+    .ProjectBackground{
+        height: 100vh;
+    }
+    .dynamicDiv2{
+        height: 100vh;
+    }
+  }

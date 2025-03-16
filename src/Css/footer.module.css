@@ -1,0 +1,250 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
+
+.CardButton{
+    display: flex;
+    width: 250px;
+    padding: 19px 31px 17px 31px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    background: #A2FF86;
+    font-family: outfit;
+    display: flex;
+    gap: 5px;
+    border-style: solid;
+    border-color: #A2FF86;
+    border-radius: 8px;
+    border-width: 1.2px;
+}
+.CardButton:hover{
+    transform: scale(1.03);
+    transition: 0.2s ease-in;
+    background-color: transparent;
+    color: white;
+}
+ .FooterMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 125px;
+    width: 100%;
+    height: fit-content;
+    padding-top: 80px;
+    flex-shrink: 0;
+    background-image: url('../Images/WavyDesign.png');
+    background-color: #0F0F0F;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: 250px;
+}
+.EveryFooterDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.AllColumn{
+    display: flex;
+    align-items: center;
+    width: 90%;
+    height: fit-content;
+
+}
+.MiddleColumn{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap:20px;
+}
+.MiddleColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    width: fit-content;
+}
+.MiddleColumn p{
+    color: white;
+    font-family: Outfit;
+    font-size: 18px;
+    text-wrap: balance;
+    text-align: left;
+    font-weight: 400;
+    line-height: normal;
+    width: 50%;
+}
+.LeftColumn{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+.LeftColumn h1{
+    color: white;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h4{
+    color: white;
+    margin-top: 20px;
+    font-family: Arial;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.LeftColumn h2,h3,h5,h6{
+    color: white;
+    font-family: Arial;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.FooterHeading{
+    justify-content:center;
+    display: flex;
+}
+.WorkTogether{
+    width: 100%;
+}
+.ThinLine{
+    display: flex;
+    gap: 400px;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 2%;
+}
+.SocialMedia{
+    width: 19%;
+    height: fit-content;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    cursor: pointer;
+}
+.SocialMedia img{
+    object-fit: cover;
+    height: 32px;
+}
+
+@media (max-width: 1080px) {
+    .FooterMain {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        background-size:cover;
+        background-position: center;
+        /* margin-top: 500px; */
+    }
+
+    .EveryFooterDiv {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-top: 8%;
+        width: 100%;
+        height: fit-content;
+    }
+
+    .AllColumn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px; 
+    }
+    .LeftColumn {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+    .LeftColumn h1 {
+        font-size: 16px; 
+    }
+    .LeftColumn h2{
+        font-size: 14px;
+    }
+    .LeftColumn h3{
+        font-size: 14px;
+    }
+    .LeftColumn h5{
+        font-size: 14px;
+    }
+    .LeftColumn h6 {
+        font-size: 14px; 
+    }
+
+    .MiddleColumn {
+        text-align: center;
+        width: 100%;
+        gap: 16px; /* Reduced gap for better spacing */
+    }
+
+    .MiddleColumn h1 {
+        font-size: 24px; /* Slightly smaller to fit better on mobile */ 
+        text-align: center;
+    }
+    .MiddleColumn p {
+        font-size: 3.8vmin; /* Slightly smaller to fit better on mobile */
+        width: 96%;
+        text-align: center;        
+    }
+    .CardButton {
+        width: 100%; /* Width adjusted to be responsive */
+        padding: 12px 16px; /* Adjusted padding for mobile */
+        font-size: 16px; /* Slightly smaller font size */
+    }
+
+    .SocialMedia {
+        /* display: flex; */
+        justify-content: start;
+        gap: 8px; /* Adjusted gap for smaller icons */
+        width: 20px;
+        height: 20%;
+    }
+
+    .ThinLine {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        gap: 1px;
+        /* z-index: 1; */
+        width: 40%;
+        padding: 0%;
+        text-align: start;
+        margin-top: 15%; /* Adjusted margin */
+    }
+    .ThinLine h1{
+        display: none;
+    }
+    .ThinLine h2 {
+        font-size: 10px;  
+    }
+    .WorkTogether {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: flex;
+        justify-content: bottom;
+        align-items: bottom;
+        bottom: 0;
+    }
+    .FooterHeading{
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+    }
+}

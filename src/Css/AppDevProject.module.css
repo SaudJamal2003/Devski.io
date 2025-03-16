@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -30,7 +36,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 
 .projects{
@@ -309,6 +315,7 @@ li {
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 100px;
+    margin-bottom: -300PX;
 }
 .keyFeaturesWavy{
     background-image: url('../Images/projectWavyDesign.png');
@@ -935,7 +942,7 @@ li {
     }
     .keyFeatures{
         width: 100%;
-        height: fit-content;
+        height: 220vh;
     }
     .keyFeaturesWavy{
         background-size: contain;

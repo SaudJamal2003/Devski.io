@@ -41,7 +41,7 @@ function DevskiProjects() {
                 <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.services}>Services</li>
                 </Link>
-                <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
+                <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                     <li className={DevskiProjectsCss.projects}>Projects</li>
                 </Link>
                 <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>

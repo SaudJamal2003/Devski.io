@@ -12,6 +12,7 @@ import WorkTogether from '../Images/WorkTogether.png'
 import Insta from '../Images/Insta.png'
 import linkedin from '../Images/linkedin.png'
 import upwork from '../Images/upworkIcon.png';
+import Footer from './Footer';
 
 function UiUxProjects() {
     useEffect(() => {
@@ -73,7 +74,7 @@ function UiUxProjects() {
                         <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                         <li className={UiUxProjectsCss.services}>Services</li>
                         </Link>
-                        <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
+                        <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                             <li className={UiUxProjectsCss.projects}>Projects</li>
                         </Link>
                         <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
@@ -189,57 +190,7 @@ function UiUxProjects() {
                     </div>
                 </div>
             </div>
-
-            <div className={UiUxProjectsCss.MainCard}>
-                <div className={UiUxProjectsCss.Card}>
-                    <div className={UiUxProjectsCss.CardText}>
-                        <h1>Help To Build Your Dream Project</h1>
-                        <p>We are a software startup dedicated to bringing your ideas to life. We provide end-to-end services tailored to startups and businesses looking to innovate and grow.</p>
-                        <button className={UiUxProjectsCss.CardButton} onClick={navigateAboutus}>
-                            Discuss Your Project
-                            <span> </span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                                <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                            </svg>
-                        </button>
-                    </div>
-                    <img src={CardImage} className={UiUxProjectsCss.CardImage} alt="CardImage"/>
-                </div>
-            </div>
-
-            
-            <div className={UiUxProjectsCss.FooterMain}> 
-            <div className={UiUxProjectsCss.EveryFooterDiv}>
-                <div className={UiUxProjectsCss.AllColumn}>
-                    <div className={UiUxProjectsCss.MiddleColumn}>
-                        <h1>Got a project? Let's build something amazing together! </h1>
-                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
-                        <button className={UiUxProjectsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                        </svg></button>
-                    </div>
-                    <div className={UiUxProjectsCss.LeftColumn}>
-                        <h1>United States of America</h1>
-                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
-                        <h3>Frisco, TX 75036</h3>
-                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
-                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
-                </div>
-                <div className={UiUxProjectsCss.ThinLine}>
-                    <div className={UiUxProjectsCss.SocialMedia}>
-                        <img src = {upwork} className={UiUxProjectsCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
-                        <img src = {Insta} className={UiUxProjectsCss.Insta} onClick={navigateInsta} alt = "Insta"/>
-                        <img src = {linkedin} className={UiUxProjectsCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
-                    </div>
-                </div>
-            </div>
-            
-            <div className={UiUxProjectsCss.FooterHeading}>
-                 <img src = {WorkTogether}className={UiUxProjectsCss.WorkTogether} alt = "WorkTogether"/>
-            </div>
-        </div>
+            <Footer/>
 
         </div>
     

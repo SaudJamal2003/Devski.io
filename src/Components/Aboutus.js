@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Footer from './Footer';
 import AboutUsCss from '../Css/AboutUs.module.css';
 import Devski_Logo from '../Images/Devski_Logo.png';
 import maryam from '../Images/Maryam.jpeg';
@@ -76,8 +77,6 @@ function Aboutus() {
         navigate('/devski-contactus')
     }
 
-
-
   return (
     <>
         <div className={AboutUsCss.main}>
@@ -87,13 +86,13 @@ function Aboutus() {
                     <img src={Devski_Logo} className={AboutUsCss.DevskiLogo} alt='logo'/>
                 </Link>        
                  <ul className={AboutUsCss.navMenu}>
-                    <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
+                    <Link to='/' style={{textDecoration: 'none'}}>
                     <li className={AboutUsCss.home}>Home</li>
                     </Link>
                     <Link to='/devski-devskiServices' style={{textDecoration: 'none'}}>
                     <li className={AboutUsCss.services}>Services</li>
                     </Link>
-                    <Link to='/devski-projectsPage' style={{textDecoration: 'none'}}>
+                    <Link to='/devski-completeProjects' style={{textDecoration: 'none'}}>
                         <li className={AboutUsCss.projects}>Projects</li>
                     </Link>
                     <Link to='/devski-aboutus' style={{textDecoration: 'none'}}>
@@ -170,41 +169,7 @@ function Aboutus() {
                 </div>
 
             </div>
-
-
-            <div className={AboutUsCss.FooterMain}> 
-            <div className={AboutUsCss.EveryFooterDiv}>
-                <div className={AboutUsCss.AllColumn}>
-                    <div className={AboutUsCss.MiddleColumn}>
-                        <h1>Got a project? Let's build something amazing together! </h1>
-                        <p>Have an idea you'd like to bring to life or a project you need help with? Let's collaborate and create something extraordinary together. Click below to start the conversation—your vision is just one step away!</p>
-                        <button className={AboutUsCss.CardButton} onClick={navigateAboutus}>Discuss Your Project <span> </span> <svg xmlns="http://www.w3.org/2000/svg" width="10" height="12" viewBox="0 0 10 12" fill="none">
-                            <path d="M10 6L0 11.7735V0.226501L10 6Z" fill="#111204"/>
-                        </svg></button>
-                    </div>
-                    <div className={AboutUsCss.LeftColumn}>
-                        <h1>United States of America</h1>
-                        <h2>5570 FM 423 Ste 250 Apt# 1120</h2>
-                        <h3>Frisco, TX 75036</h3>
-                        <h4 style={{marginTop: '-2px'}}>Texas</h4>
-                        <h1 style={{marginTop:'10px', fontWeight:'bold', fontSize:'16px'}}>Contact</h1>
-                        <h2>devski@info.io</h2>
-                    </div>
-                </div>
-                <div className={AboutUsCss.ThinLine}>
-                    <div className={AboutUsCss.SocialMedia}>
-                        <img src = {upwork} className={AboutUsCss.upwork}  onClick={navigateUpwork} alt = "behance"/>
-                        <img src = {Insta} className={AboutUsCss.Insta} onClick={navigateInsta} alt = "Insta"/>
-                        <img src = {linkedin} className={AboutUsCss.linkedin} onClick={navigateLinkedin} alt = "linkedin"/>
-                    </div>
-                </div>
-            </div>
-            
-            <div className={AboutUsCss.FooterHeading}>
-                 <img src = {WorkTogether}className={AboutUsCss.WorkTogether} alt = "WorkTogether"/>
-            </div>
-        </div>
-
+            <Footer/>
         </div>
 
     </>

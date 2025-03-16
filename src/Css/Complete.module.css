@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -30,7 +36,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 
 .projects{
@@ -206,19 +212,19 @@ li {
 }
 
 .videoButtons{
-    border-color: #A2FF86;
-    border-radius: 0;
+    background-color: #a2ff86a7;
+    color: rgba(0, 128, 0, 0.641);
     border-width: 2px;
-    border-style: solid;
+    border-style: none;
     height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 10px;
-    background-color: transparent;
+    padding: 12px 10px 20px 10px;
     cursor: pointer;
     font-size: 35px;
-    border-radius: 15%;
+    border-radius: 50%;
+    outline-style: none;
 }
 .projectBackground{
     background-image: url('../Images/featuredProject.png');
@@ -352,6 +358,7 @@ section .navigation li img:hover{
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 100px;
+    margin-bottom: -300PX;
 }
 .keyFeaturesWavy{
     background-image: url('../Images/projectWavyDesign.png');
@@ -958,6 +965,9 @@ section .navigation li img:hover{
         height: 350px;
 
     }
+    .uiProj1{
+        background-size: cover;
+    }
     .uiProjectsPic{
         margin-top: 20px;
         width: 90%;
@@ -965,7 +975,7 @@ section .navigation li img:hover{
     }
     .keyFeatures{
         width: 100%;
-        height: fit-content;
+        height: 220vh;
     }
     .keyFeaturesWavy{
         background-size: contain;

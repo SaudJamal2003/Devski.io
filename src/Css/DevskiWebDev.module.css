@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
 * {
     margin: 0;
     padding: 0;
@@ -20,7 +26,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 
 .services{
@@ -109,7 +115,7 @@ li {
     margin-top: 135px;
 }
 .ServicesHeading{
-    color: #9df981;
+    color: #91ea76;
     font-family: Outfit;
     font-size: 16px;
     font-style: normal;
@@ -160,7 +166,7 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 130px;
+    margin-top: 80px;
 }
 .HowWorksHeading{
     color: #000;
@@ -173,12 +179,12 @@ li {
     width: 40%;
 }
 .HowWorksHeading span{
-    color: #A2FF86;
+    color: #91ea76;
     text-align: center;
     font-family: Outfit;
     font-size: 38px;
     font-style: normal;
-    font-weight: 600;
+    font-weight: 700;
     line-height: normal;
     width: 40%;
 }
@@ -257,13 +263,13 @@ li {
 }
 
 .ProcessBoxHeading p {
-    width: 330.72px;
+    width: 90%;
     color: #DDD;
     font-family: Outfit;
-    font-size: 17.255px;
+    font-size: 16px;
     font-style: normal;
     font-weight: 400;
-    line-height: 50%; /* 29.333px */
+    line-height: 80%; /* 29.333px */
     letter-spacing: -0.173px;
     text-align: left;
 }
@@ -274,7 +280,8 @@ li {
     background-size:contain;
     background-repeat: no-repeat;
     padding: 100px 0; /* Add more padding to the top and bottom */
-    margin-top: 220px;
+    margin-top: 200px;
+    margin-bottom: -250px;
 }
 .WebDevProjects{
     display: inline-flex;
@@ -346,7 +353,14 @@ li {
     border-color: #A2FF86;
     width: 114px;
     height: 55px;
+    border-style: solid;
+    cursor: pointer;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    outline: none;
 }
 .MoreIcon{
     width: 12.391px;
@@ -371,11 +385,13 @@ li {
     width: 100%; /* Full width on small screens */
     max-width: 564.273px; /* Desired maximum width for each project */
     background-color: transparent; /* Ensure transparency if needed */
+    border-radius: 10px;
 }
 
 .proj1 img, .proj2 img{
+    object-fit: cover;
     width: 100%; /* Responsive image width */
-    height: auto; /* Maintain aspect ratio */
+    height: 500px; /* Maintain aspect ratio */
     max-width: 100%; /* Prevent images from exceeding container width */
     border-radius: 10px; /* Optional: Add rounded corners to images */
 }
@@ -404,9 +420,6 @@ li {
     line-height: 140%;
     margin: 0; /* Remove margin if needed */
 }
-
-
-
 
 .MainCard{
     justify-content: center;

@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -24,7 +30,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 
 .about{
@@ -111,11 +117,11 @@ li {
 
 .teamText h2{
     font-family: Outfit;
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 20px;
+    font-weight: 600;
     line-height: 25.6px;
     text-align: center;
-    color: #A2FF86;
+    color: #94e97b;
     text-wrap: balance;
 }
 .teamText h1{
@@ -178,9 +184,14 @@ li {
 .saudPic, .usaidPic, .shaheerPic{
     width: 90%;
 }
+.shaheerPic{
+    object-fit: contain;
+}
+.maryamPic, .saudPic, .usaidPic{
+    object-fit: cover;
+}
 .maryamPic, .saudPic, .shaheerPic, .usaidPic{
     margin-top: 20px;
-    object-fit: cover;
     height: 460px;
     padding: 5px;
     border-radius: 20px;

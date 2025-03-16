@@ -1,3 +1,9 @@
+@font-face {
+    font-family: Outfit;
+    src: local('../fonts/Outfit.ttf'), url('../fonts/Outfit.ttf') format('truetype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                                'embedded-opentype', and 'svg' */
+}
 .main{
     display: flex;
     flex-direction: column;
@@ -30,7 +36,7 @@ ul{
 }
 li {
     list-style: none;
-    font-family: 'Outfit';
+    font-family: Outfit;
 }
 
 .projects{
@@ -248,7 +254,7 @@ li {
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
-    width: 94%;
+    width: 77%;
     margin-bottom: -52px;
     cursor: pointer;
 }
@@ -286,7 +292,7 @@ li {
     background-size: contain;
     background-repeat: no-repeat;
     height: 480px;
-    width: 86%;
+    width: 60%;
     margin-bottom: -52px;
     cursor: pointer;
     /* margin-top: -80px; */
@@ -300,6 +306,7 @@ li {
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 100px;
+    margin-bottom: -300PX;
 }
 .keyFeaturesWavy{
     background-image: url('../Images/projectWavyDesign.png');
@@ -909,10 +916,20 @@ li {
     .appProj1, .uiProj1{
         margin-bottom: 0px;
         height: 350px;
+        background-size: cover;
+        width: 100%;
+        background-color: #b0afaf;
     }
     .appProj2, .uiProj2{
         margin-bottom: 0px;
         height: 350px;
+        background-size: cover;
+        width: 100%;
+        background-color: #b0afaf;
+    }
+    .appProj2 h2{
+        display: flex;
+        margin-top: -100px;
     }
     .uiProj1{
         background-size: cover;
@@ -928,6 +945,7 @@ li {
     .keyFeatures{
         width: 100%;
         height: fit-content;
+        height: 220vh;
     }
     .keyFeaturesWavy{
         background-size: contain;
